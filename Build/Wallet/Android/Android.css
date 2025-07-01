@@ -1,0 +1,11 @@
+#HomeDiv{
+    top: 50px;
+}
+
+#HomesDivs{
+    background: blue;
+}
+
+.SendButton{
+    background: forestgreen;
+}

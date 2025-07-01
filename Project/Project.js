@@ -1,0 +1,9 @@
+const NOVASTART=()=>{
+
+    DISPLAY("",`
+
+        hello
+        
+    `);
+
+};

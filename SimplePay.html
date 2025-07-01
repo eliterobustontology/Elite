@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="https://eroinnovations.github.io/FrameWork/Library/Assets/Images/Posts/CommunityRise/Logo.jpg" type="image/x-icon">
+    <title>Test Pay</title>
+</head>
+<link rel="stylesheet" href="https://eroinnovations.github.io/FrameWork/Library/Styles/Styles.css">
+<link rel="stylesheet" href="https://eroinnovations.github.io/FrameWork/Library/Styles/Components.css">
+<link rel="stylesheet" href="https://eroinnovations.github.io/FrameWork/Library/Styles/Classes.css">
+<script src="https://eroinnovations.github.io/FrameWork/Library/Functions/Assets.js"></script>
+<script src="https://eroinnovations.github.io/FrameWork/Library/Functions/Connection.js"></script>
+<script src="https://eroinnovations.github.io/FrameWork/Library/Functions/Functions.js"></script>
+<script src="https://eroinnovations.github.io/FrameWork/Library/Functions/Plugins.js"></script>
+<style>
+    body{
+        background: #000;
+    }
+    .Pay{
+        background: forestgreen;
+    }
+</style>
+<body>
+
+    <br><br>
+
+    <h1>Pesapal Test Payment</h1>
+
+    <br>
+
+    <h1>Enter Amount From 500 Ugandan Shillings</h1>
+
+    <br><br>
+
+    <input class="RoundInput" type="tel" placeholder="Enter Amount" >
+
+    <button onclick="PAYNOW()" class="Pay">Pay</button>
+
+
+</body>
+<script>
+    ZOOM();
+    STOREDATA(' ','Environment','Web');
+    INSPECTION();
+
+    const PAYNOW=()=>{
+
+        const RoundInput=NAMING('.RoundInput');
+
+        const Pay=NAMING('.Pay');
+
+        if (RoundInput.value < 500 ) {
+
+            TOAST('Mininium Payment of 500 Shillings');
+            
+        } else {
+
+            DISPLAY(Pay,'Please Wait ,Payment Is Being Processed...');
+
+            
+            ELITEPAY('Elite','eroinnovations9@gmail.com',RoundInput.value,'Deposit','https://eroinnovations.site/AfterPay.html',new Date(),'https://eroinnovations.site',(data)=>{
+
+                WEBSITE(data);
+
+            });
+
+            
+            
+        }
+
+
+
+    }
+
+</script>
+</html>
