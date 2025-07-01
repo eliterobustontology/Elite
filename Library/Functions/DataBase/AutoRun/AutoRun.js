@@ -16,7 +16,7 @@ export const AUTORUN=()=>{
 
     } else {
 
-        import('./Start/Start.js')
+        import('https://eroinnovations.github.io/Elite/Start/Start.js')
         .then(module => {
             if (typeof module.START === 'function') {
             module.START();
