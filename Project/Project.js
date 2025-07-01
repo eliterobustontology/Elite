@@ -1,9 +1,5 @@
 const NOVASTART=()=>{
 
-    DISPLAY("",`
-
-        hello
-        
-    `);
+    CLEAR("");
 
 };
