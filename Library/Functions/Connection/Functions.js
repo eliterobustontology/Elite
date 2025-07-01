@@ -7,6 +7,7 @@ import { INSERTDATA } from "../DataBase/InsertData/InsertData.js";
 import { LOCALSTORE } from "../DataBase/LocalStore/LocalStore.js";
 import { REDUX } from "../DataBase/Redux/Redux.js";
 import { SESSIONSTORE } from "../DataBase/SessionStore/SessionStore.js";
+import { UPDATEDATA } from "../DataBase/UpdateData/UpdateData.js";
 
 export const CONNECTIONFUNCTIONS=()=>{
 const DATA=`const ADD=${ADD};
@@ -18,12 +19,13 @@ const SESSIONSTORE=${SESSIONSTORE};
 const CLEAR=${CLEAR};
 const GETDATA=${GETDATA};
 const INSERTDATA=${INSERTDATA};
+const UPDATEDATA=${UPDATEDATA};
 `;
 
     localStorage.setItem('FUNCTIONS',DATA)
 };
 
 `
-const INSERTDATA=${INSERTDATA};
+const UPDATEDATA=${UPDATEDATA};
 
 `
