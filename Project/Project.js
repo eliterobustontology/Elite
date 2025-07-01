@@ -1,5 +1,3 @@
-import { INSERTDATA } from "../Library/Functions/DataBase/InsertData/InsertData";
-
 const NOVASTART=()=>{
 
     const H=["name","age"];
