@@ -1,5 +1,6 @@
 import { ADD } from "../DataBase/Add/Add.js";
 import { AUTORUN } from "../DataBase/AutoRun/AutoRun.js";
+import { CLEAR } from "../DataBase/Clear/Clear.js";
 import { DISPLAY } from "../DataBase/Display/Display.js";
 import { LOCALSTORE } from "../DataBase/LocalStore/LocalStore.js";
 import { REDUX } from "../DataBase/Redux/Redux.js";
@@ -12,12 +13,13 @@ const AUTORUN=${AUTORUN};
 const REDUX=${REDUX};
 const LOCALSTORE=${LOCALSTORE};
 const SESSIONSTORE=${SESSIONSTORE};
+const CLEAR=${CLEAR};
 `;
 
     localStorage.setItem('FUNCTIONS',DATA)
 };
 
 `
-const SESSIONSTORE=${SESSIONSTORE};
+const CLEAR=${CLEAR};
 
 `
