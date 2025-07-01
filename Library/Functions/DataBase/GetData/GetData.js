@@ -9,7 +9,7 @@ export const GETDATA=(Url,Name,callback)=>{
 
     fetch(APIS,{
         method:"POST",
-        mode:"no-cors",
+        mode:"cors",
         body:JSON.stringify(DATA)
     })
 
