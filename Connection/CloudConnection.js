@@ -54,7 +54,7 @@ export const CLOUDCONNECTION=(PATH)=>{
                         
                         <p style="color: #cdcdcd; text-align: left; font-size: 20px; margin: 5%; ">Something Went Wrong ,<br>Please Clear App Cache Data and Try Again</p>
                         
-                        <button class="Retry" style="width: 95%;margin: 2.5%;background: forestgreen;color: white;height: 50px;border-radius: 10px;border: none;">Retry</button>
+                        <button class="Retry" style="width: 95%; margin: 2.5%; background: forestgreen; color: white; height: 50px; border-radius: 10px; border: none;">Retry</button>
                         
                     `;
 
