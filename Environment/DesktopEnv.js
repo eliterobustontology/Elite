@@ -13,12 +13,12 @@ export const WEBENV=(PATH)=>{
 
         CLOUDSTART();
 
+        return;
+
     })
     .catch(error=>{console.log(error)}
     );
 
     console.log(element);
-
-    return;
 
 };

@@ -1,3 +1,4 @@
+import { ERRORPAGE } from "../Pages/ErrorPage.js";
 import { CLOUDSTART } from "./Cloud.js";
 import { NOVA } from "./CloudStart.js";
 
@@ -39,20 +40,16 @@ export const CLOUDCONNECTION=(PATH)=>{
         .then(data =>{
 
             data.forEach(element => {
-                
-                if(localStorage.getItem("NAME") !== element.ID){
-
-
-
-                    return;
-                    
-                };
 
                 if (localStorage.getItem("NAME") === element.ID ) {
 
-                    
-                    
-                    
+                    console.log(element);
+
+                      
+                }else{
+
+                    ERRORPAGE();
+
                 };
                 
             });
