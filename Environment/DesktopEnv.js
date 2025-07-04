@@ -3,7 +3,7 @@ import { NOVA } from "../Connection/CloudStart.js";
 
 export const DESKTOPENV=(PATH)=>{
 
-    fetch(PATH)
+    fetch(PATH.DesktopDesign)
     .then(res =>res.text())
     .then(data =>{
 

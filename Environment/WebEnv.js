@@ -3,7 +3,7 @@ import { NOVA } from "../Connection/CloudStart.js";
 
 export const WEBENV=(PATH)=>{
 
-    fetch(PATH)
+    fetch(PATH.WebDesign)
     .then(res =>res.text())
     .then(data =>{
 

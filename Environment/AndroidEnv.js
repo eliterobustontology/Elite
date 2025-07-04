@@ -3,7 +3,7 @@ import { NOVA } from "../Connection/CloudStart.js";
 
 export const ANDROIDENV=(PATH)=>{
 
-    fetch(PATH)
+    fetch(PATH.AndroidDesign)
     .then(res =>res.text())
     .then(data =>{
 
