@@ -1,3 +1,6 @@
+import { ANDROIDENV } from "../Environment/AndroidEnv.js";
+import { DESKTOPENV } from "../Environment/DesktopEnv.js";
+import { WEBENV } from "../Environment/WebEnv.js";
 import { ERRORPAGE } from "../Pages/ErrorPage.js";
 import { CLOUDSTART } from "./Cloud.js";
 import { NOVA } from "./CloudStart.js";
@@ -43,9 +46,24 @@ export const CLOUDCONNECTION=(PATH)=>{
 
                 if (localStorage.getItem("NAME") === element.ID ) {
 
-                    console.log(element);
+                    if (localStorage.getItem("Environment") === "Production" ) {
 
-                      
+                        ANDROIDENV(element);
+                        
+                    } else {
+
+                        if (localStorage.getItem("Environment") === "Desktop" ) {
+
+                            DESKTOPENV(element);
+                            
+                        } else {
+
+                            WEBENV(element);
+                           
+                        };
+   
+                    };
+  
                 }else{
 
                     ERRORPAGE();
