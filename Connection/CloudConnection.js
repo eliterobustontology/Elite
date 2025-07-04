@@ -73,9 +73,12 @@ export const CLOUDCONNECTION=(PATH)=>{
             });
 
         })
-        .catch(Error => console.log(Error)
-        )
+        .catch(Error => {
+
+            console.log(Error);
+
+        });
         
-    }
+    };
 
 };
