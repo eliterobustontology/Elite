@@ -6,6 +6,7 @@ import { GETDATA } from "../DataBase/GetData/GetData.js";
 import { INSERTDATA } from "../DataBase/InsertData/InsertData.js";
 import { LOCALSTORE } from "../DataBase/LocalStore/LocalStore.js";
 import { REDUX } from "../DataBase/Redux/Redux.js";
+import { ROUTE } from "../DataBase/Route/Route.js";
 import { SESSIONSTORE } from "../DataBase/SessionStore/SessionStore.js";
 import { UPDATEDATA } from "../DataBase/UpdateData/UpdateData.js";
 
@@ -20,12 +21,13 @@ const CLEAR=${CLEAR};
 const GETDATA=${GETDATA};
 const INSERTDATA=${INSERTDATA};
 const UPDATEDATA=${UPDATEDATA};
+const ROUTE=${ROUTE};
 `;
 
     localStorage.setItem('FUNCTIONS',DATA)
 };
 
 `
-const UPDATEDATA=${UPDATEDATA};
+const ROUTE=${ROUTE};
 
 `
