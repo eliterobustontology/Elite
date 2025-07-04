@@ -36,7 +36,7 @@ export const CLOUDCONNECTION=(PATH)=>{
         })
 
         .then(res => res.json())
-
+ 
         .then(data =>{
 
             data.forEach(element => {

@@ -20,4 +20,14 @@ export const ERRORPAGE=()=>{
                             
     `;
 
+    const Retry=document.querySelector(".Retry");
+
+    Retry.addEventListener("click",()=>{
+
+        localStorage.clear();
+
+        location.reload();
+        
+    });
+
 };
