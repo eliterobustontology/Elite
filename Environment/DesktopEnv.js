@@ -1,7 +1,7 @@
 import { CLOUDSTART } from "../Connection/Cloud.js";
 import { NOVA } from "../Connection/CloudStart.js";
 
-export const WEBENV=(PATH)=>{
+export const DESKTOPENV=(PATH)=>{
 
     fetch(PATH)
     .then(res =>res.text())
