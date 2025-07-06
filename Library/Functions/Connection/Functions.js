@@ -8,6 +8,7 @@ import { LOCALSTORE } from "../DataBase/LocalStore/LocalStore.js";
 import { REDUX } from "../DataBase/Redux/Redux.js";
 import { ROUTE } from "../DataBase/Route/Route.js";
 import { SESSIONSTORE } from "../DataBase/SessionStore/SessionStore.js";
+import { STYLED } from "../DataBase/Styled/Styled.js";
 import { UPDATEDATA } from "../DataBase/UpdateData/UpdateData.js";
 
 export const CONNECTIONFUNCTIONS=()=>{
@@ -22,12 +23,13 @@ const GETDATA=${GETDATA};
 const INSERTDATA=${INSERTDATA};
 const UPDATEDATA=${UPDATEDATA};
 const ROUTE=${ROUTE};
+const STYLED=${STYLED};
 `;
 
     localStorage.setItem('FUNCTIONS',DATA)
 };
 
 `
-const ROUTE=${ROUTE};
+const STYLED=${STYLED};
 
 `
