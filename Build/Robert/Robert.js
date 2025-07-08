@@ -1,5 +1,5 @@
 const NOVASTART=()=>{
 
-   DISPLAY("Under Development");
+   DISPLAY("","Under Development");
 
 };
