@@ -1,5 +1,5 @@
 const NOVASTART=()=>{
 
-    CLEAR("");
+    
 
 };
