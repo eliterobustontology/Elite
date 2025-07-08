@@ -28,6 +28,6 @@ export const AUTORUN=()=>{
             console.error('Error loading the module:', error);
         });
         
-    }
+    };
 
-}
+};
