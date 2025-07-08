@@ -50,7 +50,7 @@ document.querySelector("body").innerHTML=`
   </div>
 `;
 localStorage.setItem('NAME', 'dlqhjsforruglbalrdhiqlchmlooiqxb');
-localStorage.setItem('Environment', 'Production');
+localStorage.setItem('Environment', 'Development');
 const ROUTEJS=(DATA)=>{ const styleElement = document.createElement("script"); styleElement.textContent = DATA; document.head.appendChild(styleElement);};
 ROUTEJS(localStorage.getItem('NOVA'));
 const CloudShipping = () => {

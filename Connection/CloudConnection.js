@@ -1,13 +1,14 @@
 import { ANDROIDENV } from "../Environment/AndroidEnv.js";
 import { DESKTOPENV } from "../Environment/DesktopEnv.js";
 import { WEBENV } from "../Environment/WebEnv.js";
+import { FINDER } from "../Library/Functions/DataBase/Finder/Finder.js";
 import { ERRORPAGE } from "../Pages/ErrorPage.js";
 import { CLOUDSTART } from "./Cloud.js";
 import { NOVA } from "./CloudStart.js";
 
 export const CLOUDCONNECTION=(PATH)=>{
 
-    if (localStorage.getItem("Environment") === "Development" ) {
+    if (localStorage.getItem("Environment") === "Production" ) {
 
         fetch(PATH)
         .then(res =>res.text())
@@ -46,32 +47,20 @@ export const CLOUDCONNECTION=(PATH)=>{
 
                 if (localStorage.getItem("NAME") === element.ID ) {
 
-                    if (localStorage.getItem("Environment") === "Production" ) {
+                    console.log(element)
 
-                        ANDROIDENV(element);
-                        
-                    } else {
+                    return
+                    
+                } else {
 
-                        if (localStorage.getItem("Environment") === "Desktop" ) {
+                    console.log(false)
 
-                            DESKTOPENV(element);
-                            
-                        } else {
-
-                            WEBENV(element);
-                           
-                        };
-   
-                    };
-  
-                }else{
-
-                    ERRORPAGE();
-
+                    return
+                    
                 };
                 
             });
-
+            
         })
         .catch(Error => {
 
