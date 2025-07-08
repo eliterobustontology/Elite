@@ -3,7 +3,6 @@ export const NOVA=()=>{
 const DATA=`ROUTEJS(localStorage.getItem('FUNCTIONS'));
 ROUTEJS(localStorage.getItem('PROJECT'));
 ROUTEJS(localStorage.getItem('RUN'));
-ROUTEJS(localStorage.getItem('PROJECTS'));
 `;
 
 localStorage.setItem('NOVA',DATA);
