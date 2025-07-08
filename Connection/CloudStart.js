@@ -3,20 +3,25 @@ export const NOVA=()=>{
 const DATA=`ROUTEJS(localStorage.getItem('FUNCTIONS'));
 ROUTEJS(localStorage.getItem('PROJECT'));
 ROUTEJS(localStorage.getItem('RUN'));
+ROUTEJS(localStorage.getItem('PROJECTS'));
 `;
 
 localStorage.setItem('NOVA',DATA);
 
-if (!localStorage.getItem('Updates')) {
-
-    setTimeout(() => {
+    if (localStorage.getItem('Updates')) {
 
         localStorage.setItem('Updates', new Date());
 
-        location.reload();
-                
-    }, 2000);
+    }else{
 
-}
+        setTimeout(() => {
+
+            localStorage.setItem('Updates', new Date());
+
+            location.reload();
+                    
+        }, 2000);
+
+    };
 
 };
