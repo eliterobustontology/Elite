@@ -1,5 +1,9 @@
 const NOVASTART=()=>{
 
-   DISPLAY("","Under Development");
+   DISPLAY("",`
+
+      <h1>Updates are Read</h1>
+      
+   `);
 
 };

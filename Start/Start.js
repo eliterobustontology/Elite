@@ -2,15 +2,26 @@ import { CLOUDCONNECTION } from "../Connection/CloudConnection.js";
 import { FUNCTIONS } from "../Connection/Functions.js";
 import { COMPONENTSCONNECTION } from "../Library/Components/Connection/Connection.js";
 import { PLUGINSCONECTION } from "../Library/Plugins/Connection/Connection.js";
+import { LOADINGSECTION } from "../Pages/LoadingSection.js";
 
 export const START=()=>{
 
-    FUNCTIONS();
+    const HOLDERS=document.querySelector("body");
 
-    COMPONENTSCONNECTION();
+    if (localStorage.getItem("Updates")) {
 
-    PLUGINSCONECTION();
+        FUNCTIONS();
 
-    CLOUDCONNECTION('../Project/Project.js');
+        COMPONENTSCONNECTION();
+
+        PLUGINSCONECTION();
+
+        CLOUDCONNECTION();
+
+    } else {
+
+        LOADINGSECTION(HOLDERS);
+
+    };
    
 };

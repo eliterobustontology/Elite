@@ -6,12 +6,14 @@ import { ERRORPAGE } from "../Pages/ErrorPage.js";
 import { CLOUDSTART } from "./Cloud.js";
 import { NOVA } from "./CloudStart.js";
 
-export const CLOUDCONNECTION=(PATH)=>{
+export const CLOUDCONNECTION=()=>{
 
-    if (localStorage.getItem("Environment") === "Production" ) {
+    if (localStorage.getItem("Environment") === "Development" ) {
 
-        fetch(PATH)
+        fetch("../Project/Project.js")
+
         .then(res =>res.text())
+
         .then(data =>{
 
             localStorage.setItem('PROJECT',data);
@@ -21,8 +23,8 @@ export const CLOUDCONNECTION=(PATH)=>{
             CLOUDSTART();
 
         })
-        .catch(error=>{console.log(error)}
-        );
+
+        .catch(error=>{console.log(error)});
         
     } else {
 
@@ -49,13 +51,13 @@ export const CLOUDCONNECTION=(PATH)=>{
 
                     console.log(element)
 
-                    return
+                    return;
                     
                 } else {
 
-                    console.log(false)
+                    ERRORPAGE();
 
-                    return
+                    return;
                     
                 };
                 
