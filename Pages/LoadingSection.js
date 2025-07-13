@@ -1,4 +1,5 @@
 import { DEVELOPMENTPAGE } from "./LoadingPages/Development/Page1.js";
+import { PROJECTCONNECTION } from "./ProjectConnection.js";
 
 export const LOADINGSECTION=(HOLDERS)=>{
 
@@ -7,6 +8,8 @@ export const LOADINGSECTION=(HOLDERS)=>{
         DEVELOPMENTPAGE(HOLDERS);
         
     } else {
+
+        PROJECTCONNECTION(HOLDERS);
         
     };
 
