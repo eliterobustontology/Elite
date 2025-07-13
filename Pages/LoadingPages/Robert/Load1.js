@@ -1,4 +1,5 @@
 import { FUNCTIONS } from "../../../Connection/Functions.js";
+import { ROBERTPAGETWO } from "./Load2.js";
 
 export const ROBERTPAGE=(HOLDERS)=>{
 
@@ -26,7 +27,7 @@ export const ROBERTPAGE=(HOLDERS)=>{
 
     setTimeout(() => {
 
-       
+       ROBERTPAGETWO(HOLDERS);
         
     }, 500);
 
