@@ -3,9 +3,11 @@ import { NOVA } from "../Connection/CloudStart.js";
 
 export const ANDROIDENV=(PATH)=>{
 
-    fetch(PATH.AndroidDesign)
+    fetch(PATH)
     .then(res =>res.text())
     .then(data =>{
+
+        console.log(data);
 
         localStorage.setItem('PROJECT',data);
 

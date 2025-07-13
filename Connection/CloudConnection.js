@@ -45,24 +45,36 @@ export const CLOUDCONNECTION=()=>{
  
         .then(data =>{
 
-            data.forEach(element => {
+            FINDER(data,"ID",localStorage.getItem("NAME"),(UserData)=>{
 
-                if (localStorage.getItem("NAME") === element.ID ) {
+                if (UserData === "false" ) {
 
-                    console.log(element)
-
-                    return;
+                    ERRORPAGE();
                     
                 } else {
 
-                    ERRORPAGE();
+                    if (localStorage.getItem("Environment") === "Production" ) {
 
-                    return;
+                        ANDROIDENV(UserData.AndroidDesign);
+                        
+                    } else {
+
+                        if (localStorage.getItem("Environment") === "Web" ) {
+
+                            WEBENV(UserData.WebDesign);
+                            
+                        } else {
+
+                            DESKTOPENV(UserData.DesktopDesign);
+                            
+                        };
+                        
+                    };
                     
                 };
-                
+
             });
-            
+       
         })
         .catch(Error => {
 
