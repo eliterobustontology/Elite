@@ -2,6 +2,7 @@ import { ADD } from "../DataBase/Add/Add.js";
 import { AUTORUN } from "../DataBase/AutoRun/AutoRun.js";
 import { CLEAR } from "../DataBase/Clear/Clear.js";
 import { DISPLAY } from "../DataBase/Display/Display.js";
+import { ELEMENTED } from "../DataBase/Elemented/Elemented.js";
 import { FINDER } from "../DataBase/Finder/Finder.js";
 import { GETDATA } from "../DataBase/GetData/GetData.js";
 import { INSERTDATA } from "../DataBase/InsertData/InsertData.js";
@@ -26,12 +27,13 @@ const UPDATEDATA=${UPDATEDATA};
 const ROUTE=${ROUTE};
 const STYLED=${STYLED};
 const FINDER=${FINDER};
+const ELEMENTED=${ELEMENTED};
 `;
 
     localStorage.setItem('FUNCTIONS',DATA)
 };
 
 `
-const FINDER=${FINDER};
+const ELEMENTED=${ELEMENTED};
 
 `
