@@ -1,8 +1,17 @@
+
 const NOVASTART=()=>{
 
   CLEAR();
 
-  FOOTER("","red",(ELE)=>{
+  HEADER("","red",(ELE)=>{
+
+   TEXT(ELE,"h1","white","20px","Hello",(ElEMENT)=>{
+
+   });
+
+  });
+
+   FOOTER("","red",(ELE)=>{
 
       ADD(ELE,"Test")
 
