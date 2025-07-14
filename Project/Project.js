@@ -2,7 +2,9 @@ const NOVASTART=()=>{
 
   CLEAR();
 
-  FOOTER("","red",()=>{
+  FOOTER("","red",(ELE)=>{
+
+      ADD(ELE,"Test")
 
   });
 

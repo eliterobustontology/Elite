@@ -12,6 +12,7 @@ export const FOOTER=(HOLDER,COLOR,callback)=>{
         STYLED(ELEMENTS,"left","0");
         STYLED(ELEMENTS,"bottom","0");
         STYLED(ELEMENTS,"top","auto");
+        STYLED(ELEMENTS,"display","inline-flex");
 
         callback(ELEMENTS);
 
