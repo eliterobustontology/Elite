@@ -2,7 +2,7 @@ export const ASSETSCONNECTION=()=>{
 const DATA=`
 `;
     
-localStorage.setItem('COMPONENTS',DATA)
+localStorage.setItem('ASSETS',DATA)
 
 };
 `
