@@ -1,4 +1,3 @@
-
 const NOVASTART=()=>{
 
   CLEAR();
@@ -9,7 +8,7 @@ const NOVASTART=()=>{
 
     });
 
-    IMAGE(ELE,"h1","white","20px","Hello",(ElEMENT)=>{
+    IMAGE(ELE,WHITEMENUICON,"","20px","20px",(ElEMENT)=>{
 
     });
 
