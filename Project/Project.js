@@ -1,9 +1,9 @@
 const NOVASTART=()=>{
 
-   DISPLAY("",`
+  CLEAR();
 
-      <h1>Updates are Read</h1>
-      
-   `);
+  FOOTER("","red",()=>{
+
+  });
 
 };
