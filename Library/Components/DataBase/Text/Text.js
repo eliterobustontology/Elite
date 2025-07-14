@@ -10,6 +10,7 @@ export const TEXT=(HOLDER,TYPE,COLOR,SIZE,WORDS,callback)=>{
         STYLED(ELEMENTS,"font-family","sans-serif");
         STYLED(ELEMENTS,"display","block");
         STYLED(ELEMENTS,"text-align","center");
+        STYLED(ELEMENTS,"margin","auto");
 
         ELEMENTS.innerHTML=WORDS||"Your Text";
         

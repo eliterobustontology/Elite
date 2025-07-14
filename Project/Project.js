@@ -5,9 +5,9 @@ const NOVASTART=()=>{
 
   HEADER("","red",(ELE)=>{
 
-   TEXT(ELE,"h1","white","20px","Hello",(ElEMENT)=>{
+    TEXT(ELE,"h1","white","20px","Hello",(ElEMENT)=>{
 
-   });
+    });
 
   });
 
