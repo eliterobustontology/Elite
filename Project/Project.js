@@ -9,6 +9,10 @@ const NOVASTART=()=>{
 
     });
 
+    IMAGE(ELE,"h1","white","20px","Hello",(ElEMENT)=>{
+
+    });
+
   });
 
    FOOTER("","red",(ELE)=>{
