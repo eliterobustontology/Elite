@@ -31,8 +31,7 @@ const FINDER=${FINDER};
 const ELEMENTED=${ELEMENTED};
 const APPMODE=${APPMODE};
 `;
-
-    localStorage.setItem('FUNCTIONS',DATA)
+localStorage.setItem('FUNCTIONS',DATA)
 };
 
 `
