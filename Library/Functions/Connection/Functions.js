@@ -1,4 +1,5 @@
 import { ADD } from "../DataBase/Add/Add.js";
+import { APPMODE } from "../DataBase/AppMode/AppMode.js";
 import { AUTORUN } from "../DataBase/AutoRun/AutoRun.js";
 import { CLEAR } from "../DataBase/Clear/Clear.js";
 import { DISPLAY } from "../DataBase/Display/Display.js";
@@ -28,12 +29,13 @@ const ROUTE=${ROUTE};
 const STYLED=${STYLED};
 const FINDER=${FINDER};
 const ELEMENTED=${ELEMENTED};
+const APPMODE=${APPMODE};
 `;
 
     localStorage.setItem('FUNCTIONS',DATA)
 };
 
 `
-const ELEMENTED=${ELEMENTED};
+const APPMODE=${APPMODE};
 
 `
