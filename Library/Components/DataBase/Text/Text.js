@@ -1,7 +1,7 @@
 import { ELEMENTED } from "../../../Functions/DataBase/Elemented/Elemented.js";
 import { STYLED } from "../../../Functions/DataBase/Styled/Styled.js";
 
-export const TEXT=(HOLDER,TYPE,COLOR,SIZE,WORDS,callback)=>{
+export const TEXT=(HOLDER,TYPE,COLOR,MARGIN,SIZE,WORDS,callback)=>{
     
     ELEMENTED(HOLDER,TYPE||"p",(ELEMENTS)=>{
     
@@ -10,7 +10,7 @@ export const TEXT=(HOLDER,TYPE,COLOR,SIZE,WORDS,callback)=>{
         STYLED(ELEMENTS,"font-family","sans-serif");
         STYLED(ELEMENTS,"display","block");
         STYLED(ELEMENTS,"text-align","center");
-        STYLED(ELEMENTS,"margin","auto");
+        STYLED(ELEMENTS,"margin",MARGIN||"auto");
 
         ELEMENTS.innerHTML=WORDS||"Your Text";
         
