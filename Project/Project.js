@@ -50,6 +50,18 @@ const MOBILEVERSION=()=>{
 
     STYLED(ELEMENT,"top","49px");
 
+    TEXT(ELEMENT,"h1","white","","18px","About Us",(ELEMENTS)=>{
+
+    });
+
+    TEXT(ELEMENT,"h1","white","","18px","Our Services",(ELEMENTS)=>{
+
+    });
+
+    TEXT(ELEMENT,"h1","white","","18px","Contact Us",(ELEMENTS)=>{
+
+    });
+
   });
 
 };
