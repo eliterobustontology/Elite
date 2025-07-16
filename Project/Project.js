@@ -1,17 +1,23 @@
 const NOVASTART=()=>{
 
-  SWITCHER(100,()=>{
+  SWITCHER(800,()=>{
 
-    alert("Big Screen");
+    DESKTOPVERSION();
 
   },()=>{
 
-    alert("Small Screen");
+    MOBILEVERSION();
 
   });
 
+};
+
+const MOBILEVERSION=()=>{
+
   CLEAR();
 
+};
 
-  
+const DESKTOPVERSION=()=>{
+
 };
