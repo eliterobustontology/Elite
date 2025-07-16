@@ -16,8 +16,22 @@ const MOBILEVERSION=()=>{
 
   CLEAR();
 
+  DISPLAY("",`
+
+    mobile
+    
+  `);
+
 };
 
 const DESKTOPVERSION=()=>{
+
+  CLEAR();
+
+  DISPLAY("",`
+
+    DESKTOP
+    
+  `);
 
 };
