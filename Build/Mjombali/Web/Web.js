@@ -85,7 +85,7 @@ const MOBILEVERSION=()=>{
 
     });
 
-    DIV(ELEMENT,"95%","80%","red","block","","2%",(ELEMENTS)=>{
+    DIV(ELEMENT,"95%","80%","transparent","block","","2%",(ELEMENTS)=>{
 
       DIV(ELEMENTS,"45%","40%","green","inline-table","","2.5%",(ELEMENTS)=>{
 
