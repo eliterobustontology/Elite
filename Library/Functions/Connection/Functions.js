@@ -1,6 +1,7 @@
 import { ADD } from "../DataBase/Add/Add.js";
 import { APPMODE } from "../DataBase/AppMode/AppMode.js";
 import { AUTORUN } from "../DataBase/AutoRun/AutoRun.js";
+import { BODIED } from "../DataBase/Body/Body.js";
 import { CLEAR } from "../DataBase/Clear/Clear.js";
 import { DISPLAY } from "../DataBase/Display/Display.js";
 import { ELEMENTED } from "../DataBase/Elemented/Elemented.js";
@@ -30,11 +31,12 @@ const STYLED=${STYLED};
 const FINDER=${FINDER};
 const ELEMENTED=${ELEMENTED};
 const APPMODE=${APPMODE};
+const BODIED=${BODIED};
 `;
 localStorage.setItem('FUNCTIONS',DATA)
 };
 
 `
-const APPMODE=${APPMODE};
+const BODIED=${BODIED};
 
 `

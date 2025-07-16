@@ -1,6 +1,6 @@
 export const CLOUDSTART=()=>{
 
-const START=`AUTORUN();
+const START=`AUTORUN();BODIED();
 
 `;
 
