@@ -7,7 +7,7 @@ const NOVASTART=()=>{
   },()=>{
 
     MOBILEVERSION();
-
+0
   });
 
 };
