@@ -20,7 +20,7 @@ const MOBILEVERSION=()=>{
 
   HEADER("","forestgreen",(ELEMENT)=>{
 
-    TEXT(ELEMENT,"h1","white","auto 1% ","20px","Doctor Mjombali",(ELEMENTS)=>{
+    TEXT(ELEMENT,"h1","white","auto 3% ","20px","Doctor Mjombali",(ELEMENTS)=>{
 
     });
 
@@ -73,7 +73,11 @@ const MOBILEVERSION=()=>{
 
     });
 
-    DIV(ELEMENT,"95%","40%","green","inline-flex","","2%",(ELEMENTS)=>{
+    DIV(ELEMENT,"95%","10%","green","inline-flex","","2%",(ELEMENTS)=>{
+
+      TEXT(ELEMENTS,"h1","white","auto 3% ","16px","",(ELEMENTS)=>{
+
+      });
 
     });
 
@@ -81,7 +85,21 @@ const MOBILEVERSION=()=>{
 
     });
 
-    BREAK(ELEMENT);BREAK(ELEMENT);BREAK(ELEMENT);BREAK(ELEMENT);
+    DIV(ELEMENT,"95%","80%","red","block","","2%",(ELEMENTS)=>{
+
+      DIV(ELEMENTS,"45%","40%","green","inline-table","","2.5%",(ELEMENTS)=>{
+
+      });
+
+      DIV(ELEMENTS,"45%","40%","green","inline-table","","2.5%",(ELEMENTS)=>{
+
+      });
+
+    });
+
+    DIV(ELEMENT,"100%","100px","forestgreen","inline-flex","","",(ELEMENTS)=>{
+
+    });
 
     BREAK(ELEMENT);BREAK(ELEMENT);BREAK(ELEMENT);BREAK(ELEMENT);
 
