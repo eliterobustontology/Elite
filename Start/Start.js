@@ -3,6 +3,7 @@ import { FUNCTIONS } from "../Connection/Functions.js";
 import { ASSETSCONNECTION } from "../Library/Assets/Connection/Connection.js";
 import { COMPONENTSCONNECTION } from "../Library/Components/Connection/Connection.js";
 import { PLUGINSCONECTION } from "../Library/Plugins/Connection/Connection.js";
+import { TEMPLATES } from "../Library/Templates/Connection/Connection.js";
 import { LOADINGSECTION } from "../Pages/LoadingSection.js";
 
 export const START=()=>{
@@ -21,7 +22,11 @@ export const START=()=>{
 
         CLOUDCONNECTION();
 
+        TEMPLATES();
+
     } else {
+
+        TEMPLATES();
 
         ASSETSCONNECTION();
 

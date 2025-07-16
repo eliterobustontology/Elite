@@ -5,6 +5,7 @@ ROUTEJS(localStorage.getItem('PROJECT'));
 ROUTEJS(localStorage.getItem('RUN'));
 ROUTEJS(localStorage.getItem('COMPONENTS'));
 ROUTEJS(localStorage.getItem('ASSETS'));
+ROUTEJS(localStorage.getItem('TEMPLATES'));
 `;
 
 localStorage.setItem('NOVA',DATA);
