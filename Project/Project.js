@@ -24,11 +24,11 @@ const MOBILEVERSION=()=>{
 
     });
 
-    IMAGE(ELEMENT,WHITEWHATSAPPICON,"transparent","20px","20px","auto 30%  auto 10%",()=>{
+    LEFTIMAGE(ELEMENT,WHITEWHATSAPPICON,"transparent","20px","20px","10%",()=>{
 
     });
 
-    IMAGE(ELEMENT,WHITEWHATSAPPICON,"transparent","20px","20px","auto 30%  auto 10%",()=>{
+    RIGHTIMAGE(ELEMENT,WHITEWHATSAPPICON,"transparent","20px","20px","10%",()=>{
 
     });
 
