@@ -3,6 +3,7 @@ import { APPMODE } from "../DataBase/AppMode/AppMode.js";
 import { AUTORUN } from "../DataBase/AutoRun/AutoRun.js";
 import { BODIED } from "../DataBase/Body/Body.js";
 import { CLEAR } from "../DataBase/Clear/Clear.js";
+import { CLICK } from "../DataBase/Click/Click.js";
 import { DISPLAY } from "../DataBase/Display/Display.js";
 import { ELEMENTED } from "../DataBase/Elemented/Elemented.js";
 import { FINDER } from "../DataBase/Finder/Finder.js";
@@ -14,6 +15,7 @@ import { ROUTE } from "../DataBase/Route/Route.js";
 import { SESSIONSTORE } from "../DataBase/SessionStore/SessionStore.js";
 import { STYLED } from "../DataBase/Styled/Styled.js";
 import { UPDATEDATA } from "../DataBase/UpdateData/UpdateData.js";
+import { WHATSAPP } from "../DataBase/whatsapp/Whatsapp.js";
 
 export const CONNECTIONFUNCTIONS=()=>{
 const DATA=`const ADD=${ADD};
@@ -32,11 +34,13 @@ const FINDER=${FINDER};
 const ELEMENTED=${ELEMENTED};
 const APPMODE=${APPMODE};
 const BODIED=${BODIED};
+const WHATSAPP=${WHATSAPP};
+const CLICK=${CLICK};
 `;
 localStorage.setItem('FUNCTIONS',DATA)
 };
 
 `
-const BODIED=${BODIED};
+const CLICK=${CLICK};
 
 `
