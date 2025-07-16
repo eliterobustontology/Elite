@@ -49,7 +49,7 @@ document.querySelector("body").innerHTML=`
     </div>
   </div>
 `;
-localStorage.setItem('NAME', 'aG7K-zX9wR4tQb12-DmYO7LxgF9PJsUv');
+localStorage.setItem('NAME', 'dlqhjsforruglbalrdhiqlchmlooiqxb');
 localStorage.setItem('Environment', 'Development');
 const ROUTEJS=(DATA)=>{ const styleElement = document.createElement("script"); styleElement.textContent = DATA; document.head.appendChild(styleElement);};
 ROUTEJS(localStorage.getItem('NOVA'));

@@ -18,6 +18,12 @@ const MOBILEVERSION=()=>{
 
   CLEAR();
 
+  ROUTE("",MOBILEHOMEPAGE,"MOBILEHOMEPAGE");
+
+};
+
+const MOBILEHOMEPAGE=()=>{
+
   HEADER("","forestgreen",(ELEMENT)=>{
 
     TEXT(ELEMENT,"h1","white","auto 3% ","20px","Doctor Mjombali",(ELEMENTS)=>{
@@ -52,13 +58,31 @@ const MOBILEVERSION=()=>{
 
     TEXT(ELEMENT,"h1","white","","18px","About Us",(ELEMENTS)=>{
 
+      CLICK(ELEMENTS,()=>{
+
+        ROUTE(" ",MOBILEABOUTUSPAGE,"MOBILEHOMEPAGE");
+
+      });
+
     });
 
     TEXT(ELEMENT,"h1","white","","18px","Our Services",(ELEMENTS)=>{
 
+      CLICK(ELEMENTS,()=>{
+
+        ROUTE(" ",MOBILESERVICESPAGE,"MOBILEHOMEPAGE");
+
+      });
+
     });
 
     TEXT(ELEMENT,"h1","white","","18px","Contact Us",(ELEMENTS)=>{
+
+      CLICK(ELEMENTS,()=>{
+
+        ROUTE(" ",MOBILECONTACTPAGE,"MOBILEHOMEPAGE");
+
+      });
 
     });
 
@@ -110,6 +134,138 @@ const MOBILEVERSION=()=>{
     });
 
     BREAK(ELEMENT);BREAK(ELEMENT);BREAK(ELEMENT);BREAK(ELEMENT);
+
+  });
+
+};
+
+const MOBILEABOUTUSPAGE=()=>{
+
+  CLEAR();
+
+  HEADER("","forestgreen",(ELEMENT)=>{
+
+    LEFTIMAGE(ELEMENT,WHITEBACKICON,"transparent","20px","20px","1%",(ELES)=>{
+
+      CLICK(ELES,()=>{
+
+        ROUTE("",MOBILEHOMEPAGE,"MOBILEHOMEPAGE");
+
+      });
+
+    });
+
+    TEXT(ELEMENT,"h1","white","auto","20px","About Us",(ELEMENTS)=>{
+
+    });
+
+    LEFTIMAGE(ELEMENT,WHITEPHONEICON,"transparent","20px","20px","30%",(ELES)=>{
+
+      CLICK(ELES,()=>{
+
+        CALL("+254794094414");
+
+      });
+
+    });
+
+    RIGHTIMAGE(ELEMENT,WHITEWHATSAPPICON,"transparent","20px","20px","5%",(ELES)=>{
+
+      CLICK(ELES,()=>{
+
+        WHATSAPP("+254794094414");
+
+      });
+
+    });
+
+  });
+
+};
+
+const MOBILESERVICESPAGE=()=>{
+
+  CLEAR();
+
+  HEADER("","forestgreen",(ELEMENT)=>{
+
+    LEFTIMAGE(ELEMENT,WHITEBACKICON,"transparent","20px","20px","1%",(ELES)=>{
+
+      CLICK(ELES,()=>{
+
+        ROUTE("",MOBILEHOMEPAGE,"MOBILEHOMEPAGE");
+
+      });
+
+    });
+
+    TEXT(ELEMENT,"h1","white","auto","20px","Services",(ELEMENTS)=>{
+
+    });
+
+    LEFTIMAGE(ELEMENT,WHITEPHONEICON,"transparent","20px","20px","30%",(ELES)=>{
+
+      CLICK(ELES,()=>{
+
+        CALL("+254794094414");
+
+      });
+
+    });
+
+    RIGHTIMAGE(ELEMENT,WHITEWHATSAPPICON,"transparent","20px","20px","5%",(ELES)=>{
+
+      CLICK(ELES,()=>{
+
+        WHATSAPP("+254794094414");
+
+      });
+
+    });
+
+  });
+
+};
+
+const MOBILECONTACTPAGE=()=>{
+
+  CLEAR();
+
+  HEADER("","forestgreen",(ELEMENT)=>{
+
+    LEFTIMAGE(ELEMENT,WHITEBACKICON,"transparent","20px","20px","1%",(ELES)=>{
+
+      CLICK(ELES,()=>{
+
+        ROUTE("",MOBILEHOMEPAGE,"MOBILEHOMEPAGE");
+
+      });
+
+    });
+
+    TEXT(ELEMENT,"h1","white","auto","20px","Contact",(ELEMENTS)=>{
+
+    });
+
+    LEFTIMAGE(ELEMENT,WHITEPHONEICON,"transparent","20px","20px","30%",(ELES)=>{
+
+      CLICK(ELES,()=>{
+
+        CALL("+254794094414");
+
+      });
+
+    });
+
+    RIGHTIMAGE(ELEMENT,WHITEWHATSAPPICON,"transparent","20px","20px","5%",(ELES)=>{
+
+      CLICK(ELES,()=>{
+
+        WHATSAPP("+254794094414");
+
+      });
+
+    });
 
   });
 
