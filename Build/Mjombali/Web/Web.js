@@ -129,7 +129,7 @@ const MOBILEHOMEPAGE=()=>{
 
     });
 
-    DIV(ELEMENT,"95%","10%","teal","inline-flex","","2.5%",(ELEMENTS)=>{
+    DIV(ELEMENT,"95%","50px","teal","inline-flex","","2.5%",(ELEMENTS)=>{
 
       STYLED(ELEMENTS,"border-radius","50px");
 
