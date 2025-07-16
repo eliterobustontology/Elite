@@ -109,7 +109,7 @@ const MOBILEHOMEPAGE=()=>{
 
     });
 
-    DIV(ELEMENT,"95%","80%","red","block","","2%",(ELEMENTS)=>{
+    DIV(ELEMENT,"95%","80%","transparent","block","","2%",(ELEMENTS)=>{
 
       DIV(ELEMENTS,"45%","45%","green","inline-table","","2.5%",(ELEMENTS)=>{
 
@@ -134,6 +134,12 @@ const MOBILEHOMEPAGE=()=>{
       STYLED(ELEMENTS,"border-radius","50px");
 
       TEXT(ELEMENTS,"h1","white","auto ","16px","Check All Services",(ELEMENTS)=>{
+
+      });
+
+      CLICK(ELEMENTS,()=>{
+
+        ROUTE(" ",MOBILESERVICESPAGE,"MOBILEHOMEPAGE");
 
       });
 
