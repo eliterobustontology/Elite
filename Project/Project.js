@@ -28,7 +28,13 @@ const MOBILEVERSION=()=>{
 
     });
 
-    RIGHTIMAGE(ELEMENT,WHITEWHATSAPPICON,"transparent","20px","20px","5%",()=>{
+    RIGHTIMAGE(ELEMENT,WHITEWHATSAPPICON,"transparent","20px","20px","5%",(ELES)=>{
+
+      CLICK(ELES,()=>{
+
+        WHATSAPP("+254794094414");
+
+      });
 
     });
 
