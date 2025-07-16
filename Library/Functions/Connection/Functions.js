@@ -2,6 +2,7 @@ import { ADD } from "../DataBase/Add/Add.js";
 import { APPMODE } from "../DataBase/AppMode/AppMode.js";
 import { AUTORUN } from "../DataBase/AutoRun/AutoRun.js";
 import { BODIED } from "../DataBase/Body/Body.js";
+import { BREAK } from "../DataBase/Break/Break.js";
 import { CALL } from "../DataBase/Call/Call.js";
 import { CLEAR } from "../DataBase/Clear/Clear.js";
 import { CLICK } from "../DataBase/Click/Click.js";
@@ -38,11 +39,12 @@ const BODIED=${BODIED};
 const WHATSAPP=${WHATSAPP};
 const CLICK=${CLICK};
 const CALL=${CALL};
+const BREAK=${BREAK};
 `;
 localStorage.setItem('FUNCTIONS',DATA)
 };
 
 `
-const CALL=${CALL};
+const BREAK=${BREAK};
 
 `

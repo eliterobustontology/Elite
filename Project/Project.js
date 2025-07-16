@@ -64,14 +64,26 @@ const MOBILEVERSION=()=>{
 
   });
 
-  DIV("","100%","100%","red","block","","",(ELEMENT)=>{
+  DIV("","100%","100%","transparent","block","auto","",(ELEMENT)=>{
 
     STYLED(ELEMENT,"top","49px");
     STYLED(ELEMENT,"bottom","0")
 
-    DIV(ELEMENT,"95%","30%","green","inline-flex","","2%",(ELEMENTS)=>{
+    DIV(ELEMENT,"95%","40%","green","inline-flex","","2%",(ELEMENTS)=>{
 
     });
+
+    DIV(ELEMENT,"95%","40%","green","inline-flex","","2%",(ELEMENTS)=>{
+
+    });
+
+    DIV(ELEMENT,"95%","40%","green","inline-flex","","2%",(ELEMENTS)=>{
+
+    });
+
+    BREAK(ELEMENT);BREAK(ELEMENT);BREAK(ELEMENT);BREAK(ELEMENT);
+
+    BREAK(ELEMENT);BREAK(ELEMENT);BREAK(ELEMENT);BREAK(ELEMENT);
 
   });
 
