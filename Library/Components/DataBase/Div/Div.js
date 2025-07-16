@@ -1,7 +1,7 @@
 import { ELEMENTED } from "../../../Functions/DataBase/Elemented/Elemented.js";
 import { STYLED } from "../../../Functions/DataBase/Styled/Styled.js";
 
-export const DIV=(HOLDER,WIDTH,HEIGHT,COLOR,DISPLAY,SCROLL,callback)=>{
+export const DIV=(HOLDER,WIDTH,HEIGHT,COLOR,DISPLAY,SCROLL,MARGIN,callback)=>{
     
     ELEMENTED(HOLDER,"div",(ELEMENTS)=>{
     
@@ -11,6 +11,7 @@ export const DIV=(HOLDER,WIDTH,HEIGHT,COLOR,DISPLAY,SCROLL,callback)=>{
         STYLED(ELEMENTS,"background",COLOR||"#cdcdcd");
         STYLED(ELEMENTS,"display",DISPLAY||"block");
         STYLED(ELEMENTS,"overflow",SCROLL||"hidden");
+        STYLED(ELEMENTS,"margin",MARGIN||"auto");
 
         callback(ELEMENTS);
         

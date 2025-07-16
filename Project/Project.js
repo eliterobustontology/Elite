@@ -64,6 +64,17 @@ const MOBILEVERSION=()=>{
 
   });
 
+  DIV("","100%","100%","red","block","",(ELEMENT)=>{
+
+    STYLED(ELEMENT,"top","49px");
+    STYLED(ELEMENT,"bottom","0")
+
+    DIV(ELEMENT,"95%","30%","green","inline-flex","auto 2%",(ELEMENTS)=>{
+
+    });
+
+  });
+
 };
 
 const DESKTOPVERSION=()=>{
