@@ -46,6 +46,12 @@ const MOBILEVERSION=()=>{
 
   });
 
+  DIV("","100%","50px","forestgreen","inline-flex","",(ELEMENT)=>{
+
+    STYLED(ELEMENT,"top","49px");
+
+  });
+
 };
 
 const DESKTOPVERSION=()=>{
