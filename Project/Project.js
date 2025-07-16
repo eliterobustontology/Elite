@@ -24,7 +24,13 @@ const MOBILEVERSION=()=>{
 
     });
 
-    LEFTIMAGE(ELEMENT,WHITEPHONEICON,"transparent","20px","20px","30%",()=>{
+    LEFTIMAGE(ELEMENT,WHITEPHONEICON,"transparent","20px","20px","30%",(ELES)=>{
+
+      CLICK(ELES,()=>{
+
+        CALL("+254794094414");
+
+      });
 
     });
 
