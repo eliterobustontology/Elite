@@ -95,6 +95,14 @@ const MOBILEVERSION=()=>{
 
       });
 
+      DIV(ELEMENTS,"45%","40%","green","inline-table","","2.5%",(ELEMENTS)=>{
+
+      });
+
+      DIV(ELEMENTS,"45%","40%","green","inline-table","","2.5%",(ELEMENTS)=>{
+
+      });
+
     });
 
     DIV(ELEMENT,"100%","100px","forestgreen","inline-flex","","",(ELEMENTS)=>{
