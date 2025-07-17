@@ -16,6 +16,7 @@ import { LOCALSTORE } from "../DataBase/LocalStore/LocalStore.js";
 import { REDUX } from "../DataBase/Redux/Redux.js";
 import { ROUTE } from "../DataBase/Route/Route.js";
 import { SESSIONSTORE } from "../DataBase/SessionStore/SessionStore.js";
+import { STOREINDEXED } from "../DataBase/StoreIndexed/StoreIndexed.js";
 import { STYLED } from "../DataBase/Styled/Styled.js";
 import { UPDATEDATA } from "../DataBase/UpdateData/UpdateData.js";
 import { WHATSAPP } from "../DataBase/whatsapp/Whatsapp.js";
@@ -41,11 +42,13 @@ const WHATSAPP=${WHATSAPP};
 const CLICK=${CLICK};
 const CALL=${CALL};
 const BREAK=${BREAK};
+const INPUTED=${INPUTED};
+const STOREINDEXED=${STOREINDEXED};
 `;
 localStorage.setItem('FUNCTIONS',DATA)
 };
 
 `
-const BREAK=${INPUTED};
+const STOREINDEXED=${STOREINDEXED};
 
 `
