@@ -24,6 +24,8 @@ const MOBILEVERSION=()=>{
 
 const MOBILEHOMEPAGE=()=>{
 
+  CLEAR();
+
   HEADER("","forestgreen",(ELEMENT)=>{
 
     TEXT(ELEMENT,"h1","white","auto 3% ","20px","Doctor Mjombali",(ELEMENTS)=>{
