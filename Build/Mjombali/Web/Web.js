@@ -1,4 +1,29 @@
+const LINK="https://docs.google.com/spreadsheets/d/1PjMlNtQy4kWMgcd9_J8b1XyXYEklEeGa3w7kDw786IQ/edit?usp=sharing";
+
 const NOVASTART=()=>{
+
+  GETDATA(LINK,"Services",(data)=>{
+
+    const Data={
+      "Name":"Services",
+      "data":data
+    };
+  
+    if (localStorage.getItem("Services")) {
+
+        console.log("Updates Not Yet");
+
+    } else {
+
+      STOREINDEXED("Services","Services",Data,(de)=>{
+
+        LOCALSTORE("Services","One")
+
+      });
+      
+    };
+
+  });
 
   APPMODE("White");
 
@@ -276,10 +301,46 @@ const MOBILESERVICESPAGE=()=>{
 
   });
 
-  DIV("","100%","100%","transparent","block","auto","",(ELEMENT)=>{
+  DIV("","100%","90%","transparent","block","auto","",(ELEMENT)=>{
 
     STYLED(ELEMENT,"top","49px");
-    STYLED(ELEMENT,"bottom","0")
+    STYLED(ELEMENT,"bottom","10px");
+
+    GETINDEXED('Services', "Services", (data)=>{
+
+      REDUX(data,(Element)=>{
+
+        console.log(Element)
+
+        REDUX(Element.data,(Elementd)=>{
+
+          DIV(ELEMENT,"45%","45%","transparent","inline-table","","2%",(ELEMENTS)=>{
+
+            IMAGE(ELEMENTS,Elementd.Image,"","100%","100%","",()=>{
+
+            });
+
+            STYLED(ELEMENTS,"bottom","50px")
+            STYLED(ELEMENTS,"top","50px");
+            STYLED(ELEMENTS,"border","0.1px solid forestgreen");
+
+            FOOTER(ELEMENTS,"forestgreen",(ELEMENTSES)=>{
+
+              STYLED(ELEMENTSES,"height","100px");
+
+              TEXT(ELEMENTSES,"h1","white","auto","20px",Elementd.Name,(ELEMENTS)=>{
+
+              });
+
+            });
+
+          });
+
+        });
+
+      });
+
+    });
 
   });
 
@@ -331,6 +392,15 @@ const MOBILECONTACTPAGE=()=>{
 
     STYLED(ELEMENT,"top","49px");
     STYLED(ELEMENT,"bottom","0")
+
+    INPUT(ELEMENT,"95%","","2%","forestgreen","password","Password",(ELEMENTS)=>{
+
+      STYLED(ELEMENTS,"border","1px solid forestgreen");
+      STYLED(ELEMENTS,"border-radius","10px");
+
+      console.log(ELEMENTS.value)
+
+    });
 
   });
 
