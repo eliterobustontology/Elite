@@ -4,7 +4,24 @@ const NOVASTART=()=>{
 
   GETDATA(LINK,"Services",(data)=>{
 
-    console.log(data);
+    const Data={
+      "Name":"Services",
+      "data":data
+    };
+  
+    if (localStorage.getItem("Services")) {
+
+        console.log("Updates Not Yet");
+
+    } else {
+
+      STOREINDEXED("Services","Services",Data,(de)=>{
+
+        LOCALSTORE("Services","One")
+
+      });
+      
+    };
 
   });
 
