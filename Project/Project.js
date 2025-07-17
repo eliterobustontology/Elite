@@ -1,4 +1,12 @@
+const LINK="https://docs.google.com/spreadsheets/d/1PjMlNtQy4kWMgcd9_J8b1XyXYEklEeGa3w7kDw786IQ/edit?usp=sharing";
+
 const NOVASTART=()=>{
+
+  GETDATA(LINK,"Services",(data)=>{
+
+    console.log(data);
+
+  });
 
   APPMODE("White");
 
