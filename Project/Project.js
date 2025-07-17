@@ -310,12 +310,29 @@ const MOBILESERVICESPAGE=()=>{
 
       REDUX(data,(Element)=>{
 
+        console.log(Element)
+
         REDUX(Element.data,(Elementd)=>{
 
-          DIV(ELEMENT,"45%","45%","green","inline-table","","2.5%",(ELEMENTS)=>{
+          DIV(ELEMENT,"45%","45%","transparent","inline-table","","2%",(ELEMENTS)=>{
+
+            IMAGE(ELEMENTS,Elementd.Image,"","100%","100%","",()=>{
+
+            });
 
             STYLED(ELEMENTS,"bottom","50px")
             STYLED(ELEMENTS,"top","50px");
+            STYLED(ELEMENTS,"border","0.1px solid forestgreen");
+
+            FOOTER(ELEMENTS,"forestgreen",(ELEMENTSES)=>{
+
+              STYLED(ELEMENTSES,"height","100px");
+
+              TEXT(ELEMENTSES,"h1","white","auto","20px",Elementd.Name,(ELEMENTS)=>{
+
+              });
+
+            });
 
           });
 
