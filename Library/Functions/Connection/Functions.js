@@ -10,6 +10,7 @@ import { DISPLAY } from "../DataBase/Display/Display.js";
 import { ELEMENTED } from "../DataBase/Elemented/Elemented.js";
 import { FINDER } from "../DataBase/Finder/Finder.js";
 import { GETDATA } from "../DataBase/GetData/GetData.js";
+import { INPUTED } from "../DataBase/Inputed/Inputted.js";
 import { INSERTDATA } from "../DataBase/InsertData/InsertData.js";
 import { LOCALSTORE } from "../DataBase/LocalStore/LocalStore.js";
 import { REDUX } from "../DataBase/Redux/Redux.js";
@@ -45,6 +46,6 @@ localStorage.setItem('FUNCTIONS',DATA)
 };
 
 `
-const BREAK=${BREAK};
+const BREAK=${INPUTED};
 
 `
