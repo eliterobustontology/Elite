@@ -332,6 +332,10 @@ const MOBILECONTACTPAGE=()=>{
     STYLED(ELEMENT,"top","49px");
     STYLED(ELEMENT,"bottom","0")
 
+    INPUT(ELEMENT,"95%","","","orange","password","Password",(ELEMENTS)=>{
+
+    });
+
   });
 
 };
