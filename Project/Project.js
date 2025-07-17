@@ -332,7 +332,12 @@ const MOBILECONTACTPAGE=()=>{
     STYLED(ELEMENT,"top","49px");
     STYLED(ELEMENT,"bottom","0")
 
-    INPUT(ELEMENT,"95%","","","orange","password","Password",(ELEMENTS)=>{
+    INPUT(ELEMENT,"95%","","2%","forestgreen","password","Password",(ELEMENTS)=>{
+
+      STYLED(ELEMENTS,"border","1px solid forestgreen");
+      STYLED(ELEMENTS,"border-radius","10px");
+
+      console.log(ELEMENTS.value)
 
     });
 

@@ -5,7 +5,7 @@ export const INPUT=(HOLDER,WIDTH,HEIGHT,MARGIN,COLOR,TYPE,PLACE,callback)=>{
 
     ELEMENTED(HOLDER,"input",(ELEMENTS)=>{
 
-        STYLED(ELEMENTS,"color",COLOR);
+        STYLED(ELEMENTS,"color",COLOR||"#000000");
         STYLED(ELEMENTS,"width",WIDTH||"95%");
         STYLED(ELEMENTS,"height",HEIGHT||"32px");
         STYLED(ELEMENTS,"margin",MARGIN||"auto");
