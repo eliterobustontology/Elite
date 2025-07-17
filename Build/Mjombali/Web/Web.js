@@ -197,6 +197,39 @@ const MOBILEABOUTUSPAGE=()=>{
 
   });
 
+  DIV("","100%","100%","transparent","block","auto","",(ELEMENT)=>{
+
+    const Message=`Renowned African witch doctor and spiritual Healer.
+    <br><br>
+    With decades of experience in traditional African healing practices, Dr. Mjombali combines ancestral wisdom, spiritual guidance and potent rituals to provide transformative solutions to life's most challenging problems. Whether you are seeking help with love, prosperity protection and spiritual guidance.
+    <br><br>
+    Dr.Mjombali offers authentic, personalised services rooted in ancient African traditions.
+    <br><br>
+    As a trusted healer Dr. Mjombali works with the forces of nature, ancestral spirits, and powerful rituals to bring balance, healing, and clarity to your life. With a compassionate heart and profound knowledge, Dr. Mjombali is committed to chihelping you overcome obstacles and and achive peace, succes, and happiness.
+    <br><br>
+    Explore the services offered, and discover how Dr.Mjombali can guide you on your path to spiritural renewal and empowerment.
+    `;
+
+    STYLED(ELEMENT,"top","49px");
+    STYLED(ELEMENT,"bottom","0")
+
+    TEXT(ELEMENT,"h1","forestgreen","5% 3% ","23px","Doctor Mjombali",(ELEMENTS)=>{
+
+    });
+
+    TEXT(ELEMENT,"p","#000000","2% 3% ","18px",Message,(ELEMENTS)=>{
+
+      STYLED(ELEMENTS,"text-align","left")
+
+    });
+
+    DIV(ELEMENT,"100%","100px","forestgreen","inline-flex","","",(ELEMENTS)=>{
+
+    });
+
+    BREAK(ELEMENT);BREAK(ELEMENT);BREAK(ELEMENT);
+  });
+
 };
 
 const MOBILESERVICESPAGE=()=>{
@@ -241,6 +274,13 @@ const MOBILESERVICESPAGE=()=>{
 
   });
 
+  DIV("","100%","100%","transparent","block","auto","",(ELEMENT)=>{
+
+    STYLED(ELEMENT,"top","49px");
+    STYLED(ELEMENT,"bottom","0")
+
+  });
+
 };
 
 const MOBILECONTACTPAGE=()=>{
@@ -282,6 +322,13 @@ const MOBILECONTACTPAGE=()=>{
       });
 
     });
+
+  });
+
+  DIV("","100%","100%","transparent","block","auto","",(ELEMENT)=>{
+
+    STYLED(ELEMENT,"top","49px");
+    STYLED(ELEMENT,"bottom","0")
 
   });
 
