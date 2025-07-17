@@ -315,7 +315,7 @@ const MOBILESERVICESPAGE=()=>{
           DIV(ELEMENT,"45%","45%","green","inline-table","","2.5%",(ELEMENTS)=>{
 
             STYLED(ELEMENTS,"bottom","50px")
-            STYLED(ELEMENTS,"top","50px")
+            STYLED(ELEMENTS,"top","50px");
 
           });
 
