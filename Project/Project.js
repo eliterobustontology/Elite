@@ -197,6 +197,13 @@ const MOBILEABOUTUSPAGE=()=>{
 
   });
 
+  DIV("","100%","100%","transparent","block","auto","",(ELEMENT)=>{
+
+    STYLED(ELEMENT,"top","49px");
+    STYLED(ELEMENT,"bottom","0")
+
+  });
+
 };
 
 const MOBILESERVICESPAGE=()=>{
@@ -241,6 +248,13 @@ const MOBILESERVICESPAGE=()=>{
 
   });
 
+  DIV("","100%","100%","transparent","block","auto","",(ELEMENT)=>{
+
+    STYLED(ELEMENT,"top","49px");
+    STYLED(ELEMENT,"bottom","0")
+
+  });
+
 };
 
 const MOBILECONTACTPAGE=()=>{
@@ -282,6 +296,13 @@ const MOBILECONTACTPAGE=()=>{
       });
 
     });
+
+  });
+
+  DIV("","100%","100%","transparent","block","auto","",(ELEMENT)=>{
+
+    STYLED(ELEMENT,"top","49px");
+    STYLED(ELEMENT,"bottom","0")
 
   });
 
