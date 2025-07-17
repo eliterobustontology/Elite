@@ -301,10 +301,29 @@ const MOBILESERVICESPAGE=()=>{
 
   });
 
-  DIV("","100%","100%","transparent","block","auto","",(ELEMENT)=>{
+  DIV("","100%","90%","transparent","block","auto","",(ELEMENT)=>{
 
     STYLED(ELEMENT,"top","49px");
-    STYLED(ELEMENT,"bottom","0")
+    STYLED(ELEMENT,"bottom","10px");
+
+    GETINDEXED('Services', "Services", (data)=>{
+
+      REDUX(data,(Element)=>{
+
+        REDUX(Element.data,(Elementd)=>{
+
+          DIV(ELEMENT,"45%","45%","green","inline-table","","2.5%",(ELEMENTS)=>{
+
+            STYLED(ELEMENTS,"bottom","50px")
+            STYLED(ELEMENTS,"top","50px")
+
+          });
+
+        });
+
+      });
+
+    });
 
   });
 

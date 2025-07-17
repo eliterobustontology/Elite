@@ -10,6 +10,7 @@ import { DISPLAY } from "../DataBase/Display/Display.js";
 import { ELEMENTED } from "../DataBase/Elemented/Elemented.js";
 import { FINDER } from "../DataBase/Finder/Finder.js";
 import { GETDATA } from "../DataBase/GetData/GetData.js";
+import { GETINDEXED } from "../DataBase/GetIndex/GetIndex.js";
 import { INPUTED } from "../DataBase/Inputed/Inputted.js";
 import { INSERTDATA } from "../DataBase/InsertData/InsertData.js";
 import { LOCALSTORE } from "../DataBase/LocalStore/LocalStore.js";
@@ -44,11 +45,12 @@ const CALL=${CALL};
 const BREAK=${BREAK};
 const INPUTED=${INPUTED};
 const STOREINDEXED=${STOREINDEXED};
+const GETINDEXED=${GETINDEXED};
 `;
 localStorage.setItem('FUNCTIONS',DATA)
 };
 
 `
-const STOREINDEXED=${STOREINDEXED};
+const GETINDEXED=${GETINDEXED};
 
 `
