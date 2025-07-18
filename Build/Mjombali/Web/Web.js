@@ -152,19 +152,69 @@ const MOBILEHOMEPAGE=()=>{
     STYLED(ELEMENT,"top","49px");
     STYLED(ELEMENT,"bottom","0")
 
-    DIV(ELEMENT,"95%","40%","green","inline-flex","","2%",(ELEMENTS)=>{
+    DIV(ELEMENT,"95%","40%","transparent","inline-flex","","2%",(ELEMENTS)=>{
+
+      TEXT(ELEMENT,"h1","","5% 5% ","25px","Traditional African Healer",(ELEMENTS)=>{
+
+        STYLED(ELEMENTS,"position","absolute");
+        STYLED(ELEMENTS,"top","100px");
+        STYLED(ELEMENTS,"font-weight","bold");
+
+      });
+
+      IMAGE(ELEMENTS,"https://th.bing.com/th/id/OIP.kSJG2Aha0Ia458vYGgivVgHaE8?w=259&h=180&c=7&r=0&o=7&pid=1.7&rm=3","","100%","100%","",()=>{
+
+      });
+
+      TEXT(ELEMENT,"p","orange","5% 5% ","18px","Most Experienced Witch Doctor and Traditional Healer In Africa .",(ELEMENTS)=>{
+
+        STYLED(ELEMENTS,"position","absolute");
+        STYLED(ELEMENTS,"top","150px");
+  
+      });
 
     });
 
-    DIV(ELEMENT,"95%","10%","green","inline-flex","","2%",(ELEMENTS)=>{
+    TEXT(ELEMENT,"p","forestgreen","auto","18px","About Doctor Mjombali",(ELEMENTS)=>{
 
-      TEXT(ELEMENTS,"h1","white","auto 3% ","16px","",(ELEMENTS)=>{
+    });
+
+    const Message=`Renowned African witch doctor and spiritual Healer.
+    <br><br>
+    With decades of experience in traditional African healing practices, Dr. Mjombali combines ancestral wisdom, spiritual guidance and potent rituals to provide transformative solutions to life's most challenging problems. Whether you are seeking help with love, prosperity protection and spiritual guidance.
+    <br><br>
+    Dr.Mjombali offers authentic, personalised services rooted in ancient African traditions.
+    <br><br>
+    As a trusted healer Dr. Mjombali works with the forces of nature, ancestral spirits, and powerful rituals to bring balance, healing, and clarity to your life. With a compassionate heart and profound knowledge, Dr. Mjombali is committed to chihelping you overcome obstacles and and achive peace, succes, and happiness.
+    <br><br>
+    Explore the services offered, and discover how Dr.Mjombali can guide you on your path to spiritural renewal and empowerment.
+    `;
+
+    DIV(ELEMENT,"95%","40%","transparent","","","2%",(ELEMENTS)=>{
+
+      TEXT(ELEMENTS,"p","#000000","2% 3% ","18px",Message,(ELEMENTS)=>{
+
+        STYLED(ELEMENTS,"text-align","left")
 
       });
 
     });
 
-    DIV(ELEMENT,"95%","40%","green","inline-flex","","2%",(ELEMENTS)=>{
+    DIV(ELEMENT,"95%","10%","green","inline-flex","","2%",(ELEMENTS)=>{
+
+      TEXT(ELEMENTS,"h1","white","auto 3% ","16px","location",(ELEMENTS)=>{
+
+      });
+
+      RIGHTIMAGE(ELEMENTS,WHITEWHATSAPPICON,"transparent","20px","20px","5%",(ELES)=>{
+
+      });
+
+      CLICK(ELEMENTS,()=>{
+
+        WHATSAPP("+254794094414");
+
+      });
 
     });
 
