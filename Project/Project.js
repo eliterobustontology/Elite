@@ -463,25 +463,23 @@ const MOBILESERVICESPAGE=()=>{
 
   DIV("","100%","90%","transparent","block","auto","",(ELEMENT)=>{
 
-    STYLED(ELEMENT,"top","49px");
+    STYLED(ELEMENT,"top","50px");
     STYLED(ELEMENT,"bottom","10px");
 
     GETINDEXED('Services', "Services", (data)=>{
 
       REDUX(data,(Element)=>{
 
-        console.log(Element)
-
         REDUX(Element.data,(Elementd)=>{
 
-          DIV(ELEMENT,"45%","45%","transparent","inline-table","","2%",(ELEMENTS)=>{
+          DIV(ELEMENT,"45%","45%","transparent","inline-table","","0% 2%",(ELEMENTS)=>{
 
             IMAGE(ELEMENTS,Elementd.Image,"","100%","100%","",()=>{
 
             });
 
             STYLED(ELEMENTS,"bottom","50px")
-            STYLED(ELEMENTS,"top","50px");
+            STYLED(ELEMENTS,"top","10px");
             STYLED(ELEMENTS,"border","0.1px solid forestgreen");
 
             FOOTER(ELEMENTS,"forestgreen",(ELEMENTSES)=>{
