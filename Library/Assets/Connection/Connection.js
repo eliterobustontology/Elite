@@ -1,4 +1,5 @@
 import { WHITEBACKICON } from "../DataBase/WhiteIcons/Back/Back.js";
+import { WHITEFACEBOOKICON } from "../DataBase/WhiteIcons/FaceBook/FaceBook.js";
 import { WHITEINSTAGRAMICON } from "../DataBase/WhiteIcons/Instagram/Instagram.js";
 import { WHITELOCATIONICON } from "../DataBase/WhiteIcons/Location/Location.js";
 import { WHITEMENUICON } from "../DataBase/WhiteIcons/Menu/Menu.js";
@@ -12,12 +13,13 @@ const WHITEWHATSAPPICON="${WHITEWHATSAPPICON}";
 const WHITEBACKICON="${WHITEBACKICON}";
 const WHITELOCATIONICON="${WHITELOCATIONICON}";
 const WHITEINSTAGRAMICON="${WHITEINSTAGRAMICON}";
+const WHITEFACEBOOKICON="${WHITEFACEBOOKICON}";
 `;
     
 localStorage.setItem('ASSETS',DATA)
 
 };
 `
-const WHITEINSTAGRAMICON="${WHITEINSTAGRAMICON}";
+const WHITEFACEBOOKICON="${WHITEFACEBOOKICON}";
 
 `
