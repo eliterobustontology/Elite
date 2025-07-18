@@ -11,7 +11,9 @@ const NOVASTART=()=>{
   
     if (localStorage.getItem("Services")) {
 
-        console.log("Updates Not Yet");
+      UPDATEINDEX ("Services", "Services", Data, ()=>{
+
+      })
 
     } else {
 
@@ -39,6 +41,34 @@ const NOVASTART=()=>{
 
 };
 
+const UPDATES=()=>{
+    
+  GETDATA(LINK,"Services",(data)=>{
+
+    const Data={
+      "Name":"Services",
+      "data":data
+    };
+  
+    if (localStorage.getItem("Services")) {
+
+      UPDATEINDEX ("Services", "Services", Data, ()=>{
+
+      })
+
+    } else {
+
+      STOREINDEXED("Services","Services",Data,(de)=>{
+
+        LOCALSTORE("Services","One")
+
+      });
+      
+    };
+
+  });
+}
+
 const MOBILEVERSION=()=>{
 
   CLEAR();
@@ -48,6 +78,8 @@ const MOBILEVERSION=()=>{
 };
 
 const MOBILEHOMEPAGE=()=>{
+
+  UPDATES();
 
   CLEAR();
 
@@ -259,6 +291,8 @@ const MOBILEHOMEPAGE=()=>{
 };
 
 const MOBILEABOUTUSPAGE=()=>{
+
+
 
   CLEAR();
 
