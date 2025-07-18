@@ -206,7 +206,7 @@ const MOBILEHOMEPAGE=()=>{
 
       });
 
-      RIGHTIMAGE(ELEMENTS,WHITEWHATSAPPICON,"transparent","20px","20px","5%",(ELES)=>{
+      RIGHTIMAGE(ELEMENTS,WHITELOCATIONICON,"transparent","20px","20px","5%",(ELES)=>{
 
       });
 
