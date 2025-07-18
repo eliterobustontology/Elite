@@ -777,7 +777,7 @@ const MOBILECONTACTPAGE=()=>{
 
     DIV(ELEMENT,"95%","10%","green","inline-flex","","2%",(ELEMENTS)=>{
 
-      LEFTIMAGE(ELEMENTS,WHITEWHATSAPPICON,"transparent","20px","20px","10%",(ELES)=>{
+      LEFTIMAGE(ELEMENTS,WHITEINSTAGRAMICON,"transparent","20px","20px","10%",(ELES)=>{
 
       });
 
