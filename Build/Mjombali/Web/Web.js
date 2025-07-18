@@ -85,7 +85,7 @@ const MOBILEHOMEPAGE=()=>{
 
   HEADER("","forestgreen",(ELEMENT)=>{
 
-    TEXT(ELEMENT,"h1","white","auto 3% ","20px","Doctor Mjombali",(ELEMENTS)=>{
+    TEXT(ELEMENT,"h1","white","auto 3% ","20px","Doctor Mjomb Ali",(ELEMENTS)=>{
 
     });
 
@@ -175,7 +175,7 @@ const MOBILEHOMEPAGE=()=>{
 
     });
 
-    TEXT(ELEMENT,"p","forestgreen","auto","18px","About Doctor Mjombali",(ELEMENTS)=>{
+    TEXT(ELEMENT,"p","forestgreen","auto","18px","About Doctor Mjomb Ali",(ELEMENTS)=>{
 
     });
 
@@ -206,7 +206,7 @@ const MOBILEHOMEPAGE=()=>{
 
       });
 
-      RIGHTIMAGE(ELEMENTS,WHITEWHATSAPPICON,"transparent","20px","20px","5%",(ELES)=>{
+      RIGHTIMAGE(ELEMENTS,WHITELOCATIONICON,"transparent","20px","20px","5%",(ELES)=>{
 
       });
 
