@@ -811,6 +811,14 @@ const MOBILECONTACTPAGE=()=>{
 
     });
 
+    TEXT(ELEMENT,"h1","forestgreen","5% 3% ","20px","Location",(ELEMENTS)=>{
+
+    });
+
+    TEXT(ELEMENT,"h1","teal","5% 3% ","20px","located in Western Kenya",(ELEMENTS)=>{
+
+    });
+
   });
 
 };
