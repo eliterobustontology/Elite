@@ -20,6 +20,7 @@ import { SESSIONSTORE } from "../DataBase/SessionStore/SessionStore.js";
 import { STOREINDEXED } from "../DataBase/StoreIndexed/StoreIndexed.js";
 import { STYLED } from "../DataBase/Styled/Styled.js";
 import { UPDATEDATA } from "../DataBase/UpdateData/UpdateData.js";
+import { UPDATEINDEX } from "../DataBase/UpdateIndex/UpdateIndex.js";
 import { WHATSAPP } from "../DataBase/whatsapp/Whatsapp.js";
 
 export const CONNECTIONFUNCTIONS=()=>{
@@ -46,11 +47,12 @@ const BREAK=${BREAK};
 const INPUTED=${INPUTED};
 const STOREINDEXED=${STOREINDEXED};
 const GETINDEXED=${GETINDEXED};
+const UPDATEINDEX=${UPDATEINDEX};
 `;
 localStorage.setItem('FUNCTIONS',DATA)
 };
 
 `
-const GETINDEXED=${GETINDEXED};
+const UPDATEINDEX=${UPDATEINDEX};
 
 `
