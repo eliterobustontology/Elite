@@ -3,6 +3,8 @@ import { WHITEADDPERSONICON } from "../DataBase/WhiteIcons/AddPerson/AddPerson.j
 import { WHITEANDROIDICON } from "../DataBase/WhiteIcons/Android/Android.js";
 import { WHITEAPPICON } from "../DataBase/WhiteIcons/App/AppIcon.js";
 import { WHITEBACKICON } from "../DataBase/WhiteIcons/Back/Back.js";
+import { WHITEBAGICON } from "../DataBase/WhiteIcons/Bag/Bag.js";
+import { WHITEBICYCLEICON } from "../DataBase/WhiteIcons/Bicycle/Bicycle.js";
 import { WHITEFACEBOOKICON } from "../DataBase/WhiteIcons/FaceBook/FaceBook.js";
 import { WHITEINFOICON } from "../DataBase/WhiteIcons/Info/Info.js";
 import { WHITEINSTAGRAMICON } from "../DataBase/WhiteIcons/Instagram/Instagram.js";
@@ -30,12 +32,14 @@ const WHITEANDROIDICON="${WHITEANDROIDICON}";
 const WHITEAPPICON="${WHITEAPPICON}";
 const WHITELEFTBACKICON="${WHITELEFTBACKICON}";
 const WHITESONGBACKICON="${WHITESONGBACKICON}";
+const WHITEBAGICON="${WHITEBAGICON}";
+const WHITEBICYCLEICON="${WHITEBICYCLEICON}";
 `;
     
 localStorage.setItem('ASSETS',DATA)
 
 };
 `
-const WHITESONGBACKICON="${WHITESONGBACKICON}";
+const WHITEBICYCLEICON="${WHITEBICYCLEICON}";
 
 `
