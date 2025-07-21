@@ -320,33 +320,6 @@ const JSONADDER = (data, contents, callback) => {
     const updatedJSON = JSON.stringify(MYDATA);
     callback(updatedJSON);
 };
-const INSPECTION = () => {
-    if (localStorage.getItem("Environment") === "Development") {
-    } else {
-        document.addEventListener("contextmenu", function (e) {
-            e.preventDefault();
-        });
-        document.addEventListener("keydown", function (e) {
-            if (e.key === "F12" || (e.ctrlKey && e.shiftKey && (e.key === "I" || e.key === "J"))) {
-                e.preventDefault();
-            }
-        });
-        document.addEventListener("keydown", function (e) {
-            if (e.ctrlKey && e.key === "u") {
-                e.preventDefault();
-            }
-        });
-        const detectDevTools = () => {
-            const threshold = 160;
-            const devToolsOpen = window.outerWidth - window.innerWidth > threshold || window.outerHeight - window.innerHeight > threshold;
-            if (devToolsOpen) {
-                window.resizeTo(window.outerWidth - 1, window.outerHeight - 1);
-                window.resizeTo(window.outerWidth + 1, window.outerHeight + 1);
-            }
-        };
-        setInterval(detectDevTools, 100);
-    }
-};
 const FINDER = (DATA, ELEMENT, ELEMENT1, ACTION) => {
     const user = DATA.find((item) => item[ELEMENT] === ELEMENT1);
     return ACTION(user ? user : false);
@@ -651,22 +624,7 @@ const MONTHTIME = (inputDate, callback) => {
         console.error("Provided callback is not a function.");
     }
 };
-const URLCOLLECTOR = () => {
-    const url = new URL(window.location.href);
-    const queryParams = {};
-    url.searchParams.forEach((value, key) => {
-        queryParams[key] = value;
-    });
-    const hash = url.hash ? url.hash.substring(1) : null;
-    const pathSegments = url.pathname.split("/").filter((seg) => seg);
-    const dataToStore = { query: Object.keys(queryParams).length ? queryParams : null, hash: hash || null, path: pathSegments.length ? pathSegments : null, origin: url.origin, fullUrl: url.href };
-    Object.keys(dataToStore).forEach((key) => {
-        if (dataToStore[key] === null) {
-            delete dataToStore[key];
-        }
-    });
-    sessionStorage.setItem("urlInfo", JSON.stringify(dataToStore));
-};
+
 const DEVICE = (callback) => {
     const deviceInfo = {
         userAgent: navigator.userAgent,
@@ -1196,24 +1154,6 @@ const POSTDRIVEFILE = (FILENAME, FILEDATA, DRIVEFOLDER, callback, callback1) => 
             callback1(error);
         });
 };
-const URLCOLLECTED = (L, C) => {
-    try {
-        const u = new URL(L),
-            q = {};
-        u.searchParams.forEach((v, k) => {
-            q[k] = v;
-        });
-        const h = u.hash ? u.hash.substring(1) : null,
-            p = u.pathname.split("/").filter((s) => s),
-            d = { query: Object.keys(q).length ? q : null, hash: h || null, path: p.length ? p : null, origin: u.origin, fullUrl: u.href };
-        Object.keys(d).forEach((k) => {
-            if (d[k] === null) delete d[k];
-        });
-        if (typeof C === "function") C(d);
-    } catch (e) {
-        console.error("Invalid URL or processing error:", e);
-    }
-};
 const NAMING = (ELEMENT) => {
     return document.querySelector(ELEMENT);
 };
@@ -1224,9 +1164,6 @@ const SCROLLPOINT = (POINT) => {
             element.scrollIntoView({ behavior: "smooth" });
         }
     }
-};
-const FUNCTIONED = (ELEMENT, FUNCTION, callback) => {
-    ELEMENT.addEventListener(FUNCTION, callback);
 };
 const GETINDEXEDNONDATA = (dbName, storeName, callback) => {
     const initialRequest = indexedDB.open(dbName);

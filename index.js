@@ -1,3 +1,30 @@
+const INSINSPECTION = () => {
+    if (localStorage.getItem("Environment") === "Development") {
+    } else {
+        document.addEventListener("contextmenu", function (e) {
+            e.preventDefault();
+        });
+        document.addEventListener("keydown", function (e) {
+            if (e.key === "F12" || (e.ctrlKey && e.shiftKey && (e.key === "I" || e.key === "J"))) {
+                e.preventDefault();
+            }
+        });
+        document.addEventListener("keydown", function (e) {
+            if (e.ctrlKey && e.key === "u") {
+                e.preventDefault();
+            }
+        });
+        const detectDevTools = () => {
+            const threshold = 160;
+            const devToolsOpen = window.outerWidth - window.innerWidth > threshold || window.outerHeight - window.innerHeight > threshold;
+            if (devToolsOpen) {
+                window.resizeTo(window.outerWidth - 1, window.outerHeight - 1);
+                window.resizeTo(window.outerWidth + 1, window.outerHeight + 1);
+            }
+        };
+        setInterval(detectDevTools, 100);
+    }
+};
 const style = document.createElement('style');
 style.textContent = `
 html,body {
@@ -67,7 +94,9 @@ const CloudShipping = () => {
     });
 };
 if (localStorage.getItem('Updates')) {
+  INSINSPECTION();
     NOVASTART();
     } else {
+    INSINSPECTION();
     CloudShipping();
 };

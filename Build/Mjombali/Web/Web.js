@@ -175,7 +175,7 @@ const MOBILEHOMEPAGE=()=>{
 
     });
 
-    TEXT(ELEMENT,"p","forestgreen","auto","18px","About Doctor Mjomb Ali",(ELEMENTS)=>{
+    TEXT(ELEMENT,"h2","forestgreen","auto","18px","About Doctor Mjomb Ali",(ELEMENTS)=>{
 
     });
 
@@ -479,6 +479,36 @@ const MOBILEHOMEPAGE=()=>{
 
     DIV(ELEMENT,"100%","100px","forestgreen","inline-flex","","",(ELEMENTS)=>{
 
+      TEXT(ELEMENTS,"h1","white","5%","18px","Policies",(ELEMENTS)=>{
+
+        CLICK(ELEMENTS,()=>{
+
+          ROUTE(" ",MOBILEABOUTUSPAGE,"MOBILEHOMEPAGE");
+
+        });
+
+      });
+
+      TEXT(ELEMENTS,"h1","white","5%","18px","Tech Support",(ELEMENTS)=>{
+
+        CLICK(ELEMENTS,()=>{
+
+          ROUTE(" ",MOBILESERVICESPAGE,"MOBILEHOMEPAGE");
+
+        });
+
+      });
+
+      TEXT(ELEMENTS,"h1","white","5%","18px","App",(ELEMENTS)=>{
+
+        CLICK(ELEMENTS,()=>{
+
+          ROUTE(" ",MOBILECONTACTPAGE,"MOBILEHOMEPAGE");
+
+        });
+
+      });
+
     });
 
     BREAK(ELEMENT);BREAK(ELEMENT);BREAK(ELEMENT);BREAK(ELEMENT);
@@ -488,8 +518,6 @@ const MOBILEHOMEPAGE=()=>{
 };
 
 const MOBILEABOUTUSPAGE=()=>{
-
-
 
   CLEAR();
 
@@ -558,6 +586,36 @@ const MOBILEABOUTUSPAGE=()=>{
     });
 
     DIV(ELEMENT,"100%","100px","forestgreen","inline-flex","","",(ELEMENTS)=>{
+
+      TEXT(ELEMENTS,"h1","white","5%","18px","Policies",(ELEMENTS)=>{
+
+        CLICK(ELEMENTS,()=>{
+
+          ROUTE(" ",MOBILEABOUTUSPAGE,"MOBILEHOMEPAGE");
+
+        });
+
+      });
+
+      TEXT(ELEMENTS,"h1","white","5%","18px","Tech Support",(ELEMENTS)=>{
+
+        CLICK(ELEMENTS,()=>{
+
+          ROUTE(" ",MOBILESERVICESPAGE,"MOBILEHOMEPAGE");
+
+        });
+
+      });
+
+      TEXT(ELEMENTS,"h1","white","5%","18px","App",(ELEMENTS)=>{
+
+        CLICK(ELEMENTS,()=>{
+
+          ROUTE(" ",MOBILECONTACTPAGE,"MOBILEHOMEPAGE");
+
+        });
+
+      });
 
     });
 

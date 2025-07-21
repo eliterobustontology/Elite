@@ -9,10 +9,12 @@ import { CLICK } from "../DataBase/Click/Click.js";
 import { DISPLAY } from "../DataBase/Display/Display.js";
 import { ELEMENTED } from "../DataBase/Elemented/Elemented.js";
 import { FINDER } from "../DataBase/Finder/Finder.js";
+import { FUNCTIONED } from "../DataBase/Functioned/Functioned.js";
 import { GETDATA } from "../DataBase/GetData/GetData.js";
 import { GETINDEXED } from "../DataBase/GetIndex/GetIndex.js";
 import { INPUTED } from "../DataBase/Inputed/Inputted.js";
 import { INSERTDATA } from "../DataBase/InsertData/InsertData.js";
+import { INSPECTION } from "../DataBase/Inspect/Inspect.js";
 import { LOCALSTORE } from "../DataBase/LocalStore/LocalStore.js";
 import { REDUX } from "../DataBase/Redux/Redux.js";
 import { ROUTE } from "../DataBase/Route/Route.js";
@@ -21,6 +23,8 @@ import { STOREINDEXED } from "../DataBase/StoreIndexed/StoreIndexed.js";
 import { STYLED } from "../DataBase/Styled/Styled.js";
 import { UPDATEDATA } from "../DataBase/UpdateData/UpdateData.js";
 import { UPDATEINDEX } from "../DataBase/UpdateIndex/UpdateIndex.js";
+import { URLCOLLECTED } from "../DataBase/UrlCollected/UrlCollected.js";
+import { URLCOLLECTOR } from "../DataBase/UrlCollector/UrlCollector.js";
 import { WHATSAPP } from "../DataBase/whatsapp/Whatsapp.js";
 
 export const CONNECTIONFUNCTIONS=()=>{
@@ -48,11 +52,15 @@ const INPUTED=${INPUTED};
 const STOREINDEXED=${STOREINDEXED};
 const GETINDEXED=${GETINDEXED};
 const UPDATEINDEX=${UPDATEINDEX};
+const INSPECTION=${INSPECTION};
+const URLCOLLECTED=${URLCOLLECTED};
+const FUNCTIONED=${FUNCTIONED};
+const URLCOLLECTOR=${URLCOLLECTOR};
 `;
 localStorage.setItem('FUNCTIONS',DATA)
 };
 
 `
-const UPDATEINDEX=${UPDATEINDEX};
+const URLCOLLECTOR=${URLCOLLECTOR};
 
 `

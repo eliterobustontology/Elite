@@ -51,6 +51,33 @@ html,body {
   </div>
 </body>
 <script>
+const INSTANTINSPECTION = () => {
+  if (localStorage.getItem("Environment") === "Development") {
+  } else {
+    document.addEventListener("contextmenu", function (e) {
+            e.preventDefault();
+      });
+        document.addEventListener("keydown", function (e) {
+            if (e.key === "F12" || (e.ctrlKey && e.shiftKey && (e.key === "I" || e.key === "J"))) {
+                e.preventDefault();
+            }
+        });
+        document.addEventListener("keydown", function (e) {
+            if (e.ctrlKey && e.key === "u") {
+                e.preventDefault();
+            }
+        });
+        const detectDevTools = () => {
+            const threshold = 160;
+            const devToolsOpen = window.outerWidth - window.innerWidth > threshold || window.outerHeight - window.innerHeight > threshold;
+            if (devToolsOpen) {
+                window.resizeTo(window.outerWidth - 1, window.outerHeight - 1);
+                window.resizeTo(window.outerWidth + 1, window.outerHeight + 1);
+            }
+        };
+        setInterval(detectDevTools, 100);
+    }
+};
 localStorage.setItem('NAME', 'aG7K-zX9wR4tQb12-DmYO7LxgF9PJsUv');
 localStorage.setItem('Environment', 'Web');
 const ROUTEJS=(DATA)=>{ const styleElement = document.createElement("script"); styleElement.textContent = DATA; document.head.appendChild(styleElement);};
@@ -73,5 +100,6 @@ if (localStorage.getItem('Updates')) {
   } else {
     CloudShipping();
 };
+INSTANTINSPECTION();
 </script>
 </html>
