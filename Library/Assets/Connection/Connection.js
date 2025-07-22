@@ -1,5 +1,6 @@
 import { WHITEADDICON } from "../DataBase/WhiteIcons/Add/Add.js";
 import { WHITEADDPERSONICON } from "../DataBase/WhiteIcons/AddPerson/AddPerson.js";
+import { WHITEAIRPLANEICON } from "../DataBase/WhiteIcons/AirPlane/AirPlane.js";
 import { WHITEANDROIDICON } from "../DataBase/WhiteIcons/Android/Android.js";
 import { WHITEAPPICON } from "../DataBase/WhiteIcons/App/AppIcon.js";
 import { WHITEBACKICON } from "../DataBase/WhiteIcons/Back/Back.js";
@@ -55,12 +56,19 @@ import { WHITENEXTSONGICON } from "../DataBase/WhiteIcons/NextSong/NextSong.js";
 import { WHITENOSTOPPINGICON } from "../DataBase/WhiteIcons/NoStopping/NoStopping.js";
 import { WHITENOTIFICATIONICON } from "../DataBase/WhiteIcons/Notification/Notification.js";
 import { WHITENOWIFIICON } from "../DataBase/WhiteIcons/NoWifi/NoWifi.js";
+import { WHITEONLINESHOPPINGICON } from "../DataBase/WhiteIcons/OnlineShopping/OnlineShopping.js";
+import { WHITEPARENTALCONTROLICON } from "../DataBase/WhiteIcons/ParentalControl/ParentalControl.js";
+import { WHITEPAUSEICON } from "../DataBase/WhiteIcons/Pause/Pause.js";
+import { WHITEPENCILICON } from "../DataBase/WhiteIcons/Pencil/Pencil.js";
 import { WHITEPHONEICON } from "../DataBase/WhiteIcons/Phone/Phone.js";
+import { WHITEPLAYICON } from "../DataBase/WhiteIcons/Play/Play.js";
 import { WHITERETRYICON } from "../DataBase/WhiteIcons/Retry/Retry.js";
 import { WHITESETTINGSICON } from "../DataBase/WhiteIcons/Settings/Settings.js";
 import { WHITESHOPPINGCART } from "../DataBase/WhiteIcons/ShoppingCart/ShoppingCart.js";
 import { WHITEMENUSHORTICON } from "../DataBase/WhiteIcons/ShortMenu/ShortMenu.js";
 import { WHITESONGBACKICON } from "../DataBase/WhiteIcons/SongBack/SongBack.js";
+import { WHITETIKTOKICON } from "../DataBase/WhiteIcons/Tiktok/Tiktik.js";
+import { WHITEUSERPROFILEICON } from "../DataBase/WhiteIcons/UserProfile/UserProfile.js";
 import { WHITEWHATSAPPICON } from "../DataBase/WhiteIcons/Whatsapp/Whatsapp.js";
 import { WHITEXICON } from "../DataBase/WhiteIcons/X/X.js";
 
@@ -130,12 +138,20 @@ const WHITENEXTSONGICON="${WHITENEXTSONGICON}";
 const WHITENOSTOPPINGICON="${WHITENOSTOPPINGICON}";
 const WHITENOTIFICATIONICON="${WHITENOTIFICATIONICON}";
 const WHITENOWIFIICON="${WHITENOWIFIICON}";
+const WHITEONLINESHOPPINGICON="${WHITEONLINESHOPPINGICON}";
+const WHITEPARENTALCONTROLICON="${WHITEPARENTALCONTROLICON}";
+const WHITEPAUSEICON="${WHITEPAUSEICON}";
+const WHITEPENCILICON="${WHITEPENCILICON}";
+const WHITEAIRPLANEICON="${WHITEAIRPLANEICON}";
+const WHITEPLAYICON="${WHITEPLAYICON}";
+const WHITEUSERPROFILEICON="${WHITEUSERPROFILEICON}";
+const WHITETIKTOKICON="${WHITETIKTOKICON}";
 `;
     
 localStorage.setItem('ASSETS',DATA);
 
 };
 `
-const WHITENOWIFIICON="${WHITENOWIFIICON}";
+const WHITETIKTOKICON="${WHITETIKTOKICON}";
 
 `
