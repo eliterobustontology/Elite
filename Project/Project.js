@@ -26,11 +26,11 @@ const MOBILEHOMEPAGE=()=>{
 
   HEADER("","Navy",(ELEMENT)=>{
 
-    TEXT(ELEMENT,"h1","","auto 1%","20px","Elite",()=>{
+    TEXT(ELEMENT,"h1","","auto 2%","20px","Elite",()=>{
 
     });
 
-    RIGHTIMAGE(ELEMENT,WHITEMENUICON,"","20px","20px","1%",()=>{
+    RIGHTIMAGE(ELEMENT,WHITEMENUICON,"","20px","20px","2%",()=>{
 
     });
 
