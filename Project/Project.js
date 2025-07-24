@@ -2,11 +2,19 @@ const NOVASTART=()=>{
 
   CLEAR();
 
+  SWITCHER(800,()=>{
 
+    DESKTOPVERSION();
+
+  },()=>{
+
+    MOBILEVERSION();
+
+  });
 
 };
 
-const MOBILE=()=>{
+const MOBILEVERSION=()=>{
 
   ROUTE("",MOBILEHOMEPAGE,"MOBILEHOMEPAGE");
 
@@ -19,5 +27,11 @@ const MOBILEHOMEPAGE=()=>{
   HEADER("","Navy",(ELEMENT)=>{
 
   });
+
+};
+
+const DESKTOPVERSION=()=>{
+
+  ROUTE("",MOBILEHOMEPAGE,"MOBILEHOMEPAGE");
 
 };
