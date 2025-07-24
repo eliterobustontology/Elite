@@ -26,6 +26,10 @@ const MOBILEHOMEPAGE=()=>{
 
   HEADER("","Navy",(ELEMENT)=>{
 
+    TEXT(ELEMENT,"h1","","auto 1%","20px","Elite",()=>{
+
+    });
+
   });
 
 };
