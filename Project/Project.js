@@ -30,6 +30,10 @@ const MOBILEHOMEPAGE=()=>{
 
     });
 
+    RIGHTIMAGE(ELEMENT,WHITEMENUICON,"","20px","20px","1%",()=>{
+
+    });
+
   });
 
 };
