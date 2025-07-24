@@ -1,5 +1,5 @@
 import { COMPONENTSCONNECTION } from "../../../Library/Components/Connection/Connection.js";
-import { MJOMBALIPAGETHREE } from "./Load3.js";
+import { ELITEPAGETHREE } from "./Load3.js";
 
 export const ELITEPAGETWO=(HOLDERS)=>{
 
@@ -27,7 +27,7 @@ export const ELITEPAGETWO=(HOLDERS)=>{
 
     setTimeout(() => {
 
-        MJOMBALIPAGETHREE(HOLDERS);
+        ELITEPAGETHREE(HOLDERS);
       
     }, 500);
 

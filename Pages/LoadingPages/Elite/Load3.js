@@ -1,5 +1,5 @@
 import { PLUGINSCONECTION } from "../../../Library/Plugins/Connection/Connection.js";
-import { MJOMBALIPAGEFOUR } from "./Load4.js";
+import { ELITEPAGEFOUR } from "./Load4.js";
 
 export const ELITEPAGETHREE=(HOLDERS)=>{
 
@@ -27,7 +27,7 @@ export const ELITEPAGETHREE=(HOLDERS)=>{
 
     setTimeout(() => {
 
-        MJOMBALIPAGEFOUR(HOLDERS);
+        ELITEPAGEFOUR(HOLDERS);
         
     }, 500);
 

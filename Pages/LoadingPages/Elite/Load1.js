@@ -1,5 +1,5 @@
 import { FUNCTIONS } from "../../../Connection/Functions.js";
-import { MJOMBALIPAGETWO } from "./Load2.js";
+import { ELITEPAGETWO } from "./Load2.js";
 
 
 export const ELITEPAGE=(HOLDERS)=>{
@@ -28,7 +28,7 @@ export const ELITEPAGE=(HOLDERS)=>{
 
     setTimeout(() => {
 
-       MJOMBALIPAGETWO(HOLDERS);
+       ELITEPAGETWO(HOLDERS);
         
     }, 500);
 
