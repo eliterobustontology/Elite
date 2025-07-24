@@ -825,12 +825,6 @@ const MOBILECONTACTPAGE=()=>{
 
       });
 
-      CLICK(ELEMENTS,()=>{
-
-        WHATSAPP("+254794094414");
-
-      });
-
     });
 
     DIV(ELEMENT,"95%","10%","green","inline-flex","","2%",(ELEMENTS)=>{
@@ -840,12 +834,6 @@ const MOBILECONTACTPAGE=()=>{
       });
 
       TEXT(ELEMENTS,"h1","white","auto 3% ","16px","Instagram",(ELEMENTS)=>{
-
-      });
-
-      CLICK(ELEMENTS,()=>{
-
-        WHATSAPP("+254794094414");
 
       });
 
