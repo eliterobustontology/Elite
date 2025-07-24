@@ -36,6 +36,12 @@ const MOBILEHOMEPAGE=()=>{
 
   });
 
+  DIV("","","","transparent","block","auto","",(ELEMENT)=>{
+
+    STYLED(ELEMENT,"top","50px");
+
+  });
+
 };
 
 const DESKTOPVERSION=()=>{
