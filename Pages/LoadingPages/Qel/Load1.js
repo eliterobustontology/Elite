@@ -1,8 +1,6 @@
 import { FUNCTIONS } from "../../../Connection/Functions.js";
 import { QELPAGETWO } from "./Load2.js";
 
-
-
 export const QELPAGE=(HOLDERS)=>{
 
     FUNCTIONS();
