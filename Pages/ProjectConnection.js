@@ -1,5 +1,6 @@
 import { ELITEPAGE } from "./LoadingPages/Elite/Load1.js";
 import { MJOMBALIPAGE } from "./LoadingPages/Mjombali/Load1.js";
+import { QELPAGE } from "./LoadingPages/Qel/Load1.js";
 import { ROBERTPAGE } from "./LoadingPages/Robert/Load1.js"
 
 export const PROJECTCONNECTION=(HOLDERS)=>{
@@ -35,5 +36,14 @@ export const PROJECTCONNECTION=(HOLDERS)=>{
         return;
         
     };
+
+    if (localStorage.getItem("NAME") === "17ea81ea-b4fa-4b7a-8f3e-10ef438b880f" ) {
+
+        QELPAGE(HOLDERS);
+
+        return;
+        
+    };
+
 
 };
