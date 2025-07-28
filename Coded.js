@@ -136,37 +136,7 @@ const VISITOR = (API, NAME) => {
         }
     );
 };
-const VIDEOPICKER = (videoElement, callback) => {
-    const input = document.createElement("input");
-    input.type = "file";
-    input.style.display = "none";
-    input.accept = "video/*";
-    document.body.appendChild(input);
-    input.addEventListener("change", function () {
-        var file = this.files[0];
-        if (!file) return;
-        var reader = new FileReader();
-        reader.onload = function (event) {
-            var base64Data = event.target.result;
-            var compressedBase64Data = resizeBase64Data(base64Data, 49800);
-            if (compressedBase64Data) {
-                videoElement.src = compressedBase64Data;
-                callback(compressedBase64Data);
-            } else {
-                TOAST("Unable to resize the video data within the character limit.");
-            }
-        };
-        reader.readAsDataURL(file);
-    });
-    input.click();
-    input.remove();
-    function resizeBase64Data(base64Data, targetSize) {
-        if (base64Data.length <= targetSize) {
-            return base64Data;
-        }
-        return base64Data.substring(0, targetSize);
-    }
-};
+
 const UPDATEINDEX = (dbName, storeName, data, callback) => {
     const request = indexedDB.open(dbName);
     request.onsuccess = function (event) {
@@ -198,17 +168,7 @@ const UPDATEINDEX = (dbName, storeName, data, callback) => {
         console.error("Error opening database", event.target.error);
     };
 };
-const EMAILSENDER = (EMAIL, SUBJECT, MESSAGE, callback, callback1) => {
-    const DATA = { recipientEmail: EMAIL, subject: SUBJECT, body: MESSAGE };
-    fetch("https://script.google.com/macros/s/AKfycbyC-L2ywxLAfkjU7L8A4dgpJDnK4E26_ilcuHiQ1r0ZmACUgv7WEzoLbrCRnjJLd7Akdg/exec", { method: "Post", mode: "cors", body: JSON.stringify(DATA) })
-        .then((res) => res.json())
-        .then((data) => {
-            callback(data);
-        })
-        .catch((error) => {
-            callback1(error);
-        });
-};
+
 const GETINDEXEDDATA = (dbName, storeName, callback) => {
     const initialRequest = indexedDB.open(dbName);
     initialRequest.onsuccess = function (event) {
@@ -247,18 +207,7 @@ const GETINDEXEDDATA = (dbName, storeName, callback) => {
         console.error("Error opening database", event.target.error);
     };
 };
-const OPERATINGSYSTEM = () => {
-    const userAgent = navigator.userAgent || navigator.vendor || window.opera;
-    let os = "Unknown OS";
-    if (/windows phone/i.test(userAgent)) os = "Windows Phone";
-    else if (/win/i.test(userAgent)) os = "Windows";
-    else if (/android/i.test(userAgent)) os = "Android";
-    else if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) os = "iOS";
-    else if (/Macintosh/i.test(userAgent)) os = "MacOS";
-    else if (/Linux/i.test(userAgent)) os = "Linux";
-    localStorage.setItem("OperatingSystem", os);
-    return os;
-};
+
 const GETTEXTPACKAGE = (LINK, POLICY, callback, callback1) => {
     fetch(LINK, { method: "Get", mode: POLICY || "no-cors" })
         .then((res) => res.text())
@@ -289,30 +238,7 @@ const GETDRIVEFILE = (DATA, callback, callback1) => {
             callback1(error);
         });
 };
-const FILEPICKER = (callback) => {
-    const input = document.createElement("input");
-    input.type = "file";
-    input.style.display = "none";
-    input.accept = "*/*";
-    document.body.appendChild(input);
-    input.addEventListener("change", function () {
-        var file = this.files[0];
-        if (!file) return;
-        const MAX_SIZE = 10 * 1024 * 1024;
-        if (file.size > MAX_SIZE) {
-            TOAST("The file is too large. Please select a file smaller than 10MB.");
-            return;
-        }
-        var reader = new FileReader();
-        reader.onload = function (event) {
-            var base64Data = event.target.result;
-            callback(base64Data);
-        };
-        reader.readAsDataURL(file);
-    });
-    input.click();
-    input.remove();
-};
+
 const QELMAIL = (EMAIL, SUBJECT, MESSAGE, callback, callback1) => {
     const DATA = { recipientEmail: EMAIL, subject: SUBJECT, body: MESSAGE };
     fetch("https://script.google.com/macros/s/AKfycbzLPkLfp0XdfRYYIS3oBOOJ67yIWMM67gnOWkJO9YRoNsDjxxM6cZtexgWeBBbBNcL9og/exec", { method: "Post", mode: "cors", body: JSON.stringify(DATA) })
@@ -450,53 +376,9 @@ const HOSTINGUPDATER = () => {
             .catch((error) => console.log(error));
     }
 };
-const SERVERCONNECTION = (PATH, FUNS) => {
-    if (localStorage.getItem("Environment") === "Development") {
-        import(`../library/Server/${PATH}`)
-            .then((module) => {
-                if (typeof module[FUNS] === "function") {
-                    module[FUNS]();
-                } else {
-                    console.error(`${FUNS} is not defined in the module or is not a function`);
-                }
-            })
-            .catch((error) => {
-                console.error("Error loading the module:", error);
-            });
-    } else {
-        import(`https://eroinnovations.github.io/Elite-Robust-Ontology/library/Server/${PATH}`)
-            .then((module) => {
-                if (typeof module[FUNS] === "function") {
-                    module[FUNS]();
-                } else {
-                    console.error(`${FUNS} is not defined in the module or is not a function`);
-                }
-            })
-            .catch((error) => {
-                console.error("Error loading the module:", error);
-            });
-    }
-};
 
-const ACCOUNTCHECKER = (HomeCallBack, VerificationCallBack, LoginCallBack) => {
-    CONDITION(
-        localStorage.getItem("UserData"),
-        () => {
-            HomeCallBack();
-        },
-        () => {
-            CONDITION(
-                localStorage.getItem("VeriifcationCode"),
-                () => {
-                    VerificationCallBack();
-                },
-                () => {
-                    LoginCallBack();
-                }
-            );
-        }
-    );
-};
+
+
 const STOREINDEXEDDATA = (API, NAME) => {
     CHECKER(navigator.onLine, () => {
         GETDATA(

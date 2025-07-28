@@ -1,3 +1,4 @@
+import { ACCOUNTCHECKER } from "../DataBase/AccouintChecker/AccountChecker.js";
 import { ADD } from "../DataBase/Add/Add.js";
 import { APPMODE } from "../DataBase/AppMode/AppMode.js";
 import { AUDIOPICKER } from "../DataBase/AudioPicker/AudioPicker.js";
@@ -22,8 +23,10 @@ import { DISPLAY } from "../DataBase/Display/Display.js";
 import { DOWNLOADIMAGE } from "../DataBase/DownloadImage/DownloadImage.js";
 import { DOWNLOADSAVEINDEX } from "../DataBase/DownloadSaveIndex/DownloadSaveIndex.js";
 import { ELEMENTED } from "../DataBase/Elemented/Elemented.js";
+import { EMAILSENDER } from "../DataBase/EmailSender/EmailSender.js";
 import { EVENT } from "../DataBase/Event/Event.js";
 import { FACEBOOK } from "../DataBase/FaceBook/FaceBook.js";
+import { FILEPICKER } from "../DataBase/FilePicker/FilePicker.js";
 import { FINDER } from "../DataBase/Finder/Finder.js";
 import { FUNCTIONED } from "../DataBase/Functioned/Functioned.js";
 import { GETDATA } from "../DataBase/GetData/GetData.js";
@@ -43,6 +46,7 @@ import { LOCALCLEAR } from "../DataBase/LocalClear/LocalClear.js";
 import { LOCALDEJSONDATA } from "../DataBase/LocalDejson/LocalDejson.js";
 import { LOCALDELETE } from "../DataBase/LocalDelete/LocalDelete.js";
 import { LOCALSTORE } from "../DataBase/LocalStore/LocalStore.js";
+import { OPERATINGSYSTEM } from "../DataBase/OperatingSystem/operatingSystem.js";
 import { POSTPACKAGE } from "../DataBase/PostPackage/PostPackage.js";
 import { RANDOMCODE } from "../DataBase/RandomCode/RandomCode.js";
 import { REDUX } from "../DataBase/Redux/Redux.js";
@@ -53,6 +57,7 @@ import { ROUTE } from "../DataBase/Route/Route.js";
 import { SCREENHEIGHT } from "../DataBase/ScreenHeight/ScreenHeight.js";
 import { SCREENWIDTH } from "../DataBase/ScreenWidth/ScreenWidth.js";
 import { SCROLL } from "../DataBase/Scroll/Scroll.js";
+import { SERVERCONNECTION } from "../DataBase/ServerConnection/ServerConnection.js";
 import { SESSIONCLEAR } from "../DataBase/SessionClear/SessionClear.js";
 import { SESSIONDELETE } from "../DataBase/SessionDelete/SessonDelete.js";
 import { SESSIONSTORE } from "../DataBase/SessionStore/SessionStore.js";
@@ -69,6 +74,7 @@ import { UPDATEDATA } from "../DataBase/UpdateData/UpdateData.js";
 import { UPDATEINDEX } from "../DataBase/UpdateIndex/UpdateIndex.js";
 import { URLCOLLECTED } from "../DataBase/UrlCollected/UrlCollected.js";
 import { URLCOLLECTOR } from "../DataBase/UrlCollector/UrlCollector.js";
+import { VIDEOPICKER } from "../DataBase/VideoPicker/VideoPicker.js";
 import { WEBSITE } from "../DataBase/WebSite/WebSite.js";
 import { WHATSAPP } from "../DataBase/whatsapp/Whatsapp.js";
 import { ZOOM } from "../DataBase/Zoom/Zoom.js";
@@ -148,11 +154,18 @@ const COPY=${COPY};
 const DEVICE=${DEVICE};
 const ZOOM=${ZOOM};
 const DOWNLOADSAVEINDEX=${DOWNLOADSAVEINDEX};
+const FILEPICKER=${FILEPICKER};
+const ACCOUNTCHECKER=${ACCOUNTCHECKER};
+const OPERATINGSYSTEM=${OPERATINGSYSTEM};
+const VIDEOPICKER=${VIDEOPICKER};
+const EMAILSENDER=${EMAILSENDER};
+const SERVERCONNECTION=${SERVERCONNECTION};
+
 `;
 localStorage.setItem('FUNCTIONS',DATA)
 };
 
 `
-const DOWNLOADSAVEINDEX=${DOWNLOADSAVEINDEX};
+const SERVERCONNECTION=${SERVERCONNECTION};
 
 `
