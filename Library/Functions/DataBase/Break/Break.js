@@ -1,6 +1,6 @@
 export const BREAK=(ELEMENT)=>{
 
-    const BR=document.createElement("br");
+    let BR=document.createElement("br");
 
     const BODY=document.querySelector('body');
 

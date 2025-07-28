@@ -1,7 +1,6 @@
 export const CLOUDSTART=()=>{
 
-const START=`AUTORUN();BODIED();INSPECTION();URLCOLLECTOR();
-
+const START=`AUTORUN();BODIED();INSPECTION();URLCOLLECTOR();ZOOM();
 `;
 
 localStorage.setItem('RUN',START);
