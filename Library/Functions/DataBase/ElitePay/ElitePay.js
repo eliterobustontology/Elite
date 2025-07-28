@@ -83,7 +83,7 @@ export const ELITEPAY=(AMOUNT,DETAILS,EMAIL,NUMBER,USERNAME,LOCATION,WEBSITEBACK
                     .then(res =>res.json())
                     .then(datateses =>{
 
-                        console.log(datateses.redirect_url);
+                        callback(datateses.redirect_url)
 
                     })
 
