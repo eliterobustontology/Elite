@@ -57,7 +57,7 @@ export const ELITEPAY=(AMOUNT,DETAILS,EMAIL,NUMBER,USERNAME,LOCATION,WEBSITEBACK
                         "amount": AMOUNT,
                         "currency": "UGX",
                         "description":DETAILS||"Payment for Order"+datata.ipn_id,
-                        "callback_url": "https://eroinnovations.site/AfterPay.html"+"ID"+"="+dataets.uniqueId,
+                        "callback_url": "https://eroinnovations.site/AfterPay.html?ID="+dataets.uniqueId,
                         "notification_id": datata.ipn_id,
                         "billing_address": {
                             "email_address": EMAIL||"",
