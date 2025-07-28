@@ -85,7 +85,7 @@ const MOBILEHOMEPAGE=()=>{
 
   HEADER("","forestgreen",(ELEMENT)=>{
 
-    TEXT(ELEMENT,"h1","white","auto 3% ","20px","Doctor Mjomb Ali",(ELEMENTS)=>{
+    TEXT(ELEMENT,"h1","white","auto 1% ","20px","Doctor Mjomba Ali",(ELEMENTS)=>{
 
     });
 
@@ -175,7 +175,7 @@ const MOBILEHOMEPAGE=()=>{
 
     });
 
-    TEXT(ELEMENT,"h2","forestgreen","auto","18px","About Doctor Mjomb Ali",(ELEMENTS)=>{
+    TEXT(ELEMENT,"h2","forestgreen","auto","18px","About Doctor Mjomba Ali",(ELEMENTS)=>{
 
     });
 
@@ -646,11 +646,11 @@ const MOBILEABOUTUSPAGE=()=>{
 
     const Message=`Renowned African witch doctor and spiritual Healer.
     <br><br>
-    With decades of experience in traditional African healing practices, Dr. Mjombali combines ancestral wisdom, spiritual guidance and potent rituals to provide transformative solutions to life's most challenging problems. Whether you are seeking help with love, prosperity protection and spiritual guidance.
+    With decades of experience in traditional African healing practices, Dr. Mjomba Ali combines ancestral wisdom, spiritual guidance and potent rituals to provide transformative solutions to life's most challenging problems. Whether you are seeking help with love, prosperity protection and spiritual guidance.
     <br><br>
     Dr.Mjombali offers authentic, personalised services rooted in ancient African traditions.
     <br><br>
-    As a trusted healer Dr. Mjombali works with the forces of nature, ancestral spirits, and powerful rituals to bring balance, healing, and clarity to your life. With a compassionate heart and profound knowledge, Dr. Mjombali is committed to chihelping you overcome obstacles and and achive peace, succes, and happiness.
+    As a trusted healer Dr. Mjomba Ali works with the forces of nature, ancestral spirits, and powerful rituals to bring balance, healing, and clarity to your life. With a compassionate heart and profound knowledge, Dr. Mjombali is committed to chihelping you overcome obstacles and and achive peace, succes, and happiness.
     <br><br>
     Explore the services offered, and discover how Dr.Mjombali can guide you on your path to spiritural renewal and empowerment.
     `;
