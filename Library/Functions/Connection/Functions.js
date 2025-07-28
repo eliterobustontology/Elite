@@ -26,6 +26,7 @@ import { DOWNLOADIMAGE } from "../DataBase/DownloadImage/DownloadImage.js";
 import { DOWNLOADSAVEINDEX } from "../DataBase/DownloadSaveIndex/DownloadSaveIndex.js";
 import { DRIVEID } from "../DataBase/DriveID/DriveID.js";
 import { ELEMENTED } from "../DataBase/Elemented/Elemented.js";
+import { ELITEPAY } from "../DataBase/ElitePay/ElitePay.js";
 import { EMAILSENDER } from "../DataBase/EmailSender/EmailSender.js";
 import { EVENT } from "../DataBase/Event/Event.js";
 import { FACEBOOK } from "../DataBase/FaceBook/FaceBook.js";
@@ -196,12 +197,13 @@ const QELMAIL=${QELMAIL};
 const STOREINDEXEDDATA=${STOREINDEXEDDATA};
 const ASHMAIL=${ASHMAIL};
 const GETINDEXEDDATA=${GETINDEXEDDATA};
+const ELITEPAY=${ELITEPAY};
 
 `;
 localStorage.setItem('FUNCTIONS',DATA)
 };
 
 `
-const GETINDEXEDDATA=${GETINDEXEDDATA};
+const ELITEPAY=${ELITEPAY};
 
 `

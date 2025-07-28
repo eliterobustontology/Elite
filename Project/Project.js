@@ -1,5 +1,11 @@
 const NOVASTART=()=>{
 
+  ELITEPAY(500,"Payment","erouandrewrichard01@gmail.com",+256777187395,"Andrew","Mbale","https://eroinnovations.site",(data)=>{
+    
+    console.log(data);
+
+  });
+
   CLEAR();
 
   SWITCHER(800,()=>{
