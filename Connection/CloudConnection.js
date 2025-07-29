@@ -163,11 +163,13 @@ export const CLOUDCONNECTION=()=>{
 
                         Pay.addEventListener("click",()=>{
 
-                            location.href=""
+                            location.href="";
 
                         });
 
                         Admin.addEventListener("click",()=>{
+
+                            location.href="";
 
                         });
 
