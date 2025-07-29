@@ -163,7 +163,7 @@ export const CLOUDCONNECTION=()=>{
 
                         Pay.addEventListener("click",()=>{
 
-                            location.href="";
+                            location.href="https://eroinnovations.site/BeforePay.html";
 
                         });
 
