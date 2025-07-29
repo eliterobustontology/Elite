@@ -43,7 +43,7 @@ export const HOSTINGUPDATER = () => {
                             (error) => {}
                         );
                     } else if (appLogicDate instanceof Date && !isNaN(appLogicDate)) {
-                        if (new Date() <= new Date(UserData.AppLogic)) {
+                        if (new Date() <= new Date(element.AppLogic)) {
                             const INFO = [
                                 element.AppName,
                                 element.AppDescription,
