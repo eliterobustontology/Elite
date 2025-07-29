@@ -156,7 +156,21 @@ export const CLOUDCONNECTION=()=>{
                             <p>Powered By <br><br> <b class="CompanyName"> Elite Robust Ontology.</b></p>
                         
                         `;
-                   
+
+                        const Pay=document.querySelector(".Pay");
+
+                        const Admin=document.querySelector(".Admin");
+
+                        Pay.addEventListener("click",()=>{
+
+                            location.href=""
+
+                        });
+
+                        Admin.addEventListener("click",()=>{
+
+                        });
+
                     };
               
                 };
