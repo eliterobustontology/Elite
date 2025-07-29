@@ -47,13 +47,15 @@ export const CLOUDCONNECTION=()=>{
 
             FINDER(data,"ID",localStorage.getItem("NAME"),(UserData)=>{
 
+                console.log(UserData)
+
                 if (UserData === false ) {
 
                     ERRORPAGE();
                     
                 } else {
 
-                    if (new Date() >= UserData.AppLogic) {
+                    if ( new Date() <= new Date(UserData.AppLogic)) {
 
                         if (localStorage.getItem("Environment") === "Production" ) {
 
@@ -71,9 +73,9 @@ export const CLOUDCONNECTION=()=>{
                                 
                             };
                             
-                        };
+                        };    
                         
-                    } else {
+                    }else{
 
                         localStorage.removeItem("Updates");
 
@@ -156,7 +158,7 @@ export const CLOUDCONNECTION=()=>{
                             <p>Powered By <br><br> <b class="CompanyName"> Elite Robust Ontology.</b></p>
                         
                         `;
-                        
+                   
                     };
               
                 };
