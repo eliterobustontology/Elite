@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tools</title>
+</head>
+<body></body>
+<script src="Tools/ImageConvertor/ImageConvertor.js"></script>
+<script  src="Tools.js"></script>
+<script>
+    localStorage.setItem('Environment', 'Web');
+    ROUTEJS(localStorage.getItem('NOVA'));
+    const CloudShipping = () => {
+        import('./Start/SubStart.js')
+        .then(module => {
+            if (typeof module.START === 'function') {
+            module.START();
+            } else {
+                console.error('START is not defined in the module');
+            }
+        })
+        .catch(error => {
+            console.error('Error loading the module:', error);
+        });
+    };
+    INSINSPECTION();
+    HOMEPAGE();
+    BODIED();
+</script>  
+</html>
