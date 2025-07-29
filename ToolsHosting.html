@@ -7,12 +7,11 @@
 </head>
 <body></body>
 <script src="Tools/ImageConvertor/ImageConvertor.js"></script>
-<script  src="Tools.js"></script>
+<script  src="https://eroinnovations.github.io/Elite/Tools.js"></script>
 <script>
     localStorage.setItem('Environment', 'Development');
-    ROUTEJS(localStorage.getItem('NOVA'));
     const CloudShipping = () => {
-        import('./Start/SubStart.js')
+        import('https://eroinnovations.github.io/Elite/Start/SubStart.js')
         .then(module => {
             if (typeof module.START === 'function') {
             module.START();
