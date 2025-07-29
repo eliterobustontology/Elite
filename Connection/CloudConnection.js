@@ -47,8 +47,6 @@ export const CLOUDCONNECTION=()=>{
 
             FINDER(data,"ID",localStorage.getItem("NAME"),(UserData)=>{
 
-                console.log(UserData)
-
                 if (UserData === false ) {
 
                     ERRORPAGE();
