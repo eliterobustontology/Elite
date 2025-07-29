@@ -84,7 +84,7 @@ export const CLOUDCONNECTION=()=>{
                             body{
                                 text-align:center;
                                 background:#333333;
-                                color:#ffffff;
+                                color:#cdcdcd;
                             }
                         
                             .WarningMessage{
