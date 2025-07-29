@@ -6,7 +6,6 @@ const HOMEPAGE=()=>{
 
     CLEAR();
 
-<<<<<<< HEAD
     const style = document.createElement('style');
 
     style.textContent = `
@@ -208,23 +207,11 @@ const HOMEPAGE=()=>{
             });
 
             console.log(Element);
-=======
-    HEADER("","forestgreen",(ELEMENT)=>{
-
-        TEXT(ELEMENT,"","#ffffff","","20px","ELITE HOSTING",()=>{
->>>>>>> 8766c696513a6c3a80669cef92a529346b324b4e
 
         });
 
     });
 
-<<<<<<< HEAD
-=======
- 
-
-
-
->>>>>>> 8766c696513a6c3a80669cef92a529346b324b4e
 };
 
 HOMEPAGE();
