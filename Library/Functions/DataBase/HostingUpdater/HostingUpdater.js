@@ -117,7 +117,9 @@ export const HOSTINGUPDATER = () => {
                             );
                         }
                     } else {
-                        console.error(`Invalid AppLogic date`);
+
+                        localStorage.removeItem("Updates");
+                       
                     }
                 });
             })

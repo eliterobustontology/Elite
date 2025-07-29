@@ -53,24 +53,56 @@ export const CLOUDCONNECTION=()=>{
                     
                 } else {
 
-                    if (localStorage.getItem("Environment") === "Production" ) {
+                    let appLogicDate = new Date(UserData.AppLogic);
+
+                    if (new Date() >= appLogicDate) {
+
+                        if (localStorage.getItem("Environment") === "Production" ) {
 
                         ANDROIDENV(UserData.AndroidDesign);
-                        
-                    } else {
-
-                        if (localStorage.getItem("Environment") === "Web" ) {
-
-                            WEBENV(UserData.WebDesign);
                             
                         } else {
 
-                            DESKTOPENV(UserData.DesktopDesign);
+                            if (localStorage.getItem("Environment") === "Web" ) {
+
+                                WEBENV(UserData.WebDesign);
+                                
+                            } else {
+
+                                DESKTOPENV(UserData.DesktopDesign);
+                                
+                            };
                             
                         };
                         
+                    } else {
+
+                        localStorage.removeItem("Updates");
+
+                        const style = document.createElement('style');
+
+                        style.textContent = `
+                        
+                            body{
+
+                                color:#000000;
+                            
+                            }
+                        
+                        `;
+
+                        document.head.appendChild(style);
+
+                        const Body=document.querySelector("body");
+
+                        Body.innerHTML=`
+
+                            <h1>Warning</h1>
+                        
+                        `;
+                        
                     };
-                    
+              
                 };
 
             });
