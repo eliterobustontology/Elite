@@ -19,6 +19,4 @@ export const DESKTOPENV=(PATH)=>{
     .catch(error=>{console.log(error)}
     );
 
-    console.log(element);
-
 };
