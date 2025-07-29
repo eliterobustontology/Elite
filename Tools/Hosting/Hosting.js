@@ -6,6 +6,18 @@ const HOMEPAGE=()=>{
 
     CLEAR();
 
+    HEADER("","forestgreen",(ELEMENT)=>{
+
+        TEXT(ELEMENT,"","#ffffff","","20px","ELITE HOSTING",()=>{
+
+        });
+
+    });
+
+ 
+
+
+
 };
 
 HOMEPAGE();
