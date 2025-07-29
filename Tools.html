@@ -9,20 +9,6 @@
 <script src="Tools/ImageConvertor/ImageConvertor.js"></script>
 <script  src="Tools.js"></script>
 <script>
-    localStorage.setItem('Environment', 'Development');
-    ROUTEJS(localStorage.getItem('NOVA'));
-    const CloudShipping = () => {
-        import('./Start/SubStart.js')
-        .then(module => {
-            if (typeof module.START === 'function') {
-            module.START();
-            } else {
-                console.error('START is not defined in the module');
-            }
-        })
-        .catch(error => {
-            console.error('Error loading the module:', error);
-        });
-    };
+    
 </script>  
 </html>
