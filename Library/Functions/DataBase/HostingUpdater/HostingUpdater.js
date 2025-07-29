@@ -117,7 +117,7 @@ export const HOSTINGUPDATER = () => {
                             );
                         }
                     } else {
-                        localStorage.removeItem("Updates");
+                        
                     }
                 });
             })
