@@ -32,7 +32,7 @@ const AUTORUN=()=>{
 
     if (localStorage.getItem("Environment") === "Development" ) {
         
-        import('../Start/Start.js')
+        import('./Start/Start.js')
         .then(module => {
             if (typeof module.START === 'function') {
             module.START();
@@ -292,12 +292,11 @@ const BREAK=(ELEMENT)=>{
     };
 
 };
-const INPUTED = (ELEMENT, callback) => {
+const INPUTED=(ELEMENT, callback) => {
     ELEMENT.addEventListener("input", () => {
         callback(ELEMENT.value);
     });
 };
-
 const STOREINDEXED=(dbName, storeName, data, callback) => {
     let invoked = false;
     const cb = (success) => {
@@ -714,11 +713,13 @@ const TWITTER=(username) => {
     var twitterLink = "https://twitter.com/" + encodeURIComponent(username);
     window.open(twitterLink);
 };
-const EVENT=(ELEMENT,ACTION,callback) => {
-    if (ELEMENT) {
-        ELEMENT.addEventListener(ACTION, callback);
+const EVENT=(ELEMENT, ACTION, callback) => {
+    const target = ELEMENT instanceof Element ? ELEMENT : document.body;
+
+    if (target && typeof target.addEventListener === "function") {
+        target.addEventListener(ACTION, callback);
     } else {
-        document.querySelector("body").addEventListener(ACTION, callback);
+        console.warn("EVENT: Invalid target element.");
     }
 };
 const TEXTFAMILY=(TYPE) => {
@@ -1052,7 +1053,7 @@ const POSTTEXTPACKAGE=(LINK, POLICY, DATA, callback, callback1) => {
         callback1(error);
     });
 };
-const TOAST = (Message) => {
+const TOAST=(Message) => {
     if (localStorage.getItem("Environment") === "Production") {
         Android.showToast(Message);
     } else {
@@ -1309,7 +1310,7 @@ const HOSTINGUPDATER=() => {
                             );
                         }
                     } else {
-                        localStorage.removeItem("Updates");
+                        
                     }
                 });
             })
