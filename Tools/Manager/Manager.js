@@ -42,7 +42,7 @@ const MOBILELOGINPAGE=()=>{
 
         STYLED(ELEMENTS,"border-radius","5px");
 
-        TEXT(ELEMENTS,"h1","#ffffff","5% auto","20px","Sign In",()=>{
+        TEXT(ELEMENTS,"h1","#ffffff","auto","20px","Sign In",()=>{
 
         });
 
