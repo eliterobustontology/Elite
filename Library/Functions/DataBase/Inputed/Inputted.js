@@ -1,5 +1,5 @@
-export const INPUTED=(ELEMENT,callback)=>{
-
-    ELEMENT.addEventListener("input", callback(ELEMENT.value));
-    
+export const INPUTED = (ELEMENT, callback) => {
+    ELEMENT.addEventListener("input", () => {
+        callback(ELEMENT.value);
+    });
 };

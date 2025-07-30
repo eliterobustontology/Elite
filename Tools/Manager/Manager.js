@@ -23,6 +23,12 @@ const MOBILELOGINPAGE=()=>{
         STYLED(ELEMENT,"background","transparent");
         STYLED(ELEMENT,"border","1px solid forestgreen");
 
+        EVENT(ELEMENT,"input",()=>{
+
+            console.log(data.value)
+
+        });
+
     });
 
     INPUT("","95%","32px","3% auto","#ffffff","password","Enter Admin Password",(ELEMENT)=>{

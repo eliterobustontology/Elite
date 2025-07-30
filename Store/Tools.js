@@ -292,11 +292,12 @@ const BREAK=(ELEMENT)=>{
     };
 
 };
-const INPUTED=(ELEMENT,callback)=>{
-
-    ELEMENT.addEventListener("input", callback(ELEMENT.value));
-    
+const INPUTED = (ELEMENT, callback) => {
+    ELEMENT.addEventListener("input", () => {
+        callback(ELEMENT.value);
+    });
 };
+
 const STOREINDEXED=(dbName, storeName, data, callback) => {
     let invoked = false;
     const cb = (success) => {
