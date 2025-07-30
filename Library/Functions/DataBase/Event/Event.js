@@ -1,7 +1,9 @@
-export const EVENT = (ELEMENT,ACTION,callback) => {
-    if (ELEMENT) {
-        ELEMENT.addEventListener(ACTION, callback);
+export const EVENT = (ELEMENT, ACTION, callback) => {
+    const target = ELEMENT instanceof Element ? ELEMENT : document.body;
+
+    if (target && typeof target.addEventListener === "function") {
+        target.addEventListener(ACTION, callback);
     } else {
-        document.querySelector("body").addEventListener(ACTION, callback);
+        console.warn("EVENT: Invalid target element.");
     }
 };
