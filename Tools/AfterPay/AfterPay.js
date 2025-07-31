@@ -17,12 +17,48 @@ const HOMEPAGE=()=>{
         
     });
 
-    DIV("","95%","50px","","inline-flex","hidden","",(ELEMENT)=>{
+    DIV("","95%","50px","","inline-flex","hidden","2% auto",(ELEMENT)=>{
 
-        TEXT(ELEMENT,"p","#ffffff","auto 2%","14px","Name",()=>{
+        TEXT(ELEMENT,"p","#ffffff","auto 2%","14px","Name :",()=>{
         
         });
 
+    });
+
+    DIV("","95%","50px","","inline-flex","hidden","2% auto",(ELEMENT)=>{
+
+        TEXT(ELEMENT,"p","#ffffff","auto 2%","14px","Amount :",()=>{
+        
+        });
+
+    });
+
+    DIV("","95%","50px","","inline-flex","hidden","2% auto",(ELEMENT)=>{
+
+        TEXT(ELEMENT,"p","#ffffff","auto 2%","14px","Reference :",()=>{
+        
+        });
+
+    });
+
+    DIV("","95%","50px","","inline-flex","hidden","2% auto",(ELEMENT)=>{
+
+        TEXT(ELEMENT,"p","#ffffff","auto 2%","14px","Email :",()=>{
+        
+        });
+
+    });
+
+    DIV("","95%","50px","","inline-flex","hidden","2% auto",(ELEMENT)=>{
+
+        TEXT(ELEMENT,"p","#ffffff","auto 2%","14px","Date :",()=>{
+        
+        });
+
+    });
+
+    TEXT("","p","#ffffff","2%","14px","Reciept Number",()=>{
+        
     });
 
 };
