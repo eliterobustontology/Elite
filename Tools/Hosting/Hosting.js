@@ -206,8 +206,6 @@ const HOMEPAGE=()=>{
                 });
             });
 
-            console.log(Element);
-
         });
 
     });
