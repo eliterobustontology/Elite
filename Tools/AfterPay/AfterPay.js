@@ -17,6 +17,14 @@ const HOMEPAGE=()=>{
         
     });
 
+    DIV("","95%","50px","","inline-flex","hidden","",(ELEMENT)=>{
+
+        TEXT(ELEMENT,"p","#ffffff","auto 2%","14px","Name",()=>{
+        
+        });
+
+    });
+
 };
 
 /*
