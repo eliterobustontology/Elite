@@ -2,9 +2,21 @@ const HOMEPAGE=()=>{
 
     APPMODE("#333333");
 
-    IMAGE("","logo.png","transparent","100px","100px","2% auto",()=>{
+    IMAGE("","logo.png","transparent","100px","100px","2% auto",(ELEMENT)=>{
+
+        STYLED(ELEMENT,"border-radius","100%");
+        STYLED(ELEMENT,"padding","2%");
 
     });
+
+    TEXT("","h1","#ffffff","2%","20px","Elite Robust Ontology",()=>{
+
+    });
+
+    TEXT("","p","#ffffff","2%","14px","Thank You For Supporting.",()=>{
+        
+    });
+
 
 
 };
