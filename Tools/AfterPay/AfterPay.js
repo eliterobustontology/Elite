@@ -1,5 +1,7 @@
 const HOMEPAGE=()=>{
 
+    APPMODE("#333333");
+
     const style = document.createElement('style');
 
     style.textContent = `
