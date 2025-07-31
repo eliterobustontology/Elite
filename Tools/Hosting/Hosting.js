@@ -213,5 +213,3 @@ const HOMEPAGE=()=>{
     });
 
 };
-
-HOMEPAGE();
