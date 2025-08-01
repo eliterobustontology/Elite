@@ -7,6 +7,7 @@ import { GREENMENUICON } from "../DataBase/GreenIcons/Menu/Menu.js";
 import { MTNICON } from "../DataBase/Logos/Mtn/Mtn.js";
 import { WHITEPAYPALICON } from "../DataBase/Logos/PayPal/PayPal.js";
 import { WHITEPESAPALICON } from "../DataBase/Logos/Pesapal/Pesapal.js";
+import { QEL } from "../DataBase/Logos/Qel/Qel.js";
 import { WHITEADDICON } from "../DataBase/WhiteIcons/Add/Add.js";
 import { WHITEADDPERSONICON } from "../DataBase/WhiteIcons/AddPerson/AddPerson.js";
 import { WHITEAIRPLANEICON } from "../DataBase/WhiteIcons/AirPlane/AirPlane.js";
@@ -238,12 +239,13 @@ const BLACKSUNICON="${BLACKSUNICON}";
 const BLACKGRIDICON="${BLACKGRIDICON}";
 const BLACKHAMBURGICON="${BLACKHAMBURGICON}";
 const GREENMENUICON="${GREENMENUICON}";
+const QEL="${QEL}";
 `;
     
 localStorage.setItem('ASSETS',DATA);
 
 };
 `
-const GREENMENUICON="${GREENMENUICON}";
+const QEL="${QEL}";
 
 `

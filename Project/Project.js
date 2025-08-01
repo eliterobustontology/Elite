@@ -35,7 +35,17 @@ const HOMEPAGE=()=>{
                 STYLED(ELEMENTSE,"position","absolute");
                 STYLED(ELEMENTSE,"left","0px");
 
-                ICON(ELEMENTSE,WHITEGRIDICON,"transparent","","","",()=>{
+                ICON(ELEMENTSE,QEL,"transparent","","","",(ELEMENTIS)=>{
+
+                    CLICK(ELEMENTIS,()=>{
+
+                        IMAGEPICKER (ELEMENTIS, (data)=>{
+
+                            console.log(data);
+
+                        });
+
+                    });
 
                 });
 
