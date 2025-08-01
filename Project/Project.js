@@ -1,4 +1,12 @@
+const LINK="https://docs.google.com/spreadsheets/d/18BUoCg4yVUrxWv8RG885ZIn2fjkURGgjIrCi6otCxFk/edit?usp=sharing";
+
 const NOVASTART=()=>{
+
+    DOWNLOADSAVEINDEX(LINK,"Products","Products","Products",()=>{
+
+        ROUTE("",HOMEPAGE,"HOMEPAGE");
+
+    });
 
     CLEAR("");
 
@@ -7,6 +15,10 @@ const NOVASTART=()=>{
 };
 
 const HOMEPAGE=()=>{
+
+    DOWNLOADSAVEINDEX(LINK,"Products","Products","Products",()=>{
+
+    });
 
     CLEAR("");
 
