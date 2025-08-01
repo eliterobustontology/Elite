@@ -65,7 +65,7 @@ const HOMEPAGE=()=>{
 
     APPMODE("#333333");
 
-    TEXT("","h1","#ffffff","2%","20px",Message,()=>{
+    TEXT("","p","#ffffff","2%","20px",Message,()=>{
 
     });
 
