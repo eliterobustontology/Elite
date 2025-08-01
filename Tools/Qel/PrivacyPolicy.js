@@ -2,8 +2,8 @@ const HOMEPAGE=()=>{
 
     const Message=`
 
-        Effective Date: July 1, 2026<br><br>
-        QEL (“we,” “our,” or “us”) respects and values your privacy. This Privacy Policy explains how we collect, use, and protect your personal information when you use our mobile application related to medical equipment.<br><br>
+        Effective Date: July 1, 2025<br><br>
+        QEL respects and values your privacy. This Privacy Policy explains how we collect, use, and protect your personal information when you use our mobile application related to medical equipment.<br><br>
 
         1. Information We Collect<br><br>
         We may collect the following types of information when you use the QEL app:<br><br>
