@@ -8,6 +8,11 @@ const NOVASTART=()=>{
 
     });
 
+    DOWNLOADSAVEINDEX(LINK,"Catergory","Catergory","Catergory",()=>{
+
+
+    });
+
     ROUTE("",HOMEPAGE,"HOMEPAGE");
 
 };
