@@ -62,7 +62,7 @@ export const QELPAGE=(HOLDERS)=>{
 
     setTimeout(() => {
 
-       //QELPAGETWO(HOLDERS);
+       QELPAGETWO(HOLDERS);
         
     }, 500);
 
