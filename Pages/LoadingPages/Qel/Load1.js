@@ -64,6 +64,6 @@ export const QELPAGE=(HOLDERS)=>{
 
        QELPAGETWO(HOLDERS);
         
-    }, 500);
+    }, 1000);
 
 };
