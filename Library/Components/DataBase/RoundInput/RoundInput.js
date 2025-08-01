@@ -1,7 +1,7 @@
 import { ELEMENTED } from "../../../Functions/DataBase/Elemented/Elemented.js";
 import { STYLED } from "../../../Functions/DataBase/Styled/Styled.js";
 
-export const ROUNDINPUT=(HOLDER,WIDTH,HEIGHT,MARGIN,COLOR,TYPE,PLACE,callback)=>{
+export const ROUNDINPUT=(HOLDER,WIDTH,HEIGHT,RADIUS,MARGIN,COLOR,TYPE,PLACE,callback)=>{
 
     ELEMENTED(HOLDER,"input",(ELEMENTS)=>{
 
@@ -11,7 +11,7 @@ export const ROUNDINPUT=(HOLDER,WIDTH,HEIGHT,MARGIN,COLOR,TYPE,PLACE,callback)=>
         STYLED(ELEMENTS,"width",WIDTH||"95%");
         STYLED(ELEMENTS,"height",HEIGHT||"32px");
         STYLED(ELEMENTS,"margin",MARGIN||"auto");
-        STYLED(ELEMENTS,"border-radius","10px");
+        STYLED(ELEMENTS,"border-radius",RADIUS||"10px");
         STYLED(ELEMENTS,"outline","none");
 
         ELEMENTS.placeholder=PLACE||"Enter Text";
