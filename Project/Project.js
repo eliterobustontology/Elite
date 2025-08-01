@@ -10,6 +10,14 @@ const HOMEPAGE=()=>{
 
     CLEAR("");
 
+    DIV("","","auto","orange","block","auto","",(ELEMENT)=>{
+
+        STYLED(ELEMENT,"position","absolute");
+        STYLED(ELEMENT,"bottom","50px");
+        STYLED(ELEMENT,"top","0px");
+
+    });
+
     FOOTER("","forestgreen",(ELEMENT)=>{
 
         ICON(ELEMENT,WHITEGRIDICON,"transparent","","","",()=>{
