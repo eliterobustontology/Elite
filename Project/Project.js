@@ -37,16 +37,6 @@ const HOMEPAGE=()=>{
 
                 ICON(ELEMENTSE,QEL,"transparent","","","",(ELEMENTIS)=>{
 
-                    CLICK(ELEMENTIS,()=>{
-
-                        IMAGEPICKER (ELEMENTIS, (data)=>{
-
-                            console.log(data);
-
-                        });
-
-                    });
-
                 });
 
             });
