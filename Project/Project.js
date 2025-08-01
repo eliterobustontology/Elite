@@ -20,10 +20,6 @@ const HOMEPAGE=()=>{
 
         });
 
-        ICON(ELEMENT,WHITESETTINGSICON,"transparent","","","",()=>{
-
-        });
-
         ICON(ELEMENT,WHITEUSERPROFILEICON,"transparent","","","",()=>{
 
         });
