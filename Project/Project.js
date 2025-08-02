@@ -59,12 +59,83 @@ const HOMEPAGE=()=>{
 
         });
 
-        DIV(ELEMENT,"100%","auto","red","block","auto","",(ELEMENTSE)=>{
+        DIV(ELEMENT,"100%","auto","transparent","block","auto","",(ELEMENTSE)=>{
 
             STYLED(ELEMENTSE,"bottom","0px");
             STYLED(ELEMENTSE,"top","0px");
 
-            TEXT(ELEMENTSE,"p","#cdcdcd","auto 1% auito auto","20px","catergory",(ELEMENTSES)=>{
+            TEXT(ELEMENTSE,"h1","#FFFFFF","3%","20px","Catergories",(ELEMENTIIS)=>{
+
+                STYLED(ELEMENTIIS,"text-align","left");
+
+            });
+
+            DIV(ELEMENTSE,"100%","200px","transparent","inline-flex","hidden","",(ELEMENTE)=>{
+
+                STYLED(ELEMENTE,"overflowX","auto");
+
+                CLEAR(ELEMENTE);
+
+                GETINDEXEDDATA("Catergory", "Catergory", (element)=>{
+
+                    DIV(ELEMENTE,"100px","180px","blue","block","hidden","2% ",(ELEMENTEIS)=>{
+
+                        STYLED(ELEMENTEIS,"flex-shrink","0");
+                        
+
+                    });
+
+                });
+
+            });
+
+            TEXT(ELEMENTSE,"h1","#FFFFFF","3%","20px","Catergories",(ELEMENTIIS)=>{
+
+                STYLED(ELEMENTIIS,"text-align","left");
+
+            });
+
+            DIV(ELEMENTSE,"100%","200px","transparent","inline-flex","hidden","",(ELEMENTE)=>{
+
+                STYLED(ELEMENTE,"overflowX","auto");
+
+                CLEAR(ELEMENTE);
+
+                GETINDEXEDDATA("Catergory", "Catergory", (element)=>{
+
+                    DIV(ELEMENTE,"100px","180px","blue","block","hidden","2% ",(ELEMENTEIS)=>{
+
+                        STYLED(ELEMENTEIS,"flex-shrink","0");
+                        
+
+                    });
+
+                });
+
+            });
+
+            TEXT(ELEMENTSE,"h1","#FFFFFF","3%","20px","Catergories",(ELEMENTIIS)=>{
+
+                STYLED(ELEMENTIIS,"text-align","left");
+
+            });
+
+            DIV(ELEMENTSE,"100%","200px","transparent","inline-flex","hidden","",(ELEMENTE)=>{
+
+                STYLED(ELEMENTE,"overflowX","auto");
+
+                CLEAR(ELEMENTE);
+
+                GETINDEXEDDATA("Catergory", "Catergory", (element)=>{
+
+                    DIV(ELEMENTE,"100px","180px","blue","block","hidden","2% ",(ELEMENTEIS)=>{
+
+                        STYLED(ELEMENTEIS,"flex-shrink","0");
+                        
+
+                    });
+
+                });
 
             });
 
