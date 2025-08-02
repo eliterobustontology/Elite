@@ -59,6 +59,17 @@ const HOMEPAGE=()=>{
 
         });
 
+        DIV(ELEMENT,"100%","auto","red","block","auto","",(ELEMENTSE)=>{
+
+            STYLED(ELEMENTSE,"bottom","0px");
+            STYLED(ELEMENTSE,"top","0px");
+
+            TEXT(ELEMENTSE,"p","#cdcdcd","auto 1% auito auto","20px","catergory",(ELEMENTSES)=>{
+
+            });
+
+        });
+
     });
 
     FOOTER("","forestgreen",(ELEMENT)=>{
