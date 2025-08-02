@@ -119,7 +119,7 @@ const HOMEPAGE=()=>{
 
                 console.log(element);
 
-                DIV(ELEMENT,"45%","180px","transparent","inline-table","hidden","2%",(ELEMENTEIS)=>{
+                DIV(ELEMENT,"45%","250px","transparent","inline-table","hidden","2%",(ELEMENTEIS)=>{
 
                     STYLED(ELEMENTEIS,"flex-shrink","0");
                     STYLED(ELEMENTEIS,"border-radius","5px");
@@ -134,7 +134,36 @@ const HOMEPAGE=()=>{
 
                     FOOTER(ELEMENTEIS,"forestgreen",(ELEMENT)=>{
 
-                        TEXT(ELEMENT,"h1","#FFFFFF","auto","14px",element.ProductName,()=>{
+                        STYLED(ELEMENT,"height","100px");
+                        STYLED(ELEMENT,"display","block");
+
+                        TEXT(ELEMENT,"h1","#FFFFFF","5%","14px",element.ProductName,(ETET)=>{
+
+                        });
+
+                        DIV(ELEMENT,"100%","50px","transparent","inline-table","hidden","",(ELEMENTEIS)=>{
+
+                            STYLED(ELEMENTEIS,"position","absolute");
+                            STYLED(ELEMENTEIS,"bottom","0");
+                            STYLED(ELEMENTEIS,"left","0");
+
+                            TEXT(ELEMENTEIS,"h1","orange","5%","14px","UGX "+element.ProductPrice,(TETST)=>{
+                            
+                                STYLED(TETST,"text-align","left");
+
+                            });
+
+                            DIV(ELEMENTEIS,"20%","50px","transparent","inline-flex","hidden","",(ELEMENTSE)=>{
+
+                                STYLED(ELEMENTSE,"position","absolute");
+                                STYLED(ELEMENTSE,"right","5px");
+                                STYLED(ELEMENTSE,"bottom","0px");
+
+                                ICON(ELEMENTSE,WHITEUNHEARTICON,"transparent","","","",(ELEMENTIS)=>{
+
+                                });
+
+                            });
 
                         });
 
