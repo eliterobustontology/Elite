@@ -63,18 +63,132 @@ const HOMEPAGE=()=>{
 
     FOOTER("","forestgreen",(ELEMENT)=>{
 
-        ICON(ELEMENT,WHITEGRIDICON,"transparent","","","",()=>{
+        ICON(ELEMENT,WHITEGRIDICON,"transparent","","","",(ELEMENTS)=>{
+
+            CLICK(ELEMENTS,()=>{
+
+                ROUTE(" ",CATERGORYPAGE,"HOMEPAGE");
+
+            });
 
         });
 
-        ICON(ELEMENT,WHITESAVEDICON,"transparent","","","",()=>{
+        ICON(ELEMENT,WHITESAVEDICON,"transparent","","","",(ELEMENTS)=>{
+
+            CLICK(ELEMENTS,()=>{
+
+                ROUTE(" ",SAVEDPAGE,"HOMEPAGE");
+
+            });
 
         });
 
-        ICON(ELEMENT,WHITEUSERPROFILEICON,"transparent","","","",()=>{
+        ICON(ELEMENT,WHITEUSERPROFILEICON,"transparent","","","",(ELEMENTS)=>{
+
+            CLICK(ELEMENTS,()=>{
+
+                ROUTE(" ",USERACCOUNTPAGE,"HOMEPAGE");
+
+            });
 
         });
         
+    });
+
+};
+
+const CATERGORYPAGE=()=>{
+
+    CLEAR();
+
+    HEADER("","forestgreen",(ELEMENT)=>{
+
+        IMAGE(ELEMENT,WHITEBACKICON,"","20px","20px","auto 2%",(ELEMENTS)=>{
+
+            CLICK(ELEMENTS,()=>{
+
+                ROUTE("",HOMEPAGE,"HOMEPAGE");
+
+            });
+
+        });
+
+        TEXT(ELEMENT,"h1","#FFFFFF","auto auto auto  63%","20px","Catergory",()=>{
+
+        });
+
+    });
+
+    DIV("","","auto","transparent","block","auto","",(ELEMENT)=>{
+
+        STYLED(ELEMENT,"position","absolute");
+        STYLED(ELEMENT,"bottom","0px");
+        STYLED(ELEMENT,"top","50px");
+
+    });
+
+};
+
+const SAVEDPAGE=()=>{
+
+    CLEAR();
+
+    HEADER("","forestgreen",(ELEMENT)=>{
+
+        IMAGE(ELEMENT,WHITEBACKICON,"","20px","20px","auto 2%",(ELEMENTS)=>{
+
+            CLICK(ELEMENTS,()=>{
+
+                ROUTE("",HOMEPAGE,"HOMEPAGE");
+
+            });
+
+        });
+
+        TEXT(ELEMENT,"h1","#FFFFFF","auto auto auto  55%","20px","Saved Items",()=>{
+
+        });
+
+    });
+
+    DIV("","","auto","transparent","block","auto","",(ELEMENT)=>{
+
+        STYLED(ELEMENT,"position","absolute");
+        STYLED(ELEMENT,"bottom","0px");
+        STYLED(ELEMENT,"top","50px");
+
+    });
+
+};
+
+const USERACCOUNTPAGE=()=>{
+
+    CLEAR();
+
+    HEADER("","forestgreen",(ELEMENT)=>{
+
+        IMAGE(ELEMENT,WHITEBACKICON,"","20px","20px","auto 2%",(ELEMENTS)=>{
+
+            CLICK(ELEMENTS,()=>{
+
+                ROUTE("",HOMEPAGE,"HOMEPAGE");
+
+            });
+
+        });
+
+        TEXT(ELEMENT,"h1","#FFFFFF","auto auto auto  63%","20px","Profile",()=>{
+
+        });
+
+    });
+
+    DIV("","","auto","transparent","block","auto","",(ELEMENT)=>{
+
+        STYLED(ELEMENT,"position","absolute");
+        STYLED(ELEMENT,"bottom","0px");
+        STYLED(ELEMENT,"top","50px");
+
     });
 
 };
