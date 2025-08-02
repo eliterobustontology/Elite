@@ -207,6 +207,20 @@ const CATERGORYPAGE=()=>{
         STYLED(ELEMENT,"bottom","0px");
         STYLED(ELEMENT,"top","50px");
 
+        CLEAR(ELEMENT);
+
+        GETINDEXEDDATA("Catergory", "Catergory", (element)=>{
+
+            DIV(ELEMENT,"45%","180px","transparent","inline-table","hidden","2%",(ELEMENTEIS)=>{
+
+                STYLED(ELEMENTEIS,"flex-shrink","0");
+                STYLED(ELEMENTEIS,"border-radius","5px");
+                STYLED(ELEMENTEIS,"border","1px solid green");
+                        
+            });
+
+        });
+
     });
 
 };
