@@ -107,6 +107,45 @@ const HOMEPAGE=()=>{
 
         });
 
+        TEXT(ELEMENT,"h1","#FFFFFF","2%","20px","Products",(ELEMENTIIS)=>{
+
+        });
+
+        DIV(ELEMENT,"","auto","transparent","block","auto","",(ELEMENT)=>{
+
+            CLEAR(ELEMENT);
+
+            GETINDEXEDDATA("Products", "Products", (element)=>{
+
+                console.log(element);
+
+                DIV(ELEMENT,"45%","180px","transparent","inline-table","hidden","2%",(ELEMENTEIS)=>{
+
+                    STYLED(ELEMENTEIS,"flex-shrink","0");
+                    STYLED(ELEMENTEIS,"border-radius","5px");
+                    STYLED(ELEMENTEIS,"border","1px solid green");
+
+                    IMAGE(ELEMENTEIS,element.ProductImage,"","100%","100%","",(ELEMENTER)=>{
+
+                        STYLED(ELEMENTER,"position","absolute");
+                        STYLED(ELEMENTER,"left","0");
+
+                    });
+
+                    FOOTER(ELEMENTEIS,"forestgreen",(ELEMENT)=>{
+
+                        TEXT(ELEMENT,"h1","#FFFFFF","auto","14px",element.ProductName,()=>{
+
+                        });
+
+                    });
+        
+                });
+
+            });
+
+        });
+
     });
 
     FOOTER("","forestgreen",(ELEMENT)=>{
