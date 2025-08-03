@@ -64,7 +64,7 @@ const HOMEPAGE=()=>{
             STYLED(ELEMENTSE,"bottom","0px");
             STYLED(ELEMENTSE,"top","0px");
 
-            TEXT(ELEMENTSE,"h1","#FFFFFF","3%","20px","Catergories",(ELEMENTIIS)=>{
+            TEXT(ELEMENTSE,"h1","#FFFFFF","3% auto auto 2%","20px","Catergories",(ELEMENTIIS)=>{
 
                 STYLED(ELEMENTIIS,"text-align","left");
 
