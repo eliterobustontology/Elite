@@ -350,7 +350,7 @@ const USERACCOUNTPAGE=()=>{
             STYLED(ELEMENTS,"border-radius","10px");
             STYLED(ELEMENTS,"border","1px solid green");
 
-            DIV(ELEMENTS,"50%","100%","transparent","inline-flex","","",(ELEMENTSI)=>{
+            DIV(ELEMENTS,"40%","100%","transparent","inline-flex","","",(ELEMENTSI)=>{
 
                 STYLED(ELEMENTSI,"position","absolute");
                 STYLED(ELEMENTSI,"left","0");
@@ -361,10 +361,12 @@ const USERACCOUNTPAGE=()=>{
 
             });
 
-            DIV(ELEMENTS,"50%","100%","blue","block","","",(ELEMENTSI)=>{
+            DIV(ELEMENTS,"60%","95%","transparent","block","","1%",(ELEMENTSI)=>{
 
                 STYLED(ELEMENTSI,"position","absolute");
                 STYLED(ELEMENTSI,"right","0");
+                STYLED(ELEMENTSI,"border-radius","10px");
+                STYLED(ELEMENTSI,"border","1px solid green");
 
             });
 
