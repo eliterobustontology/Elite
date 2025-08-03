@@ -336,6 +336,13 @@ const USERACCOUNTPAGE=()=>{
         STYLED(ELEMENT,"bottom","0px");
         STYLED(ELEMENT,"top","50px");
 
+        DIV(ELEMENT,"96%","200px","transparent","block","","2%",(ELEMENTS)=>{
+
+            STYLED(ELEMENTS,"border-radius","10px");
+            STYLED(ELEMENTS,"border","1px solid green");
+
+        });
+
     });
 
 };
