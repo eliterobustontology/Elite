@@ -350,6 +350,24 @@ const USERACCOUNTPAGE=()=>{
             STYLED(ELEMENTS,"border-radius","10px");
             STYLED(ELEMENTS,"border","1px solid green");
 
+            DIV(ELEMENTS,"50%","100%","transparent","inline-flex","","",(ELEMENTSI)=>{
+
+                STYLED(ELEMENTSI,"position","absolute");
+                STYLED(ELEMENTSI,"left","0");
+
+                IMAGE(ELEMENTSI,WHITEUSERPROFILEICON,"","90%","90%","auto",(ELEMENTER)=>{
+
+                });
+
+            });
+
+            DIV(ELEMENTS,"50%","100%","blue","block","","",(ELEMENTSI)=>{
+
+                STYLED(ELEMENTSI,"position","absolute");
+                STYLED(ELEMENTSI,"right","0");
+
+            });
+
         });
 
         TEXT(ELEMENT,"h1","#FFFFFF","3%","20px","Prefrences",(ELEMENTIIS)=>{

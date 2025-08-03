@@ -1,14 +1,6 @@
 const LINK="https://docs.google.com/spreadsheets/d/18BUoCg4yVUrxWv8RG885ZIn2fjkURGgjIrCi6otCxFk/edit?usp=sharing";
 const NOVASTART=()=>{
 
-    DATADOWNLOADSECTION();
-
-    ROUTE("",HOMEPAGE,"HOMEPAGE");
-
-};
-
-const DATADOWNLOADSECTION=()=>{
-
     GETDATA(LINK,"UserAccountPageDesign",(data)=>{
 
         JSONIFICATION(data,(UserData)=>{
@@ -21,11 +13,16 @@ const DATADOWNLOADSECTION=()=>{
 
     DOWNLOADSAVEINDEX(LINK,"Products","Products","Products",()=>{
 
+        ROUTE("",HOMEPAGE,"HOMEPAGE");
+
     });
 
     DOWNLOADSAVEINDEX(LINK,"Catergory","Catergory","Catergory",()=>{
 
+
     });
+
+    ROUTE("",HOMEPAGE,"HOMEPAGE");
 
 };
 
@@ -352,6 +349,24 @@ const USERACCOUNTPAGE=()=>{
 
             STYLED(ELEMENTS,"border-radius","10px");
             STYLED(ELEMENTS,"border","1px solid green");
+
+            DIV(ELEMENTS,"50%","100%","transparent","inline-flex","","",(ELEMENTSI)=>{
+
+                STYLED(ELEMENTSI,"position","absolute");
+                STYLED(ELEMENTSI,"left","0");
+
+                IMAGE(ELEMENTSI,WHITEUSERPROFILEICON,"","90%","90%","auto",(ELEMENTER)=>{
+
+                });
+
+            });
+
+            DIV(ELEMENTS,"50%","100%","blue","block","","",(ELEMENTSI)=>{
+
+                STYLED(ELEMENTSI,"position","absolute");
+                STYLED(ELEMENTSI,"right","0");
+
+            });
 
         });
 
