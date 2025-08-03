@@ -34,6 +34,24 @@ const HOMEPAGE=()=>{
 
         });
 
+        ICON(ELEMENT,WHITERETRYICON,"","30px","30px","auto 5% auto auto",(ELEMENTAS)=>{
+
+            CLICK(ELEMENTAS,()=>{
+
+                RELOAD();
+
+            });
+
+        });
+
+        ICON(ELEMENT,WHITEADDICON,"","30px","30px","auto 5% auto auto",()=>{
+
+        });
+
+        ICON(ELEMENT,WHITEUSERPROFILEICON,"","30px","30px","auto 5% auto auto",()=>{
+
+        });
+
     });
 
 };
