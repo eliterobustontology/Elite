@@ -1,6 +1,15 @@
 const LINK="https://docs.google.com/spreadsheets/d/18BUoCg4yVUrxWv8RG885ZIn2fjkURGgjIrCi6otCxFk/edit?usp=sharing";
-
 const NOVASTART=()=>{
+
+    GETDATA(LINK,"UserAccountPageDesign",(data)=>{
+
+        JSONIFICATION(data,(UserData)=>{
+
+            LOCALSTORE("UserAccountPageDesign",UserData);
+
+        });
+
+    });
 
     DOWNLOADSAVEINDEX(LINK,"Products","Products","Products",()=>{
 
@@ -117,7 +126,7 @@ const HOMEPAGE=()=>{
 
             GETINDEXEDDATA("Products", "Products", (element)=>{
 
-                console.log(element);
+                //console.log(element);
 
                 DIV(ELEMENT,"45%","250px","transparent","inline-table","hidden","2%",(ELEMENTEIS)=>{
 
@@ -340,6 +349,49 @@ const USERACCOUNTPAGE=()=>{
 
             STYLED(ELEMENTS,"border-radius","10px");
             STYLED(ELEMENTS,"border","1px solid green");
+
+        });
+
+        TEXT(ELEMENT,"h1","#FFFFFF","3%","20px","Prefrences",(ELEMENTIIS)=>{
+
+            STYLED(ELEMENTIIS,"text-align","left");
+
+        });
+
+        DIV(ELEMENT,"100%","auto","transparent","block","","",(ELEMENTS)=>{
+
+            CLEAR(ELEMENTS);
+
+            STYLED(ELEMENTS,"border-top","1px solid green");
+
+            LOCALDEJSONDATA("UserAccountPageDesign",(data)=>{
+
+                REDUX(data,(Element)=>{
+
+                    console.log(Element);
+
+                    DIV(ELEMENTS,"96%","50px","transparent","inline-flex","","2%",(ELEMENTS)=>{
+
+                        STYLED(ELEMENTS,"border","1px solid green");
+                        STYLED(ELEMENTS,"border-radius","10px");
+
+                        TEXT(ELEMENTS,"h1","#FFFFFF","3% auto auto 2%","20px",Element.Name,(ELEMENTIIS)=>{
+
+                            STYLED(ELEMENTIIS,"text-align","left");
+
+                        });
+
+                        RIGHTIMAGE(ELEMENTS,WHITEBACKICON,"transparent","20px","20px","3%",(ELEMENTSE)=>{
+
+                            STYLED(ELEMENTSE,"transform","rotate(180deg)");
+
+                        });
+    
+                    });
+    
+                });
+
+            });
 
         });
 
