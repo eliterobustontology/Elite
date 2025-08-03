@@ -229,7 +229,7 @@ const CATERGORYPAGE=()=>{
 
         });
 
-        TEXT(ELEMENT,"h1","#FFFFFF","auto auto auto  63%","20px","Catergory",()=>{
+        TEXT(ELEMENT,"h1","#FFFFFF","auto 1% auto auto","20px","Catergory",()=>{
 
         });
 
@@ -292,7 +292,7 @@ const SAVEDPAGE=()=>{
 
         });
 
-        TEXT(ELEMENT,"h1","#FFFFFF","auto auto auto  55%","20px","Saved Items",()=>{
+        TEXT(ELEMENT,"h1","#FFFFFF","auto 1% auto auto","20px","Saved Items",()=>{
 
         });
 
@@ -324,8 +324,8 @@ const USERACCOUNTPAGE=()=>{
 
         });
 
-        TEXT(ELEMENT,"h1","#FFFFFF","auto auto auto  63%","20px","Profile",()=>{
-
+        TEXT(ELEMENT,"h1","#FFFFFF","auto 1% auto auto","20px","Profile",(ELEMENTS)=>{
+            
         });
 
     });
