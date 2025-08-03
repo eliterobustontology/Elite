@@ -1,6 +1,14 @@
 const LINK="https://docs.google.com/spreadsheets/d/18BUoCg4yVUrxWv8RG885ZIn2fjkURGgjIrCi6otCxFk/edit?usp=sharing";
 const NOVASTART=()=>{
 
+    DATADOWNLOADSECTION();
+
+    ROUTE("",HOMEPAGE,"HOMEPAGE");
+
+};
+
+const DATADOWNLOADSECTION=()=>{
+
     GETDATA(LINK,"UserAccountPageDesign",(data)=>{
 
         JSONIFICATION(data,(UserData)=>{
@@ -13,16 +21,11 @@ const NOVASTART=()=>{
 
     DOWNLOADSAVEINDEX(LINK,"Products","Products","Products",()=>{
 
-        ROUTE("",HOMEPAGE,"HOMEPAGE");
-
     });
 
     DOWNLOADSAVEINDEX(LINK,"Catergory","Catergory","Catergory",()=>{
 
-
     });
-
-    ROUTE("",HOMEPAGE,"HOMEPAGE");
 
 };
 
