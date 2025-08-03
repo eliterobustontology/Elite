@@ -34,24 +34,48 @@ const HOMEPAGE=()=>{
 
         });
 
-        ICON(ELEMENT,WHITERETRYICON,"","30px","30px","auto 5% auto auto",(ELEMENTAS)=>{
+        DIV(ELEMENT,"50%","100%","transparent","inline-flex","auto","",(ELEMENTS)=>{
 
-            CLICK(ELEMENTAS,()=>{
+            STYLED(ELEMENTS,"position","absolute");
+            STYLED(ELEMENTS,"right","30%");
 
-                RELOAD();
+            ROUNDINPUT(ELEMENTS,"90%","50px","10px","auto","#ffffff","text","Find Your Product",()=>{
 
             });
 
         });
 
-        ICON(ELEMENT,WHITEADDICON,"","30px","30px","auto 5% auto auto",()=>{
+        DIV(ELEMENT,"30%","100%","transparent","inline-flex","auto","",(ELEMENTS)=>{
+
+            STYLED(ELEMENTS,"position","absolute");
+            STYLED(ELEMENTS,"right","0");
+
+            ICON(ELEMENTS,WHITERETRYICON,"","30px","30px","auto 5% auto auto",(ELEMENTAS)=>{
+
+                CLICK(ELEMENTAS,()=>{
+
+                    RELOAD();
+
+                });
+
+            });
+
+            ICON(ELEMENTS,WHITEADDICON,"","30px","30px","auto 5% auto auto",(ELEMENTAS)=>{
+
+                CLICK(ELEMENTAS,()=>{
+
+                    ROUTE(" ",NEWCLIENT,"HOMEPAGE");
+
+                });
+
+            });
+
+            ICON(ELEMENTS,WHITEUSERPROFILEICON,"","30px","30px","auto 5% auto auto",()=>{
+
+            });
 
         });
-
-        ICON(ELEMENT,WHITEUSERPROFILEICON,"","30px","30px","auto 5% auto auto",()=>{
-
-        });
-
+        
     });
 
     DIV("","","auto","transparent","block","auto","",(ELEMENT)=>{
@@ -103,7 +127,7 @@ const HOMEPAGE=()=>{
                             STYLED(ELEMENTSE,"right","5px");
                             STYLED(ELEMENTSE,"bottom","0px");
 
-                            ICON(ELEMENTSE,WHITEUNHEARTICON,"transparent","","","",(ELEMENTIS)=>{
+                            ICON(ELEMENTSE,WHITEADDICON,"transparent","","","",(ELEMENTIS)=>{
 
                             });
 
@@ -114,6 +138,46 @@ const HOMEPAGE=()=>{
                 });
             
             });
+
+        });
+
+    });
+
+};
+
+const NEWCLIENT=()=>{
+
+    CLEAR();
+
+    HEADER("","green",(ELEMENT)=>{
+
+        STYLED(ELEMENT,"height","100px");
+
+        TEXT(ELEMENT,"h1","#ffffff","auto auto auto 2%","25px","Qel Manager",(ELEMENTS)=>{
+
+        });
+
+        ICON(ELEMENT,WHITERETRYICON,"","30px","30px","auto 5% auto auto",(ELEMENTAS)=>{
+
+            CLICK(ELEMENTAS,()=>{
+
+                RELOAD();
+
+            });
+
+        });
+
+        ICON(ELEMENT,WHITEDELETEICON,"","30px","30px","auto 5% auto auto",(ELEMENTAS)=>{
+
+            CLICK(ELEMENTAS,()=>{
+
+                ROUTE("",HOMEPAGE,"HOMEPAGE");
+
+            });
+
+        });
+
+        ICON(ELEMENT,WHITEPENCILICON,"","30px","30px","auto 5% auto auto",()=>{
 
         });
 
