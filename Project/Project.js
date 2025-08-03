@@ -1,5 +1,13 @@
 const NOVASTART=()=>{
 
+    DOWNLOADSAVEINDEX(LINK,"Products","Products","Products",()=>{
+
+    });
+
+    DOWNLOADSAVEINDEX(LINK,"Catergory","Catergory","Catergory",()=>{
+
+    });
+
     CONDITION(localStorage.getItem("UserData"),()=>{
 
         ROUTE("",HOMEPAGE,"HOMEPAGE");
