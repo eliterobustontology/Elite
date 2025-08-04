@@ -410,6 +410,8 @@ const NEWCLIENT=()=>{
 
             JSONIFICATION(localStorage.getItem("NewProduct"),(Data)=>{
 
+                
+
             });
 
         });
