@@ -29,6 +29,10 @@ const NOVASTART=()=>{
 
 const HOMEPAGE=()=>{
 
+    SESSIONDELETE("ProductName");
+
+    SESSIONDELETE("ProductNumber");
+
     DOWNLOADSAVEINDEX(LINK,"Products","Products","Products",()=>{
 
     });
@@ -109,7 +113,7 @@ const HOMEPAGE=()=>{
 
                         });
 
-                        CLICK(ELEMENT,()=>{
+                        CLICK(ELEMENTEIS,()=>{
 
                             SESSIONSTORE("ProductNumber",element.ID);
                             SESSIONSTORE("ProductName",element.ProductName);
@@ -234,6 +238,10 @@ const HOMEPAGE=()=>{
 
 const CATERGORYPAGE=()=>{
 
+    SESSIONDELETE("ProductName");
+
+    SESSIONDELETE("ProductNumber");
+
     BACKPAGE("HOMEPAGE");
 
     CLEAR();
@@ -287,7 +295,7 @@ const CATERGORYPAGE=()=>{
 
                 });
 
-                CLICK(ELEMENT,()=>{
+                CLICK(ELEMENTEIS,()=>{
 
                     SESSIONSTORE("ProductNumber",element.ID);
                     SESSIONSTORE("ProductName",element.ProductName);
@@ -344,29 +352,58 @@ const ALLPRODUCTPAGE=()=>{
 
         GETINDEXEDDATA("Products", "Products", (element)=>{
 
-            CHECKER(element.ProductCatergory === sessionStorage.getItem("ProductNumber"),()=>{
+            CHECKER(sessionStorage.getItem("ProductNumber")=== element.ProductCatergory,()=>{
 
                 console.log(element);
     
-                DIV(ELEMENT,"45%","180px","transparent","inline-table","hidden","2%",(ELEMENTEIS)=>{
-    
+                DIV(ELEMENT,"45%","250px","transparent","inline-table","hidden","2%",(ELEMENTEIS)=>{
+
                     STYLED(ELEMENTEIS,"flex-shrink","0");
                     STYLED(ELEMENTEIS,"border-radius","5px");
                     STYLED(ELEMENTEIS,"border","1px solid green");
-    
+
                     IMAGE(ELEMENTEIS,element.ProductImage,"","100%","100%","",(ELEMENTER)=>{
-    
+
                         STYLED(ELEMENTER,"position","absolute");
                         STYLED(ELEMENTER,"left","0");
-    
+
                     });
-    
+
                     FOOTER(ELEMENTEIS,"forestgreen",(ELEMENT)=>{
-    
-                        TEXT(ELEMENT,"h1","#FFFFFF","auto","14px",element.ProductName,()=>{
-    
+
+                        STYLED(ELEMENT,"height","100px");
+                        STYLED(ELEMENT,"display","block");
+
+                        TEXT(ELEMENT,"h1","#FFFFFF","5%","14px",element.ProductName,(ETET)=>{
+
                         });
-    
+
+                        DIV(ELEMENT,"100%","50px","transparent","inline-table","hidden","",(ELEMENTEIS)=>{
+
+                            STYLED(ELEMENTEIS,"position","absolute");
+                            STYLED(ELEMENTEIS,"bottom","0");
+                            STYLED(ELEMENTEIS,"left","0");
+
+                            TEXT(ELEMENTEIS,"h1","orange","5%","14px","UGX "+element.ProductPrice,(TETST)=>{
+                            
+                                STYLED(TETST,"text-align","left");
+
+                            });
+
+                            DIV(ELEMENTEIS,"20%","50px","transparent","inline-flex","hidden","",(ELEMENTSE)=>{
+
+                                STYLED(ELEMENTSE,"position","absolute");
+                                STYLED(ELEMENTSE,"right","5px");
+                                STYLED(ELEMENTSE,"bottom","0px");
+
+                                ICON(ELEMENTSE,WHITEUNHEARTICON,"transparent","","","",(ELEMENTIS)=>{
+
+                                });
+
+                            });
+
+                        });
+
                     });
         
                 });
