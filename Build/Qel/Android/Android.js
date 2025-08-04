@@ -108,6 +108,15 @@ const HOMEPAGE=()=>{
                             });
 
                         });
+
+                        CLICK(ELEMENT,()=>{
+
+                            SESSIONSTORE("ProductNumber",element.ID);
+                            SESSIONSTORE("ProductName",element.ProductName);
+
+                            ROUTE(" ",ALLPRODUCTPAGE,"HOMEPAGE");
+
+                        });
             
                     });
 
@@ -225,6 +234,8 @@ const HOMEPAGE=()=>{
 
 const CATERGORYPAGE=()=>{
 
+    BACKPAGE("HOMEPAGE");
+
     CLEAR();
 
     HEADER("","forestgreen",(ELEMENT)=>{
@@ -255,8 +266,6 @@ const CATERGORYPAGE=()=>{
 
         GETINDEXEDDATA("Catergory", "Catergory", (element)=>{
 
-            console.log(element);
-
             DIV(ELEMENT,"45%","180px","transparent","inline-table","hidden","2%",(ELEMENTEIS)=>{
 
                 STYLED(ELEMENTEIS,"flex-shrink","0");
@@ -276,6 +285,90 @@ const CATERGORYPAGE=()=>{
 
                     });
 
+                });
+
+                CLICK(ELEMENT,()=>{
+
+                    SESSIONSTORE("ProductNumber",element.ID);
+                    SESSIONSTORE("ProductName",element.ProductName);
+
+                    ROUTE(" ",ALLPRODUCTPAGE,"CATERGORYPAGE");
+
+                });
+    
+            });
+
+        });
+
+    });
+
+};
+
+const ALLPRODUCTPAGE=()=>{
+
+    CLEAR();
+
+    HEADER("","forestgreen",(ELEMENT)=>{
+
+        IMAGE(ELEMENT,WHITEBACKICON,"","20px","20px","auto 2%",(ELEMENTS)=>{
+
+            CLICK(ELEMENTS,()=>{
+
+                CONDITION(sessionStorage.getItem("PreviousPage") === "HOMEPAGE",()=>{
+
+                    ROUTE("",HOMEPAGE,"HOMEPAGE");
+
+                },()=>{
+
+                    ROUTE("",CATERGORYPAGE,"CATERGORYPAGE");
+
+                });
+
+            });
+
+        });
+
+        TEXT(ELEMENT,"h1","#FFFFFF","auto 1% auto auto","20px",sessionStorage.getItem("ProductName"),()=>{
+
+        });
+
+    });
+
+    DIV("","","auto","transparent","block","auto","",(ELEMENT)=>{
+
+        STYLED(ELEMENT,"position","absolute");
+        STYLED(ELEMENT,"bottom","0px");
+        STYLED(ELEMENT,"top","50px");
+
+        CLEAR(ELEMENT);
+
+        GETINDEXEDDATA("Products", "Products", (element)=>{
+
+            CHECKER(element.ProductCatergory === sessionStorage.getItem("ProductNumber"),()=>{
+
+                console.log(element);
+    
+                DIV(ELEMENT,"45%","180px","transparent","inline-table","hidden","2%",(ELEMENTEIS)=>{
+    
+                    STYLED(ELEMENTEIS,"flex-shrink","0");
+                    STYLED(ELEMENTEIS,"border-radius","5px");
+                    STYLED(ELEMENTEIS,"border","1px solid green");
+    
+                    IMAGE(ELEMENTEIS,element.ProductImage,"","100%","100%","",(ELEMENTER)=>{
+    
+                        STYLED(ELEMENTER,"position","absolute");
+                        STYLED(ELEMENTER,"left","0");
+    
+                    });
+    
+                    FOOTER(ELEMENTEIS,"forestgreen",(ELEMENT)=>{
+    
+                        TEXT(ELEMENT,"h1","#FFFFFF","auto","14px",element.ProductName,()=>{
+    
+                        });
+    
+                    });
+        
                 });
 
             });
