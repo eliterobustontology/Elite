@@ -667,19 +667,19 @@ const CONTACTPAGE=()=>{
             
         });
 
-        ROUNDINPUT(ELEMENT,"90%","50px","10px","2%","green","text","Subject Of Contact",()=>{
+        ROUNDINPUT(ELEMENT,"90%","50px","10px","2%","#ffffff","text","Subject Of Contact",()=>{
 
         });
 
-        ROUNDINPUT(ELEMENT,"90%","50px","10px","2%","green","text","Enter Your Name",()=>{
+        ROUNDINPUT(ELEMENT,"90%","50px","10px","2%","#ffffff","text","Enter Your Name",()=>{
 
         });
 
-        ROUNDINPUT(ELEMENT,"90%","50px","10px","2%","green","email","Enter Your Email",()=>{
+        ROUNDINPUT(ELEMENT,"90%","50px","10px","2%","#ffff","email","Enter Your Email",()=>{
 
         });
 
-        TEXTAREA(ELEMENT,"90%","","10px","2%","green","Compose Your Message",()=>{
+        TEXTAREA(ELEMENT,"90%","","10px","2%","#ffff","Compose Your Message",()=>{
 
         });
 
