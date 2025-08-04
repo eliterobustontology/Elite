@@ -663,7 +663,7 @@ const CONTACTPAGE=()=>{
         STYLED(ELEMENT,"bottom","0px");
         STYLED(ELEMENT,"top","50px");
 
-        TEXT(ELEMENT,"h1","#FFFFFF","2% 1% auto auto","20px","Fill The Form Below",(ELEMENTS)=>{
+        TEXT(ELEMENT,"h1","#FFFFFF","3% auto","20px","Fill The Form Below",(ELEMENTS)=>{
             
         });
 
@@ -679,6 +679,13 @@ const CONTACTPAGE=()=>{
 
         });
 
+        TEXTAREA(ELEMENT,"90%","","10px","2%","green","Compose Your Message",()=>{
+
+        });
+
+        BUTTON(ELEMENT,"90%","50px","green","#ffffff","10px","Send","2%",()=>{
+
+        });
 
     });
 
