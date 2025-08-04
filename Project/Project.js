@@ -60,6 +60,12 @@ const HOMEPAGE=()=>{
 
                 ICON(ELEMENTSE,WHITELOCATIONICON,"transparent","","","auto 5% auto auto",(ELEMENTIS)=>{
 
+                    CLICK(ELEMENTIS,()=>{
+
+                        ROUTE(" ",LOCATIONPAGE,"HOMEPAGE");
+
+                    });
+
                 });
 
             });
@@ -225,6 +231,138 @@ const HOMEPAGE=()=>{
 
         });
         
+    });
+
+};
+
+const LOCATIONPAGE=()=>{
+
+    CLEAR();
+
+    HEADER("","forestgreen",(ELEMENT)=>{
+
+        IMAGE(ELEMENT,WHITEBACKICON,"","20px","20px","auto 2%",(ELEMENTS)=>{
+
+            CLICK(ELEMENTS,()=>{
+
+                ROUTE("",HOMEPAGE,"HOMEPAGE");
+
+            });
+
+        });
+
+        TEXT(ELEMENT,"h1","#FFFFFF","auto 1% auto auto","20px","Location",(ELEMENTS)=>{
+            
+        });
+
+    });
+
+    DIV("","","auto","transparent","block","auto","",(ELEMENT)=>{
+
+        STYLED(ELEMENT,"position","absolute");
+        STYLED(ELEMENT,"bottom","0px");
+        STYLED(ELEMENT,"top","50px");
+
+        DIV(ELEMENT,"96%","50px","transparent","inline-flex","","2%",(ELEMENTS)=>{
+
+            STYLED(ELEMENTS,"border","1px solid green");
+            STYLED(ELEMENTS,"border-radius","10px");
+
+            TEXT(ELEMENTS,"h1","#FFFFFF","3% auto auto 2%","20px","Privacy Policy",(ELEMENTIIS)=>{
+
+                STYLED(ELEMENTIIS,"text-align","left");
+
+            });
+
+            RIGHTIMAGE(ELEMENTS,WHITEBACKICON,"transparent","20px","20px","3%",(ELEMENTSE)=>{
+
+                STYLED(ELEMENTSE,"transform","rotate(180deg)");
+
+            });
+
+            CLICK(ELEMENTS,()=>{
+
+                ROUTE(" ",SETTINGSPAGE,"USERACCOUNTPAGE");
+     
+            });
+    
+        });
+
+        DIV(ELEMENT,"96%","50px","transparent","inline-flex","","2%",(ELEMENTS)=>{
+
+            STYLED(ELEMENTS,"border","1px solid green");
+            STYLED(ELEMENTS,"border-radius","10px");
+
+            TEXT(ELEMENTS,"h1","#FFFFFF","3% auto auto 2%","20px","Updates",(ELEMENTIIS)=>{
+
+                STYLED(ELEMENTIIS,"text-align","left");
+
+            });
+
+            RIGHTIMAGE(ELEMENTS,WHITEBACKICON,"transparent","20px","20px","3%",(ELEMENTSE)=>{
+
+                STYLED(ELEMENTSE,"transform","rotate(180deg)");
+
+            });
+
+            CLICK(ELEMENTS,()=>{
+
+                ROUTE(" ",SETTINGSPAGE,"USERACCOUNTPAGE");
+     
+            });
+    
+        });
+
+        DIV(ELEMENT,"96%","50px","transparent","inline-flex","","2%",(ELEMENTS)=>{
+
+            STYLED(ELEMENTS,"border","1px solid green");
+            STYLED(ELEMENTS,"border-radius","10px");
+
+            TEXT(ELEMENTS,"h1","#FFFFFF","3% auto auto 2%","20px","Delete Account",(ELEMENTIIS)=>{
+
+                STYLED(ELEMENTIIS,"text-align","left");
+
+            });
+
+            RIGHTIMAGE(ELEMENTS,WHITEBACKICON,"transparent","20px","20px","3%",(ELEMENTSE)=>{
+
+                STYLED(ELEMENTSE,"transform","rotate(180deg)");
+
+            });
+
+            CLICK(ELEMENTS,()=>{
+
+                ROUTE(" ",SETTINGSPAGE,"USERACCOUNTPAGE");
+     
+            });
+    
+        });
+
+        DIV(ELEMENT,"96%","50px","transparent","inline-flex","","2%",(ELEMENTS)=>{
+
+            STYLED(ELEMENTS,"border","1px solid green");
+            STYLED(ELEMENTS,"border-radius","10px");
+
+            TEXT(ELEMENTS,"h1","#FFFFFF","3% auto auto 2%","20px","App Sync",(ELEMENTIIS)=>{
+
+                STYLED(ELEMENTIIS,"text-align","left");
+
+            });
+
+            RIGHTIMAGE(ELEMENTS,WHITEBACKICON,"transparent","20px","20px","3%",(ELEMENTSE)=>{
+
+                STYLED(ELEMENTSE,"transform","rotate(180deg)");
+
+            });
+
+            CLICK(ELEMENTS,()=>{
+
+                ROUTE(" ",SETTINGSPAGE,"USERACCOUNTPAGE");
+     
+            });
+    
+        });
+
     });
 
 };
