@@ -54,7 +54,11 @@ const HOMEPAGE=()=>{
                 STYLED(ELEMENTSE,"position","absolute");
                 STYLED(ELEMENTSE,"right","0px");
 
-                ROUNDINPUT(ELEMENTSE,"95%","35px","5px","auto","green","text","Search Products",()=>{
+                ROUNDINPUT(ELEMENTSE,"70%","35px","5px","auto","green","text","Search Products",()=>{
+
+                });
+
+                ICON(ELEMENTSE,WHITELOCATIONICON,"transparent","","","auto 5% auto auto",(ELEMENTIS)=>{
 
                 });
 
