@@ -320,6 +320,8 @@ const SAVEDPAGE=()=>{
 
 const USERACCOUNTPAGE=()=>{
 
+    BACKPAGE("HOMEPAGE");
+
     CLEAR();
 
     HEADER("","forestgreen",(ELEMENT)=>{
@@ -393,39 +395,132 @@ const USERACCOUNTPAGE=()=>{
 
         DIV(ELEMENT,"100%","auto","transparent","block","","",(ELEMENTS)=>{
 
-            CLEAR(ELEMENTS);
-
             STYLED(ELEMENTS,"border-top","1px solid green");
 
-            LOCALDEJSONDATA("UserAccountPageDesign",(data)=>{
+            DIV(ELEMENTS,"96%","50px","transparent","inline-flex","","2%",(ELEMENTS)=>{
 
-                REDUX(data,(Element)=>{
+                STYLED(ELEMENTS,"border","1px solid green");
+                STYLED(ELEMENTS,"border-radius","10px");
 
-                    console.log(Element);
+                TEXT(ELEMENTS,"h1","#FFFFFF","3% auto auto 2%","20px","Community",(ELEMENTIIS)=>{
 
-                    DIV(ELEMENTS,"96%","50px","transparent","inline-flex","","2%",(ELEMENTS)=>{
+                    STYLED(ELEMENTIIS,"text-align","left");
 
-                        STYLED(ELEMENTS,"border","1px solid green");
-                        STYLED(ELEMENTS,"border-radius","10px");
-
-                        TEXT(ELEMENTS,"h1","#FFFFFF","3% auto auto 2%","20px",Element.Name,(ELEMENTIIS)=>{
-
-                            STYLED(ELEMENTIIS,"text-align","left");
-
-                        });
-
-                        RIGHTIMAGE(ELEMENTS,WHITEBACKICON,"transparent","20px","20px","3%",(ELEMENTSE)=>{
-
-                            STYLED(ELEMENTSE,"transform","rotate(180deg)");
-
-                        });
-    
-                    });
-    
                 });
+
+                RIGHTIMAGE(ELEMENTS,WHITEBACKICON,"transparent","20px","20px","3%",(ELEMENTSE)=>{
+
+                    STYLED(ELEMENTSE,"transform","rotate(180deg)");
+
+                });
+
+                CLICK(ELEMENTS,()=>{
+
+                    ROUTE(" ",SETTINGSPAGE,"USERACCOUNTPAGE");
+     
+                });
+    
+            });
+
+            DIV(ELEMENTS,"96%","50px","transparent","inline-flex","","2%",(ELEMENTS)=>{
+
+                STYLED(ELEMENTS,"border","1px solid green");
+                STYLED(ELEMENTS,"border-radius","10px");
+
+                TEXT(ELEMENTS,"h1","#FFFFFF","3% auto auto 2%","20px","Settings",(ELEMENTIIS)=>{
+
+                    STYLED(ELEMENTIIS,"text-align","left");
+
+                });
+
+                RIGHTIMAGE(ELEMENTS,WHITEBACKICON,"transparent","20px","20px","3%",(ELEMENTSE)=>{
+
+                    STYLED(ELEMENTSE,"transform","rotate(180deg)");
+
+                });
+
+                CLICK(ELEMENTS,()=>{
+
+                    ROUTE(" ",SETTINGSPAGE,"USERACCOUNTPAGE");
+     
+                });
+    
+            });
+
+            DIV(ELEMENTS,"96%","50px","transparent","inline-flex","","2%",(ELEMENTS)=>{
+
+                STYLED(ELEMENTS,"border","1px solid green");
+                STYLED(ELEMENTS,"border-radius","10px");
+
+                TEXT(ELEMENTS,"h1","#FFFFFF","3% auto auto 2%","20px","Help",(ELEMENTIIS)=>{
+
+                    STYLED(ELEMENTIIS,"text-align","left");
+
+                });
+
+                RIGHTIMAGE(ELEMENTS,WHITEBACKICON,"transparent","20px","20px","3%",(ELEMENTSE)=>{
+
+                    STYLED(ELEMENTSE,"transform","rotate(180deg)");
+
+                });
+
+                CLICK(ELEMENTS,()=>{
+
+                    ROUTE(" ",SETTINGSPAGE,"USERACCOUNTPAGE");
+     
+                });
+    
+            });
+
+            DIV(ELEMENTS,"96%","50px","transparent","inline-flex","","2%",(ELEMENTS)=>{
+
+                STYLED(ELEMENTS,"border","1px solid green");
+                STYLED(ELEMENTS,"border-radius","10px");
+
+                TEXT(ELEMENTS,"h1","#FFFFFF","3% auto auto 2%","20px","Contact Us",(ELEMENTIIS)=>{
+
+                    STYLED(ELEMENTIIS,"text-align","left");
+
+                });
+
+                RIGHTIMAGE(ELEMENTS,WHITEBACKICON,"transparent","20px","20px","3%",(ELEMENTSE)=>{
+
+                    STYLED(ELEMENTSE,"transform","rotate(180deg)");
+
+                });
+
+                CLICK(ELEMENTS,()=>{
+
+                    ROUTE(" ",SETTINGSPAGE,"USERACCOUNTPAGE");
+     
+                });
+    
+            });
+
+        });
+
+    });
+
+};
+
+const SETTINGSPAGE=()=>{
+
+    CLEAR();
+
+    HEADER("","forestgreen",(ELEMENT)=>{
+
+        IMAGE(ELEMENT,WHITEBACKICON,"","20px","20px","auto 2%",(ELEMENTS)=>{
+
+            CLICK(ELEMENTS,()=>{
+
+                ROUTE("",USERACCOUNTPAGE,"USERACCOUNTPAGE");
 
             });
 
+        });
+
+        TEXT(ELEMENT,"h1","#FFFFFF","auto 1% auto auto","20px","Settings",(ELEMENTS)=>{
+            
         });
 
     });
