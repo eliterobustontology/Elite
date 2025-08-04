@@ -10,6 +10,7 @@ import { LEFTIMAGE } from "../DataBase/LeftImage/LeftImage.js";
 import { RIGHTIMAGE } from "../DataBase/RightImage/RightImage.js";
 import { ROUNDINPUT } from "../DataBase/RoundInput/RoundInput.js";
 import { TEXT } from "../DataBase/Text/Text.js";
+import { TEXTAREA } from "../DataBase/TextArea/TextArea.js";
 
 export const COMPONENTSCONNECTION=()=>{
 const DATA=`const FOOTER=${FOOTER};
@@ -24,12 +25,13 @@ const BUTTON=${BUTTON};
 const ROUNDINPUT=${ROUNDINPUT};
 const ICON=${ICON};
 const AUDIO=${AUDIO};
+const TEXTAREA=${TEXTAREA};
 `;
     
 localStorage.setItem('COMPONENTS',DATA)
 
 };
 `
-const AUDIO=${AUDIO};
+const TEXTAREA=${TEXTAREA};
 
 `

@@ -491,7 +491,7 @@ const USERACCOUNTPAGE=()=>{
 
                 CLICK(ELEMENTS,()=>{
 
-                    ROUTE(" ",SETTINGSPAGE,"USERACCOUNTPAGE");
+                    ROUTE(" ",CONTACTPAGE,"USERACCOUNTPAGE");
      
                 });
     
@@ -630,6 +630,55 @@ const SETTINGSPAGE=()=>{
             });
     
         });
+
+    });
+
+};
+
+const CONTACTPAGE=()=>{
+
+    CLEAR();
+
+    HEADER("","forestgreen",(ELEMENT)=>{
+
+        IMAGE(ELEMENT,WHITEBACKICON,"","20px","20px","auto 2%",(ELEMENTS)=>{
+
+            CLICK(ELEMENTS,()=>{
+
+                ROUTE("",USERACCOUNTPAGE,"USERACCOUNTPAGE");
+
+            });
+
+        });
+
+        TEXT(ELEMENT,"h1","#FFFFFF","auto 1% auto auto","20px","Reach Us",(ELEMENTS)=>{
+            
+        });
+
+    });
+
+    DIV("","","auto","transparent","block","auto","",(ELEMENT)=>{
+
+        STYLED(ELEMENT,"position","absolute");
+        STYLED(ELEMENT,"bottom","0px");
+        STYLED(ELEMENT,"top","50px");
+
+        TEXT(ELEMENT,"h1","#FFFFFF","2% 1% auto auto","20px","Fill The Form Below",(ELEMENTS)=>{
+            
+        });
+
+        ROUNDINPUT(ELEMENT,"90%","50px","10px","2%","green","text","Subject Of Contact",()=>{
+
+        });
+
+        ROUNDINPUT(ELEMENT,"90%","50px","10px","2%","green","text","Enter Your Name",()=>{
+
+        });
+
+        ROUNDINPUT(ELEMENT,"90%","50px","10px","2%","green","email","Enter Your Email",()=>{
+
+        });
+
 
     });
 
