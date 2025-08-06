@@ -26,7 +26,7 @@ const MOBILEHOMEPAGE=()=>{
 
   HEADER("","Navy",(ELEMENT)=>{
 
-    TEXT(ELEMENT,"h1","","auto 2%","20px","Elite",()=>{
+    TEXT(ELEMENT,"h1","","auto 2%","20px","Elite Robust Ontology",()=>{
 
     });
 
@@ -39,6 +39,18 @@ const MOBILEHOMEPAGE=()=>{
   DIV("","","","transparent","block","auto","",(ELEMENT)=>{
 
     STYLED(ELEMENT,"top","50px");
+
+    DIV(ELEMENT,"100%","100px","blue","block","auto","",(ELEMENT)=>{
+
+    });
+
+    DIV(ELEMENT,"100%","200px","green","block","auto","",(ELEMENT)=>{
+
+    });
+
+  });
+
+  FOOTER("","Navy",(ELEMENT)=>{
 
   });
 
