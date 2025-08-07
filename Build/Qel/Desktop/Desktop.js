@@ -28,8 +28,6 @@ const HOMEPAGE=()=>{
 
     HEADER("","green",(ELEMENT)=>{
 
-        STYLED(ELEMENT,"height","100px");
-
         TEXT(ELEMENT,"h1","#ffffff","auto auto auto 2%","25px","Qel Manager",(ELEMENTS)=>{
 
         });
@@ -39,7 +37,7 @@ const HOMEPAGE=()=>{
             STYLED(ELEMENTS,"position","absolute");
             STYLED(ELEMENTS,"right","0");
 
-            ICON(ELEMENTS,WHITERETRYICON,"","30px","30px","auto 5% auto auto",(ELEMENTAS)=>{
+            ICON(ELEMENTS,WHITERETRYICON,"","","","auto",(ELEMENTAS)=>{
 
                 CLICK(ELEMENTAS,()=>{
 
@@ -49,7 +47,7 @@ const HOMEPAGE=()=>{
 
             });
 
-            ICON(ELEMENTS,WHITEADDICON,"","30px","30px","auto 5% auto auto",(ELEMENTAS)=>{
+            ICON(ELEMENTS,WHITEADDICON,"","","","auto ",(ELEMENTAS)=>{
 
                 CLICK(ELEMENTAS,()=>{
 
@@ -61,7 +59,7 @@ const HOMEPAGE=()=>{
 
             });
 
-            ICON(ELEMENTS,WHITEUSERPROFILEICON,"","30px","30px","auto 5% auto auto",()=>{
+            ICON(ELEMENTS,WHITEUSERPROFILEICON,"","","","auto",()=>{
 
             });
 
@@ -72,7 +70,7 @@ const HOMEPAGE=()=>{
     DIV("","","auto","transparent","block","auto","",(ELEMENT)=>{
 
         STYLED(ELEMENT,"position","absolute");
-        STYLED(ELEMENT,"top","100px");
+        STYLED(ELEMENT,"top","50px");
         STYLED(ELEMENT,"bottom","0");
 
         GETINDEXEDDATA("Products", "Products", (element)=>{
@@ -151,8 +149,6 @@ const NEWCLIENT=()=>{
 
     HEADER("","green",(ELEMENT)=>{
 
-        STYLED(ELEMENT,"height","100px");
-
         TEXT(ELEMENT,"h1","#ffffff","auto auto auto 2%","25px","Qel Manager",(ELEMENTS)=>{
 
         });
@@ -181,7 +177,7 @@ const NEWCLIENT=()=>{
             STYLED(ELEMENTS,"position","absolute");
             STYLED(ELEMENTS,"right","0");
 
-            ICON(ELEMENTS,WHITERETRYICON,"","30px","30px","auto 5% auto auto",(ELEMENTAS)=>{
+            ICON(ELEMENTS,WHITERETRYICON,"","","","auto",(ELEMENTAS)=>{
 
                 CLICK(ELEMENTAS,()=>{
 
@@ -191,7 +187,7 @@ const NEWCLIENT=()=>{
 
             });
 
-            ICON(ELEMENTS,WHITEDELETEICON,"","30px","30px","auto 5% auto auto",(ELEMENTAS)=>{
+            ICON(ELEMENTS,WHITEDELETEICON,"","","","auto",(ELEMENTAS)=>{
 
                 CLICK(ELEMENTAS,()=>{
 
@@ -201,7 +197,7 @@ const NEWCLIENT=()=>{
 
             });
 
-            ICON(ELEMENTS,WHITEPENCILICON,"","30px","30px","auto 5% auto auto",(ELEMENTAS)=>{
+            ICON(ELEMENTS,WHITEPENCILICON,"","","","auto",(ELEMENTAS)=>{
 
                 CLICK(ELEMENTAS,()=>{
 
@@ -226,7 +222,7 @@ const NEWCLIENT=()=>{
     DIV("","100%","auto","transparent","block","hidden","",(ELEMENTA)=>{
 
         STYLED(ELEMENTA,"position","absolute");
-        STYLED(ELEMENTA,"top","100px");
+        STYLED(ELEMENTA,"top","50px");
         STYLED(ELEMENTA,"bottom","0");
 
         DIV(ELEMENTA,"40%","100%","transparent","block","auto","",(ELEMENTS)=>{
@@ -317,11 +313,11 @@ const NEWCLIENT=()=>{
             STYLED(ELEMENTS,"position","absolute");
             STYLED(ELEMENTS,"left","40%");
 
-            ROUNDINPUT(ELEMENTS,"90%","50px","10px","auto","#ffffff","text","Find Your Product",(ELE)=>{
+            ROUNDINPUT(ELEMENTS,"90%","50px","10px","5%auto","#ffffff","text","Find Your Product",(ELE)=>{
                 
                 INPUTED(ELE,(Data)=>{
 
-                    DIV(ELEMENTS,"100%","auto","red","block","auto","",(ELEMENTEES)=>{
+                    DIV(ELEMENTS,"100%","auto","transparent","block","auto","",(ELEMENTEES)=>{
 
                         STYLED(ELEMENTEES,"position","absolute");
                         STYLED(ELEMENTEES,"left","0%");
@@ -562,7 +558,7 @@ const LOGINPAGE=()=>{
 
     CLEAR();
 
-    TEXT("","h1","#ffffff","5%","25px","Qel Manager",()=>{
+    TEXT("","h1","#ffffff","5%","25px","Qel  Manager",()=>{
 
     });
 
