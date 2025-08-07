@@ -1,3 +1,4 @@
+
 const LINK="https://docs.google.com/spreadsheets/d/18BUoCg4yVUrxWv8RG885ZIn2fjkURGgjIrCi6otCxFk/edit?usp=sharing";
 
 const NOVASTART=()=>{
@@ -314,100 +315,110 @@ const NEWCLIENT=()=>{
                 
                 INPUTED(ELE,(Data)=>{
 
-                    DIV(ELEMENTS,"100%","auto","transparent","block","auto","",(ELEMENTEES)=>{
+                    DIV(ELEMENTS,"100%","auto","red","block","auto","",(ELEMENTEES)=>{
 
                         STYLED(ELEMENTEES,"position","absolute");
                         STYLED(ELEMENTEES,"left","0%");
                         STYLED(ELEMENTEES,"top","70px");
-
-                        GETINDEXEDDATA("Products", "Products", (element)=>{
-    
-                            CONDITION(element.ProductName.includes(Data) && Data != ""  ,()=>{
-    
-                                DIV(ELEMENTEES,"250px","250px","transparent","inline-table","hidden","2%",(ELEMENTEIS)=>{
-        
-                                    STYLED(ELEMENTEIS,"flex-shrink","0");
-                                    STYLED(ELEMENTEIS,"border-radius","5px");
-                                    STYLED(ELEMENTEIS,"border","1px solid green");
-                                    STYLED(ELEMENTEIS,"flexShrink","0");
-                    
-                                    IMAGE(ELEMENTEIS,element.ProductImage,"","100%","100%","",(ELEMENTER)=>{
-                    
-                                        STYLED(ELEMENTER,"position","absolute");
-                                        STYLED(ELEMENTER,"left","0");
-                    
-                                    });
-                    
-                                    FOOTER(ELEMENTEIS,"forestgreen",(ELEMENT)=>{
-                    
-                                        STYLED(ELEMENT,"height","100px");
-                                        STYLED(ELEMENT,"display","block");
-                    
-                                        TEXT(ELEMENT,"h1","#FFFFFF","5%","14px",element.ProductName,(ETET)=>{
-                    
-                                        });
-                    
-                                        DIV(ELEMENT,"100%","50px","transparent","inline-table","hidden","",(ELEMENTEIS)=>{
-                    
-                                            STYLED(ELEMENTEIS,"position","absolute");
-                                            STYLED(ELEMENTEIS,"bottom","0");
-                                            STYLED(ELEMENTEIS,"left","0");
-                    
-                                            TEXT(ELEMENTEIS,"h1","orange","5%","14px","UGX "+element.ProductPrice,(TETST)=>{
-                                                    
-                                                STYLED(TETST,"text-align","left");
-                    
-                                            });
-                    
-                                            DIV(ELEMENTEIS,"20%","50px","transparent","inline-flex","hidden","",(ELEMENTSE)=>{
-                    
-                                                STYLED(ELEMENTSE,"position","absolute");
-                                                STYLED(ELEMENTSE,"right","5px");
-                                                STYLED(ELEMENTSE,"bottom","0px");
-
-                                                CONDITION(element.ProductNumber === 0,()=>{
-                                                
-                                                    TOAST("Product Currently Out Of Stock");
-
-                                                },()=>{
-                                                
-                                                    ICON(ELEMENTSE,WHITEADDICON,"transparent","","","",(ELEMENTIS)=>{
-        
-                                                        CLICK(ELEMENTEIS,()=>{
-
-                                                            ELE.value=""; 
-                                                            
-                                                            JSONADDER(localStorage.getItem("NewProduct"), [element],(datate)=>{
-                    
-                                                            LOCALSTORE("NewProduct",datate);
-                    
-                                                                NEWCLIENT();
-                    
-                                                            });
-        
-                                                        });
                         
-                                                    });
-                                                })
-                    
-                                            });
-                    
-                                        });
-                    
-                                    });
-                            
-                                });
-                                
-                            },()=>{
-                                
-                                CLEAR(ELEMENTEES);
+                        CONDITION(ELE.length >= 0 ,()=>{
 
+                            GETINDEXEDDATA("Products", "Products", (element)=>{
+        
+                                SEARCH(element, "ProductName", Data, (results) => {
+    
+                                    CONDITION(results === false ,()=>{
+    
+                                        CLEAR(ELEMENTEES);
+        
+                                    },()=>{
+    
+                                        DIV(ELEMENTEES,"250px","250px","transparent","inline-table","hidden","2%",(ELEMENTEIS)=>{
+                
+                                            STYLED(ELEMENTEIS,"flex-shrink","0");
+                                            STYLED(ELEMENTEIS,"border-radius","5px");
+                                            STYLED(ELEMENTEIS,"border","1px solid green");
+                                            STYLED(ELEMENTEIS,"flexShrink","0");
+                            
+                                            IMAGE(ELEMENTEIS,element.ProductImage,"","100%","100%","",(ELEMENTER)=>{
+                            
+                                                STYLED(ELEMENTER,"position","absolute");
+                                                STYLED(ELEMENTER,"left","0");
+                            
+                                            });
+                            
+                                            FOOTER(ELEMENTEIS,"forestgreen",(ELEMENT)=>{
+                            
+                                                STYLED(ELEMENT,"height","100px");
+                                                STYLED(ELEMENT,"display","block");
+                            
+                                                TEXT(ELEMENT,"h1","#FFFFFF","5%","14px",element.ProductName,(ETET)=>{
+                            
+                                                });
+                            
+                                                DIV(ELEMENT,"100%","50px","transparent","inline-table","hidden","",(ELEMENTEIS)=>{
+                            
+                                                    STYLED(ELEMENTEIS,"position","absolute");
+                                                    STYLED(ELEMENTEIS,"bottom","0");
+                                                    STYLED(ELEMENTEIS,"left","0");
+                            
+                                                    TEXT(ELEMENTEIS,"h1","orange","5%","14px","UGX "+element.ProductPrice,(TETST)=>{
+                                                            
+                                                        STYLED(TETST,"text-align","left");
+                            
+                                                    });
+                            
+                                                    DIV(ELEMENTEIS,"20%","50px","transparent","inline-flex","hidden","",(ELEMENTSE)=>{
+                            
+                                                        STYLED(ELEMENTSE,"position","absolute");
+                                                        STYLED(ELEMENTSE,"right","5px");
+                                                        STYLED(ELEMENTSE,"bottom","0px");
+                            
+                                                        ICON(ELEMENTSE,WHITEADDICON,"transparent","","","",(ELEMENTIS)=>{
+            
+                                                            CLICK(ELEMENTEIS,()=>{
+            
+                                                                CONDITION(element.ProductNumber === 0,()=>{
+            
+                                                                    TOAST("Product Currently Out Of Stock");
+                                                                    
+                                                                },()=>{
+            
+                                                                    JSONADDER(localStorage.getItem("NewProduct"), [element],(datate)=>{
+                            
+                                                                        LOCALSTORE("NewProduct",datate);
+                            
+                                                                        NEWCLIENT();
+                            
+                                                                    });
+                            
+                                                                });
+            
+                                                            });
+                                
+                                                        });
+                                                    });
+            
+                                                });
+                            
+                                            });
+                                        
+                                        });
+    
+                                    });
+                              
+                                });
+        
                             });
-                     
+
+                        },()=>{
+
+                            CLEAR(ELEMENTEES);
+                         
                         });
 
                     });
-    
+
                 });
 
             });
@@ -490,6 +501,20 @@ const RECIPTPAGE=()=>{
             STYLED(ELEMENTS,"position","absolute");
             STYLED(ELEMENTS,"transform","rotate(-50deg)");
 
+        });
+
+        LOCALDEJSONDATA ('NewProduct', (data)=>{
+
+            SUMARRAY(data, "ProductName", "ProductPrice", ({ items, total }) => {
+
+                console.log(items);
+
+                TEXT(ELEMENTA,"h1","#ffffff","auto","25px",total||'Nil',(ELEMENTS)=>{
+
+                });
+
+            });
+ 
         });
 
     });

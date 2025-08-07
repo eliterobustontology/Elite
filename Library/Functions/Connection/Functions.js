@@ -71,6 +71,7 @@ import { SCREENHEIGHT } from "../DataBase/ScreenHeight/ScreenHeight.js";
 import { SCREENWIDTH } from "../DataBase/ScreenWidth/ScreenWidth.js";
 import { SCROLL } from "../DataBase/Scroll/Scroll.js";
 import { SCROLLPOINT } from "../DataBase/ScrollPoint/ScrollPoint.js";
+import { SEARCH } from "../DataBase/Search/Search.js";
 import { SERVERCONNECTION } from "../DataBase/ServerConnection/ServerConnection.js";
 import { SESSIONCLEAR } from "../DataBase/SessionClear/SessionClear.js";
 import { SESSIONDELETE } from "../DataBase/SessionDelete/SessonDelete.js";
@@ -200,12 +201,12 @@ const ASHMAIL=${ASHMAIL};
 const GETINDEXEDDATA=${GETINDEXEDDATA};
 const ELITEPAY=${ELITEPAY};
 const SUMARRAY=${SUMARRAY};
-
+const SEARCH=${SEARCH};
 `;
 localStorage.setItem('FUNCTIONS',DATA)
 };
 
 `
-const SUMARRAY=${SUMARRAY};
+const SEARCH=${SEARCH};
 
 `
