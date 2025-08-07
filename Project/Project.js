@@ -562,7 +562,7 @@ const LOGINPAGE=()=>{
 
     CLEAR();
 
-    TEXT("","h1","#ffffff","5%","25px","Qel Manager",()=>{
+    TEXT("","h1","#ffffff","5%","25px","Qel  Manager",()=>{
 
     });
 
