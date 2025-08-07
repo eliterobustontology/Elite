@@ -81,6 +81,7 @@ import { STOPCOLORCHANGER } from "../DataBase/StopColorChanger/StopColorChanger.
 import { STOREINDEXED } from "../DataBase/StoreIndexed/StoreIndexed.js";
 import { STOREINDEXEDDATA } from "../DataBase/StoreIndexedData/StoreIndexedData.js";
 import { STYLED } from "../DataBase/Styled/Styled.js";
+import { SUMARRAY } from "../DataBase/Sum/Sum.js";
 import { TELEGRAM } from "../DataBase/Telegram/Telegram.js";
 import { TEXTFAMILY } from "../DataBase/TextFamily/TextFamily.js";
 import { TIMENOW } from "../DataBase/TimeNow/TimeNow.js";
@@ -198,12 +199,13 @@ const STOREINDEXEDDATA=${STOREINDEXEDDATA};
 const ASHMAIL=${ASHMAIL};
 const GETINDEXEDDATA=${GETINDEXEDDATA};
 const ELITEPAY=${ELITEPAY};
+const SUMARRAY=${SUMARRAY};
 
 `;
 localStorage.setItem('FUNCTIONS',DATA)
 };
 
 `
-const ELITEPAY=${ELITEPAY};
+const SUMARRAY=${SUMARRAY};
 
 `

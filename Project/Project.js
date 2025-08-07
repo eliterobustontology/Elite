@@ -147,14 +147,6 @@ const HOMEPAGE=()=>{
 
 const NEWCLIENT=()=>{
 
-    LOCALDEJSONDATA ('NewProduct', (element)=>{
-
-        REDUX(element,(elements)=>{
-
-        });
-        
-    });
-
     CLEAR();
 
     HEADER("","green",(ELEMENT)=>{
@@ -170,10 +162,16 @@ const NEWCLIENT=()=>{
             STYLED(ELEMENTS,"position","absolute");
             STYLED(ELEMENTS,"left","30%");
 
+            LOCALDEJSONDATA ('NewProduct', (data)=>{
 
+                SUMARRAY(data, "ProductName", "ProductPrice", ({ items, total }) => {
 
-            TEXT(ELEMENTS,"h1","#ffffff","auto","25px","Qel Manager",(ELEMENTS)=>{
+                    TEXT(ELEMENTS,"h1","#ffffff","auto","25px",total||'Nil',(ELEMENTS)=>{
 
+                    });
+
+                });
+ 
             });
 
         });
@@ -436,8 +434,6 @@ const NEWCLIENT=()=>{
                         TEXT(ELEMENTIS,"h1","#ffffff","auto auto auto 2%","25px",elements.ProductName,(ELEMENTS)=>{
 
                             CLICK(ELEMENTS,()=>{
-
-                                console.log(elements.id)
 
                                 JSONREMOVER(localStorage.getItem('NewProduct'),[elements.id],(datate)=>{
 
