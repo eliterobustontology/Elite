@@ -41,6 +41,7 @@ import { GETINDEXEDNONDATA } from "../DataBase/GetIndexNodata/GetIndexedNoData.j
 import { GETPACKAGE } from "../DataBase/GetPackage/GetPackage.js";
 import { GETTEXTPACKAGE } from "../DataBase/GetTextPackage/GetTextPacakage.js";
 import { GMAIL } from "../DataBase/Gmail/Gmail.js";
+import { GROUP } from "../DataBase/Group/Group.js";
 import { HIDER } from "../DataBase/Hider/Hider.js";
 import { HOSTINGUPDATER } from "../DataBase/HostingUpdater/HostingUpdater.js";
 import { IMAGEPICKER } from "../DataBase/ImagePicker/ImagePicker.js";
@@ -202,11 +203,12 @@ const GETINDEXEDDATA=${GETINDEXEDDATA};
 const ELITEPAY=${ELITEPAY};
 const SUMARRAY=${SUMARRAY};
 const SEARCH=${SEARCH};
+const GROUP=${GROUP};
 `;
 localStorage.setItem('FUNCTIONS',DATA)
 };
 
 `
-const SEARCH=${SEARCH};
+const GROUP=${GROUP};
 
 `

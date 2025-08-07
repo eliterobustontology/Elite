@@ -1,4 +1,3 @@
-
 const LINK="https://docs.google.com/spreadsheets/d/18BUoCg4yVUrxWv8RG885ZIn2fjkURGgjIrCi6otCxFk/edit?usp=sharing";
 
 const NOVASTART=()=>{
@@ -158,7 +157,7 @@ const NEWCLIENT=()=>{
 
         });
 
-        DIV(ELEMENT,"30%","100%","red","inline-flex","auto","",(ELEMENTS)=>{
+        DIV(ELEMENT,"30%","100%","transparent","inline-flex","auto","",(ELEMENTS)=>{
 
             STYLED(ELEMENTS,"position","absolute");
             STYLED(ELEMENTS,"left","30%");
@@ -181,7 +180,6 @@ const NEWCLIENT=()=>{
 
             STYLED(ELEMENTS,"position","absolute");
             STYLED(ELEMENTS,"right","0");
-
 
             ICON(ELEMENTS,WHITERETRYICON,"","30px","30px","auto 5% auto auto",(ELEMENTAS)=>{
 
@@ -207,7 +205,15 @@ const NEWCLIENT=()=>{
 
                 CLICK(ELEMENTAS,()=>{
 
-                    ROUTE("",RECIPTPAGE,"NEWCLIENT");
+                    LOCALDEJSONDATA ('NewProduct', (data)=>{
+
+                        CHECKER(data.length != 0,()=>{
+
+                            ROUTE("",RECIPTPAGE,"NEWCLIENT");
+
+                        });
+
+                    });
 
                 });
 
@@ -420,8 +426,6 @@ const NEWCLIENT=()=>{
 
                 REDUX(element,(elements)=>{
 
-                    console.log(elements)
-
                     DIV(ELEMENTS,"95%","50px","transparent","inline-flex","2% 2%","",(ELEMENTIS)=>{
 
                         STYLED(ELEMENTIS,"border","1px solid green");
@@ -472,17 +476,33 @@ const RECIPTPAGE=()=>{
 
         });
 
+        LOCALDEJSONDATA ('NewProduct', (data)=>{
+
+            SUMARRAY(data, "ProductName", "ProductPrice", ({ items, total }) => {
+
+                DIV(ELEMENT,"50%","50px","transparent","inline-flex","hidden","2%",(ELEMENTA)=>{
+
+                    TEXT(ELEMENTA,"h1","#ffffff","auto 1% auto auto","25px",'UGX '+total,(ELEMENTS)=>{
+
+                    });
+
+                });
+
+            });
+
+        });
+
     });
 
-    DIV("","100%","auto","transparent","block","hidden","",(ELEMENTA)=>{
+    DIV("","100%","auto","green","block","auto","",(ELEMENTA)=>{
 
         STYLED(ELEMENTA,"position","absolute");
         STYLED(ELEMENTA,"top","100px");
         STYLED(ELEMENTA,"bottom","0");
 
-        TEXT(ELEMENTA,"h1","#ffffff","50% 30%","200px","PAID",(ELEMENTS)=>{
+        TEXT(ELEMENTA,"h1","#ffffff80","50% 30%","200px","PAID",(ELEMENTS)=>{
 
-            STYLED(ELEMENTS,"position","absolute");
+            STYLED(ELEMENTS,"position","fixed");
             STYLED(ELEMENTS,"transform","rotate(-50deg)");
 
         });
@@ -491,12 +511,45 @@ const RECIPTPAGE=()=>{
 
             SUMARRAY(data, "ProductName", "ProductPrice", ({ items, total }) => {
 
-                console.log(items);
+                TEXT(ELEMENTA,"h1","#ffffff90","90% 30%","50px",'UGX '+total,(ELEMENTS)=>{
 
-                TEXT(ELEMENTA,"h1","#ffffff","auto","25px",total||'Nil',(ELEMENTS)=>{
+                    STYLED(ELEMENTS,"position","fixed");
+                    
 
                 });
 
+            });
+
+        });
+
+        LOCALDEJSONDATA ('NewProduct', (data)=>{
+
+            GROUP(data, (datata)=>{
+
+                REDUX(datata,(element)=>{
+
+                    DIV(ELEMENTA,"98%","50px","transparent","inline-flex","hidden","2%",(ELEMENTA)=>{
+
+                        TEXT(ELEMENTA,"h1","#ffffff","auto auto auto 1%","25px",element.ProductName,(ELEMENTS)=>{
+
+                        });
+
+                        TEXT(ELEMENTA,"h1","#ffffff","auto auto auto auto","25px",element.quantity,(ELEMENTS)=>{
+
+                        });
+
+                        TEXT(ELEMENTA,"h1","#ffffff","auto auto auto auto","25px",element.ProductPrice,(ELEMENTS)=>{
+
+                        });
+
+                        TEXT(ELEMENTA,"h1","#ffffff","auto 1% auto auto","25px",element.ProductPrice*element.quantity,(ELEMENTS)=>{
+
+                        });
+
+                    });
+                        
+                });
+ 
             });
  
         });
