@@ -118,6 +118,8 @@ const HOMEPAGE=()=>{
 
                             CONDITION(element.ProductNumber === 0,()=>{
 
+                                STYLED(ELEMENT,"background","red");
+
                                 ICON(ELEMENTSE,WHITECLOSEICON,"transparent","","","",(ELEMENTIS)=>{
 
                                 });
@@ -272,6 +274,12 @@ const NEWCLIENT=()=>{
                                 STYLED(ELEMENTSE,"position","absolute");
                                 STYLED(ELEMENTSE,"right","5px");
                                 STYLED(ELEMENTSE,"bottom","0px");
+
+                                    CHECKER(element.ProductNumber === 0,()=>{
+
+                                        STYLED(ELEMENTEIS,"background","red");
+                                            
+                                    });
     
                                 ICON(ELEMENTSE,WHITEADDICON,"transparent","","","",(ELEMENTIS)=>{
 
@@ -279,7 +287,7 @@ const NEWCLIENT=()=>{
 
                                         CONDITION(element.ProductNumber === 0,()=>{
 
-                                            TOAST("Product Currently Out Of Stock");
+                                            STYLED(ELEMENTEIS,"background","red");
                                             
                                         },()=>{
 
@@ -313,7 +321,7 @@ const NEWCLIENT=()=>{
             STYLED(ELEMENTS,"position","absolute");
             STYLED(ELEMENTS,"left","40%");
 
-            ROUNDINPUT(ELEMENTS,"90%","50px","10px","5%auto","#ffffff","text","Find Your Product",(ELE)=>{
+            ROUNDINPUT(ELEMENTS,"90%","32px","10px","5%auto","#ffffff","text","Find Your Product",(ELE)=>{
                 
                 INPUTED(ELE,(Data)=>{
 
@@ -343,57 +351,62 @@ const NEWCLIENT=()=>{
                         
                                     FOOTER(ELEMENTEIS,"forestgreen",(ELEMENT)=>{
                         
-                                            STYLED(ELEMENT,"height","100px");
-                                            STYLED(ELEMENT,"display","block");
+                                        STYLED(ELEMENT,"height","100px");
+                                        STYLED(ELEMENT,"display","block");
                         
-                                            TEXT(ELEMENT,"h1","#FFFFFF","5%","14px",element.ProductName,(ETET)=>{
+                                        TEXT(ELEMENT,"h1","#FFFFFF","5%","14px",element.ProductName,(ETET)=>{
+                        
+                                        });
+                        
+                                        DIV(ELEMENT,"100%","50px","transparent","inline-table","hidden","",(ELEMENTEIS)=>{
+                        
+                                            STYLED(ELEMENTEIS,"position","absolute");
+                                            STYLED(ELEMENTEIS,"bottom","0");
+                                            STYLED(ELEMENTEIS,"left","0");
+                        
+                                            TEXT(ELEMENTEIS,"h1","orange","5%","14px","UGX "+element.ProductPrice,(TETST)=>{
+                                                        
+                                                STYLED(TETST,"text-align","left");
                         
                                             });
                         
-                                            DIV(ELEMENT,"100%","50px","transparent","inline-table","hidden","",(ELEMENTEIS)=>{
+                                            DIV(ELEMENTEIS,"20%","50px","transparent","inline-flex","hidden","",(ELEMENTSE)=>{
                         
-                                                STYLED(ELEMENTEIS,"position","absolute");
-                                                STYLED(ELEMENTEIS,"bottom","0");
-                                                STYLED(ELEMENTEIS,"left","0");
-                        
-                                                TEXT(ELEMENTEIS,"h1","orange","5%","14px","UGX "+element.ProductPrice,(TETST)=>{
-                                                        
-                                                    STYLED(TETST,"text-align","left");
-                        
+
+                                                CHECKER(element.ProductNumber === 0,()=>{
+
+                                                    STYLED(ELEMENTEIS,"background","red");
+                                                            
                                                 });
+
+                                                STYLED(ELEMENTSE,"position","absolute");
+                                                STYLED(ELEMENTSE,"right","5px");
+                                                STYLED(ELEMENTSE,"bottom","0px");
                         
-                                                DIV(ELEMENTEIS,"20%","50px","transparent","inline-flex","hidden","",(ELEMENTSE)=>{
-                        
-                                                    STYLED(ELEMENTSE,"position","absolute");
-                                                    STYLED(ELEMENTSE,"right","5px");
-                                                    STYLED(ELEMENTSE,"bottom","0px");
-                        
-                                                    ICON(ELEMENTSE,WHITEADDICON,"transparent","","","",(ELEMENTIS)=>{
+                                                ICON(ELEMENTSE,WHITEADDICON,"transparent","","","",(ELEMENTIS)=>{
         
-                                                        CLICK(ELEMENTEIS,()=>{
+                                                    CLICK(ELEMENTEIS,()=>{
         
-                                                            CONDITION(element.ProductNumber === 0,()=>{
+                                                        CONDITION(element.ProductNumber === 0,()=>{
+                
+                                                        },()=>{
         
-                                                                TOAST("Product Currently Out Of Stock");
-                                                                
-                                                            },()=>{
-        
-                                                                JSONADDER(localStorage.getItem("NewProduct"), [element],(datate)=>{
+                                                            JSONADDER(localStorage.getItem("NewProduct"), [element],(datate)=>{
                         
-                                                                    LOCALSTORE("NewProduct",datate);
+                                                                LOCALSTORE("NewProduct",datate);
                         
-                                                                    NEWCLIENT();
-                        
-                                                                });
+                                                                NEWCLIENT();
                         
                                                             });
-        
+                        
                                                         });
-                            
-                                                    });
-                                                });
         
+                                                    });
+                            
+                                                });
                                             });
+        
+                                        });
                         
                                     });
                                     
@@ -422,11 +435,14 @@ const NEWCLIENT=()=>{
 
                 REDUX(element,(elements)=>{
 
-                    DIV(ELEMENTS,"95%","50px","transparent","inline-flex","2% 2%","",(ELEMENTIS)=>{
+                    DIV(ELEMENTS,"95%","50px","transparent","inline-flex","10px","",(ELEMENTIS)=>{
 
                         STYLED(ELEMENTIS,"border","1px solid green");
+                        STYLED(ELEMENTIS,"top","10px");
+                        STYLED(ELEMENTIS,"margin-bottom","10px");
+                        STYLED(ELEMENTIS,"border-radius","10px");
 
-                        TEXT(ELEMENTIS,"h1","#ffffff","auto auto auto 2%","25px",elements.ProductName,(ELEMENTS)=>{
+                        TEXT(ELEMENTIS,"h1","#ffffff","auto","18px",elements.ProductName,(ELEMENTS)=>{
 
                             CLICK(ELEMENTS,()=>{
 

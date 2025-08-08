@@ -84,6 +84,7 @@ import { STOREINDEXED } from "../DataBase/StoreIndexed/StoreIndexed.js";
 import { STOREINDEXEDDATA } from "../DataBase/StoreIndexedData/StoreIndexedData.js";
 import { STYLED } from "../DataBase/Styled/Styled.js";
 import { SUMARRAY } from "../DataBase/Sum/Sum.js";
+import { SWITCHER } from "../DataBase/Switcher/Switcher.js";
 import { TELEGRAM } from "../DataBase/Telegram/Telegram.js";
 import { TEXTFAMILY } from "../DataBase/TextFamily/TextFamily.js";
 import { TIMENOW } from "../DataBase/TimeNow/TimeNow.js";
@@ -204,11 +205,12 @@ const ELITEPAY=${ELITEPAY};
 const SUMARRAY=${SUMARRAY};
 const SEARCH=${SEARCH};
 const GROUP=${GROUP};
+const SWITCHER=${SWITCHER};
 `;
 localStorage.setItem('FUNCTIONS',DATA)
 };
 
 `
-const GROUP=${GROUP};
+const SWITCHER=${SWITCHER};
 
 `
