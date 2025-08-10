@@ -486,7 +486,15 @@ const RECIPTPAGE=()=>{
 
         DIV(ELEMENTA,"100%","18%","transparent","block","auto","2%",(ELEMENTA)=>{
 
-            TEXT(ELEMENTA,"h1","#000000","0.5% auto auto 1%","25px","QEL Medistore Limited ",(ELEMENTS)=>{});
+            TEXT(ELEMENTA,"h1","#000000","0.5% auto auto 1%","25px","QEL Medistore Limited ",(ELEMENTS)=>{
+
+                CLICK(ELEMENTS,()=>{
+
+                    ROUTE("",NEWCLIENT,"NEWCLIENT");
+
+                });
+
+            });
 
             TEXT(ELEMENTA,"p","#000000","0.5% auto auto 1%","16px","Enhancing Logistics",(ELEMENTS)=>{});
 
