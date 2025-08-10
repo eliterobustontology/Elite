@@ -164,7 +164,11 @@ const NEWCLIENT=()=>{
 
                 SUMARRAY(data, "ProductName", "ProductPrice", ({ items, total }) => {
 
-                    TEXT(ELEMENTS,"h1","#ffffff","auto","25px",total||'Nil',(ELEMENTS)=>{
+                    MONEYPARTISION(total,(finalMoney)=>{
+
+                        TEXT(ELEMENTS,"h1","#ffffff","auto","25px",finalMoney||'Nil',(ELEMENTS)=>{
+    
+                        });
 
                     });
 
@@ -329,7 +333,7 @@ const NEWCLIENT=()=>{
 
                         STYLED(ELEMENTEES,"position","absolute");
                         STYLED(ELEMENTEES,"left","0%");
-                        STYLED(ELEMENTEES,"top","70px");
+                        STYLED(ELEMENTEES,"top","50px");
                         
                         GETINDEXEDDATA("Products", "Products", (element)=>{
         
@@ -474,66 +478,228 @@ const RECIPTPAGE=()=>{
 
     CLEAR();
 
-    HEADER("","green",(ELEMENT)=>{
-
-        STYLED(ELEMENT,"height","100px");
-
-        TEXT(ELEMENT,"h1","#ffffff","auto","25px","QEL MediStore Limited",(ELEMENTS)=>{
-            
-            CLICK(ELEMENTS,()=>{
-
-                ROUTE("",NEWCLIENT,"NEWCLIENT");
-
-            });
-
-        });
-
-        LOCALDEJSONDATA ('NewProduct', (data)=>{
-
-            SUMARRAY(data, "ProductName", "ProductPrice", ({ items, total }) => {
-
-                DIV(ELEMENT,"50%","50px","transparent","inline-flex","hidden","2%",(ELEMENTA)=>{
-
-                    TEXT(ELEMENTA,"h1","#ffffff","auto 1% auto auto","25px",'UGX '+total,(ELEMENTS)=>{
-
-                    });
-
-                });
-
-            });
-
-        });
-
-    });
-
-    DIV("","100%","auto","green","block","auto","",(ELEMENTA)=>{
+    DIV("","100%","auto","#ffffff","block","auto","",(ELEMENTA)=>{
 
         STYLED(ELEMENTA,"position","absolute");
-        STYLED(ELEMENTA,"top","100px");
+        STYLED(ELEMENTA,"top","0px");
         STYLED(ELEMENTA,"bottom","0");
 
-        TEXT(ELEMENTA,"h1","#ffffff80","50% 30%","200px","PAID",(ELEMENTS)=>{
+        DIV(ELEMENTA,"100%","18%","transparent","block","auto","2%",(ELEMENTA)=>{
 
-            STYLED(ELEMENTS,"position","fixed");
-            STYLED(ELEMENTS,"transform","rotate(-50deg)");
+            TEXT(ELEMENTA,"h1","#000000","0.5% auto auto 1%","25px","QEL Medistore Limited ",(ELEMENTS)=>{});
+
+            TEXT(ELEMENTA,"p","#000000","0.5% auto auto 1%","16px","Enhancing Logistics",(ELEMENTS)=>{});
+
+            TEXT(ELEMENTA,"p","#000000","0.5% auto auto 1%","16px","P.O BOX 000,Mbale (UGANDA)",(ELEMENTS)=>{});
+
+            TEXT(ELEMENTA,"p","#000000","0.5% auto auto 1%","16px","Tel:+256 700905008 || +256 760319513",(ELEMENTS)=>{});
+            
+            TEXT(ELEMENTA,"p","#000000","0.5% auto auto 1%","16px","Email:qelmedistore@gmail.com",(ELEMENTS)=>{});
 
         });
 
-        LOCALDEJSONDATA ('NewProduct', (data)=>{
+        DIV(ELEMENTA,"90%","auto","transparent","block","hidden","auto auto auto 5%",(ELEMENTS)=>{
 
-            SUMARRAY(data, "ProductName", "ProductPrice", ({ items, total }) => {
+            STYLED(ELEMENTS,"position","absolute");
+            STYLED(ELEMENTS,"top","22%");
+            STYLED(ELEMENTS,"bottom","100px");
+            STYLED(ELEMENTS,"border","1px solid #000000");
 
-                TEXT(ELEMENTA,"h1","#ffffff90","90% 30%","50px",'UGX '+total,(ELEMENTS)=>{
+            DIV(ELEMENTS,"100%","50px","transparent","block","hidden","auto",(ELEMENTS)=>{
 
-                    STYLED(ELEMENTS,"position","fixed");
-                    
+                STYLED(ELEMENTS,"position","absolute");
+                STYLED(ELEMENTS,"top","0");
+                STYLED(ELEMENTS,"border-bottom","1px solid #000000");
 
+                DIV(ELEMENTS,"40%","100%","transparent","inline-flex","hidden","auto",(ELEMENTIS)=>{
+
+                    STYLED(ELEMENTIS,"position","absolute");
+                    STYLED(ELEMENTIS,"left","0");
+                    STYLED(ELEMENTIS,"border-right","1px solid #000000");
+
+                    TEXT(ELEMENTIS,"h1","#000","auto","20px","Item Description",(ELEMENTS)=>{});
+    
+                });
+
+                DIV(ELEMENTS,"10%","100%","transparent","inline-flex","hidden","0",(ELEMENTIS)=>{
+
+                    STYLED(ELEMENTIS,"position","absolute");
+                    STYLED(ELEMENTIS,"left","40%");
+                     STYLED(ELEMENTIS,"border-right","1px solid #000000");
+
+                    TEXT(ELEMENTIS,"h1","#000","auto","20px","Quantity",(ELEMENTS)=>{});
+    
+                });
+
+                DIV(ELEMENTS,"25%","100%","transparent","inline-flex","hidden","0",(ELEMENTIS)=>{
+
+                    STYLED(ELEMENTIS,"position","absolute");
+                    STYLED(ELEMENTIS,"left","50%");
+                    STYLED(ELEMENTIS,"border-right","1px solid #000000");
+
+                    TEXT(ELEMENTIS,"h1","#000","auto","20px","Price",(ELEMENTS)=>{});
+    
+                });
+
+                DIV(ELEMENTS,"25%","100%","transparent","inline-flex","hidden","0",(ELEMENTIS)=>{
+
+                    STYLED(ELEMENTIS,"position","absolute");
+                    STYLED(ELEMENTIS,"left","75%");
+
+                    TEXT(ELEMENTIS,"h1","#000","auto","20px","Total",(ELEMENTS)=>{});
+    
+                });
+
+            });
+
+            DIV(ELEMENTS,"40%","auto","transparent","block","hidden","0",(ELEMENTS)=>{
+
+                STYLED(ELEMENTS,"position","absolute");
+                STYLED(ELEMENTS,"top","50px");
+                STYLED(ELEMENTS,"bottom","50px");
+                STYLED(ELEMENTS,"border-right","1px solid #000000");
+
+                LOCALDEJSONDATA ('NewProduct', (data)=>{
+
+                    GROUP(data, (datata)=>{
+
+                        REDUX(datata,(element)=>{
+
+                            TEXT(ELEMENTS,"h1","#000000","2% auto auto 5%","20px",element.ProductName,(ELEMENTS)=>{
+
+                                STYLED(ELEMENTS,"text-align","left");
+
+                            });
+                                
+                        });
+        
+                    });
+ 
+                });
+
+            });
+
+            DIV(ELEMENTS,"10%","auto","transparent","block","hidden","0",(ELEMENTS)=>{
+
+                STYLED(ELEMENTS,"position","absolute");
+                STYLED(ELEMENTS,"top","50px");
+                STYLED(ELEMENTS,"bottom","50px");
+                STYLED(ELEMENTS,"left","40%");
+                STYLED(ELEMENTS,"border-right","1px solid #000000");
+
+                LOCALDEJSONDATA ('NewProduct', (data)=>{
+
+                    GROUP(data, (datata)=>{
+
+                        REDUX(datata,(element)=>{
+
+                            TEXT(ELEMENTS,"h1","#000000","8% auto auto 10%","20px",element.quantity,(ELEMENTS)=>{
+
+                                STYLED(ELEMENTS,"text-align","left");
+
+                            });
+                                
+                        });
+        
+                    });
+ 
+                });
+
+            });
+
+            DIV(ELEMENTS,"25%","auto","transparent","block","hidden","0",(ELEMENTS)=>{
+
+                STYLED(ELEMENTS,"position","absolute");
+                STYLED(ELEMENTS,"top","50px");
+                STYLED(ELEMENTS,"bottom","50px");
+                STYLED(ELEMENTS,"left","50%");
+                STYLED(ELEMENTS,"border-right","1px solid #000000");
+
+                LOCALDEJSONDATA ('NewProduct', (data)=>{
+
+                    GROUP(data, (datata)=>{
+
+                        REDUX(datata,(element)=>{
+
+                            MONEYPARTISION(element.ProductPrice,(FinalMoney)=>{
+
+                                TEXT(ELEMENTS,"h1","#000000","3.2% auto auto 5%","20px",FinalMoney,(ELEMENTS)=>{
+    
+                                    STYLED(ELEMENTS,"text-align","left");
+    
+                                });
+
+                            });
+     
+                        });
+        
+                    });
+ 
+                });
+
+            });
+
+            DIV(ELEMENTS,"25%","auto","transparent","block","hidden","0",(ELEMENTS)=>{
+
+                STYLED(ELEMENTS,"position","absolute");
+                STYLED(ELEMENTS,"top","50px");
+                STYLED(ELEMENTS,"bottom","50px");
+                STYLED(ELEMENTS,"left","75%");
+
+                LOCALDEJSONDATA ('NewProduct', (data)=>{
+
+                    GROUP(data, (datata)=>{
+
+                        REDUX(datata,(element)=>{
+
+                            MONEYPARTISION(element.ProductPrice*element.quantity,(FinalMoney)=>{
+
+                                TEXT(ELEMENTS,"h1","#000000","3.2% auto auto 5%","20px",FinalMoney,(ELEMENTS)=>{
+    
+                                    STYLED(ELEMENTS,"text-align","left");
+    
+                                });
+                                    
+                            });
+
+                        });
+        
+                    });
+ 
+                });
+
+            });
+
+            DIV(ELEMENTS,"100%","50px","transparent","inline-flex","hidden","0",(ELEMENTS)=>{
+
+                STYLED(ELEMENTS,"position","absolute");
+                STYLED(ELEMENTS,"bottom","0");
+                STYLED(ELEMENTS,"left","0");
+                STYLED(ELEMENTS,"border-top","1px solid #000000");
+
+                TEXT(ELEMENTS,"h1","#000000","auto auto auto 1%","25px","TOTAL",(ELEMENTS)=>{});
+
+                LOCALDEJSONDATA ('NewProduct', (data)=>{
+
+                    SUMARRAY(data, "ProductName", "ProductPrice", ({ items, total }) => {
+
+                        MONEYPARTISION(total,(FinalMoney)=>{
+
+                            TEXT(ELEMENTS,"h1","#000000","auto","25px","UGX"+FinalMoney||'Nil',(ELEMENTS)=>{
+    
+                            });
+
+                        });
+
+                    });
+    
                 });
 
             });
 
         });
 
+        /*
         LOCALDEJSONDATA ('NewProduct', (data)=>{
 
             GROUP(data, (datata)=>{
@@ -565,6 +731,7 @@ const RECIPTPAGE=()=>{
             });
  
         });
+        */
 
     });
 

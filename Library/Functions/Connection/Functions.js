@@ -56,6 +56,7 @@ import { LOCALCLEAR } from "../DataBase/LocalClear/LocalClear.js";
 import { LOCALDEJSONDATA } from "../DataBase/LocalDejson/LocalDejson.js";
 import { LOCALDELETE } from "../DataBase/LocalDelete/LocalDelete.js";
 import { LOCALSTORE } from "../DataBase/LocalStore/LocalStore.js";
+import { MONEYPARTISION } from "../DataBase/MoneyPartision/MoneyPartision.js";
 import { MONTHTIME } from "../DataBase/MonthTime/MonthTime.js";
 import { OPERATINGSYSTEM } from "../DataBase/OperatingSystem/operatingSystem.js";
 import { POSTDRIVEFILE } from "../DataBase/PostDriveFile/PostDriveFile.js";
@@ -206,11 +207,12 @@ const SUMARRAY=${SUMARRAY};
 const SEARCH=${SEARCH};
 const GROUP=${GROUP};
 const SWITCHER=${SWITCHER};
+const MONEYPARTISION=${MONEYPARTISION};
 `;
 localStorage.setItem('FUNCTIONS',DATA)
 };
 
 `
-const SWITCHER=${SWITCHER};
+const MONEYPARTISION=${MONEYPARTISION};
 
 `

@@ -19,7 +19,6 @@ export const GROUP = (data, callback) => {
     if (idMap.has(id)) {
       idMap.get(id).quantity += 1;
     } else {
-      // Clone item and add quantity = 1
       const newItem = { ...item, quantity: 1 };
       idMap.set(id, newItem);
     }
