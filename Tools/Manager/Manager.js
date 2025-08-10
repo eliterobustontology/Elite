@@ -2,6 +2,22 @@ const HOMEPAGE=()=>{
 
     APPMODE("#333333");
 
+    SWITCHER("800px",()=>{
+
+        ROUTE("",DESKTOPPAGE,"DESKTOPPAGE");
+
+    },()=>{
+
+        ROUTE("",MOBILEPAGE,"MOBILEPAGE");
+
+    });
+
+};
+
+const MOBILEPAGE=()=>{
+
+    CLEAR();
+
     ROUTE("",MOBILELOGINPAGE,"MOBILELOGINPAGE");
 
 };
@@ -47,5 +63,9 @@ const MOBILELOGINPAGE=()=>{
         });
 
     });
+
+};
+
+const DESKTOPPAGE=()=>{
 
 };
