@@ -4,11 +4,11 @@ const HOMEPAGE=()=>{
 
     SWITCHER("800px",()=>{
 
-        ROUTE("",DESKTOPPAGE,"DESKTOPPAGE");
+        DESKTOPPAGE();
 
     },()=>{
 
-        ROUTE("",MOBILEPAGE,"MOBILEPAGE");
+        MOBILEPAGE();
 
     });
 
@@ -67,5 +67,7 @@ const MOBILELOGINPAGE=()=>{
 };
 
 const DESKTOPPAGE=()=>{
+
+    CLEAR();
 
 };
