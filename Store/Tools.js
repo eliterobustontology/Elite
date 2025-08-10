@@ -46,7 +46,7 @@ const AUTORUN=()=>{
 
     } else {
 
-        import('https://eroinnovations.github.io/Elite/Start/Start.js')
+        import('https://eliterobustontology.github.io/Elite/Start/Start.js')
         .then(module => {
             if (typeof module.START === 'function') {
             module.START();
@@ -585,33 +585,65 @@ const DATASORTER=(ARRAY, ELEMENT, callback) => {
 };
 const JSONADDER=(data, contents, callback) => {
     let MYDATA;
+
+    // Parse existing JSON data safely
     try {
         MYDATA = JSON.parse(data) || [];
     } catch (e) {
         MYDATA = [];
     }
+
+    // Find the current highest ID
+    const existingIds = MYDATA.map(item => item.id);
+    let nextId = existingIds.length > 0 ? Math.max(...existingIds) + 1 : 1;
+
     contents.forEach((content) => {
-        if (!MYDATA.includes(content)) {
+        // If content already has an id and exists in MYDATA, skip it
+        const contentId = content.id;
+        const isDuplicate = contentId !== undefined && existingIds.includes(contentId);
+
+        if (!isDuplicate) {
+            // If no id provided, assign a new unique id
+            if (contentId === undefined) {
+                content.id = nextId++;
+            } else {
+                // Ensure we don't re-add this id in this same loop
+                existingIds.push(contentId);
+            }
+
             MYDATA.push(content);
         }
     });
+
+    // Convert updated data to JSON and return
     const updatedJSON = JSON.stringify(MYDATA);
     callback(updatedJSON);
 };
-const JSONREMOVER=(data, contents, callback) => {
+const JSONREMOVER=(data, ids, callback) => {
     let MYDATA;
+
+    // Parse the original JSON data safely
     try {
         MYDATA = JSON.parse(data) || [];
     } catch (e) {
         MYDATA = [];
     }
-    contents.forEach((content) => {
-        const index = MYDATA.indexOf(content);
-        if (index > -1) {
-            MYDATA.splice(index, 1);
-        }
+
+    // Normalize all ids to string for safe comparison
+    const idSet = new Set(ids.map(id => String(id)));
+
+    // Debug: Check what each item's id is
+    MYDATA.forEach(item => {
+        console.log("Item:", item, "| item.id =", item.id);
     });
-    const updatedJSON = JSON.stringify(MYDATA);
+
+    // Only keep items that are NOT in the id list
+    const filteredData = MYDATA.filter(item => {
+        const itemId = item?.id ?? null;
+        return !idSet.has(String(itemId));
+    });
+
+    const updatedJSON = JSON.stringify(filteredData);
     callback(updatedJSON);
 };
 const IMAGEPICKER=(imageElement, callback) => {
@@ -1503,4 +1535,110 @@ const ELITEPAY=(AMOUNT,DETAILS,EMAIL,NUMBER,USERNAME,LOCATION,WEBSITEBACK,callba
     .catch(error=>console.error(error))
 
 };
+const SUMARRAY=(data, nameKey, priceKey, callback) => {
+  let parsedData;
 
+  try {
+    parsedData = typeof data === "string" ? JSON.parse(data) : data;
+  } catch {
+    parsedData = [];
+  }
+
+  if (!Array.isArray(parsedData)) {
+    callback({ items: [], total: 0 });
+    return;
+  }
+
+  const items = [];
+  let total = 0;
+
+  parsedData.forEach(item => {
+    const name = item[nameKey] || "Unknown";
+    const price = Number(item[priceKey]) || 0;
+    total += price;
+    items.push({ name, price });
+  });
+
+  callback({ items, total });
+};
+const SEARCH=(data, searchKey, searchTerm, callback) => {
+  let parsedData;
+
+  try {
+    parsedData = typeof data === "string" ? JSON.parse(data) : data;
+  } catch {
+    parsedData = [];
+  }
+
+  if (!Array.isArray(parsedData)) {
+    callback([]);
+    return;
+  }
+
+  const term = searchTerm.toLowerCase();
+
+  const results = parsedData.filter(item => {
+    const value = item[searchKey];
+    if (typeof value === "string") {
+      return value.toLowerCase().includes(term);
+    }
+    callback(false);
+  });
+
+  callback(results);
+};
+const GROUP=(data, callback) => {
+  let parsedData;
+
+  try {
+    parsedData = typeof data === "string" ? JSON.parse(data) : data;
+  } catch {
+    parsedData = [];
+  }
+
+  if (!Array.isArray(parsedData)) {
+    callback([]);
+    return;
+  }
+
+  const idMap = new Map();
+
+  parsedData.forEach(item => {
+    const id = item.ID;
+    if (idMap.has(id)) {
+      idMap.get(id).quantity += 1;
+    } else {
+      const newItem = { ...item, quantity: 1 };
+      idMap.set(id, newItem);
+    }
+  });
+
+  const finalArray = Array.from(idMap.values());
+
+  callback(finalArray);
+};
+const SWITCHER=(WIDTH, callback, callback2) => {
+    const screenWidth = window.screen.width;
+
+    if (screenWidth >= WIDTH || screenWidth >= 800) {
+        callback();
+    } else {
+        callback2();
+    }
+};
+const MONEYPARTISION=(input, callback) => {
+  // Ensure input is a number
+  if (typeof input !== 'number' || !Number.isFinite(input)) {
+    console.error("Input must be a valid number.");
+    callback('');
+    return;
+  }
+
+  // Convert number to string and format with commas
+  const formatted = input.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+
+  // Pass formatted value to callback
+  if (typeof callback === 'function') {
+    callback(formatted);
+  }
+};
