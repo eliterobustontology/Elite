@@ -76,4 +76,20 @@ const DESKTOPPAGE=()=>{
 
     CLEAR();
 
+    ROUTE("",DESKTOPHOMEPAGE,"DESKTOPHOMEPAGE");
+
+};
+
+const DESKTOPHOMEPAGE=()=>{
+
+    HEADERVIEW("","forestgreen",(ELEMENT)=>{
+
+        LEFTTEXT(ELEMENT,"h1","#ffffff","1%","20px","Manager",()=>{
+
+        });
+
+    },"transparent",(ELEMENT)=>{
+
+    });
+
 };
