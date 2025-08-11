@@ -35,12 +35,11 @@ const MOBILEHOMEPAGE=()=>{
 
             });
 
-            TEXT(ELEMENTS,"h1","#FFFFFF","","15px","Ash Shakur Charity and Orphanage Aid",()=>{
+            TEXT(ELEMENTS,"h1","#FFFFFF","","15px","Elite Robust Ontology",()=>{
 
             });
 
         });
-
 
         DIV(ELEMENT,"100%","50px","Transparent","inline-flex","hidden","auto",(ELEMENTS)=>{
 
@@ -61,7 +60,7 @@ const MOBILEHOMEPAGE=()=>{
 
         });
 
-    },"red",(ELEMENT)=>{
+    },"transparent",(ELEMENT)=>{
 
         STYLED(ELEMENT,"top","100px");
 
