@@ -1,63 +1,73 @@
 const NOVASTART=()=>{
 
-  CLEAR();
+    SWITCHER("800px",()=>{
 
-  SWITCHER(800,()=>{
+        DESKTOPVIEW();
 
-    DESKTOPVERSION();
+    },()=>{
 
-  },()=>{
+        MOBILEVIEW();
 
-    MOBILEVERSION();
-
-  });
+    });
 
 };
 
-const MOBILEVERSION=()=>{
+const MOBILEVIEW=()=>{
 
-  ROUTE("",MOBILEHOMEPAGE,"MOBILEHOMEPAGE");
+    ROUTE("",MOBILEHOMEPAGE,"MOBILEHOMEPAGE");
 
 };
 
 const MOBILEHOMEPAGE=()=>{
 
-  CLEAR();
+    HEADERVIEW("","forestgreen",(ELEMENT)=>{
 
-  HEADER("","Navy",(ELEMENT)=>{
+        STYLED(ELEMENT,"height","100px");
 
-    TEXT(ELEMENT,"h1","","auto 2%","20px","Elite Robust Ontology",()=>{
+        DIV(ELEMENT,"100%","50px","Transparent","inline-flex","hidden","auto",(ELEMENTS)=>{
+
+            STYLED(ELEMENTS,"position","absolute");
+            STYLED(ELEMENTS,"top","0");
+
+            LEFTIMAGE(ELEMENTS,WHITEHOMEICON,"","40px","40px","1%",(ELEMENTS)=>{
+
+                STYLED(ELEMENTS,"margin-top","1%");
+
+            });
+
+            TEXT(ELEMENTS,"h1","#FFFFFF","","20px","ELITE ROBUST ONTOLOGY",()=>{
+
+            });
+
+        });
+
+        DIV(ELEMENT,"100%","50px","Transparent","inline-flex","hidden","auto",(ELEMENTS)=>{
+
+            STYLED(ELEMENTS,"position","absolute");
+            STYLED(ELEMENTS,"bottom","0");
+ 
+            TEXT(ELEMENTS,"h1","#FFFFFF","","20px","About Us",()=>{
+
+            });
+
+            TEXT(ELEMENTS,"h1","#FFFFFF","","20px","Projects",()=>{
+
+            });
+
+            TEXT(ELEMENTS,"h1","#FFFFFF","","20px","Contact Us",()=>{
+
+            });
+
+        });
+
+    },"transparent",(ELEMENT)=>{
+
+        STYLED(ELEMENT,"top","100px");
 
     });
-
-    RIGHTIMAGE(ELEMENT,WHITEMENUICON,"","20px","20px","2%",()=>{
-
-    });
-
-  });
-
-  DIV("","","","transparent","block","auto","",(ELEMENT)=>{
-
-    STYLED(ELEMENT,"top","50px");
-
-    DIV(ELEMENT,"100%","100px","blue","block","auto","",(ELEMENT)=>{
-
-    });
-
-    DIV(ELEMENT,"100%","200px","green","block","auto","",(ELEMENT)=>{
-
-    });
-
-  });
-
-  FOOTER("","Navy",(ELEMENT)=>{
-
-  });
 
 };
 
-const DESKTOPVERSION=()=>{
-
-  ROUTE("",MOBILEHOMEPAGE,"MOBILEHOMEPAGE");
+const DESKTOPVIEW=()=>{
 
 };

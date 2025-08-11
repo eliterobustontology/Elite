@@ -35,7 +35,7 @@ const MOBILEHOMEPAGE=()=>{
 
             });
 
-            TEXT(ELEMENTS,"h1","#FFFFFF","","15px","Elite Robust Ontology",()=>{
+            TEXT(ELEMENTS,"h1","#FFFFFF","","20px","ELITE ROBUST ONTOLOGY",()=>{
 
             });
 
