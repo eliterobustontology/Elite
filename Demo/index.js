@@ -79,6 +79,7 @@ document.querySelector("body").innerHTML=`
 const ROUTEJS=(DATA)=>{ const styleElement = document.createElement("script"); styleElement.textContent = DATA; document.head.appendChild(styleElement);};
 ROUTEJS(localStorage.getItem('NOVA'));
 const CloudShipping = () => {
+    INSINSPECTION();
     import('../Start/Start.js')
     .then(module => {
         if (typeof module.START === 'function') {
@@ -92,9 +93,7 @@ const CloudShipping = () => {
     });
 };
 if (localStorage.getItem('Updates')) {
-    INSINSPECTION();
     NOVASTART();
   } else {
-    INSINSPECTION();
     CloudShipping();
 };
