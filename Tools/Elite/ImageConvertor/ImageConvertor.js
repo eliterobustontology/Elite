@@ -16,7 +16,7 @@ const HOMEPAGE=()=>{
 
         CLICK(ELEMENT,()=>{
 
-            COPY(sessionStorage.getItem("Imaged"));
+            COPY(sessionStorage.getItem("TakenPhoto"));
 
             DISPLAY(ELEMENT,"Copied");
 
