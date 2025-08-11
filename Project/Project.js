@@ -42,7 +42,6 @@ const MOBILEHOMEPAGE=()=>{
         });
 
 
-
         DIV(ELEMENT,"100%","50px","Transparent","inline-flex","hidden","auto",(ELEMENTS)=>{
 
             STYLED(ELEMENTS,"position","absolute");
