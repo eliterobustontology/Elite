@@ -81,7 +81,7 @@ localStorage.setItem('Environment', 'Development');
 const ROUTEJS=(DATA)=>{ const styleElement = document.createElement("script"); styleElement.textContent = DATA; document.head.appendChild(styleElement);};
 ROUTEJS(localStorage.getItem('NOVA'));
 const CloudShipping = () => {
-    import('./Start/Start.js')
+    import('../Start/Start.js')
     .then(module => {
         if (typeof module.START === 'function') {
         module.START();
