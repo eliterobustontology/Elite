@@ -9,19 +9,21 @@ export const START=()=>{
 
     const HOLDERS=document.querySelector("body");
 
-    ASSETSCONNECTION();
-
-    FUNCTIONS();
-
-    COMPONENTSCONNECTION();
-
-    PLUGINSCONECTION();
-
     if (localStorage.getItem("Updates")) {
+
+        ASSETSCONNECTION();
+
+        FUNCTIONS();
+
+        COMPONENTSCONNECTION();
+
+        PLUGINSCONECTION();
 
         CLOUDCONNECTION();
 
     } else {
+
+        ASSETSCONNECTION();
 
         LOADINGSECTION(HOLDERS);
 
