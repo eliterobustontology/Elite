@@ -20,7 +20,7 @@ const MOBILEVIEW=()=>{
 
 const MOBILEHOMEPAGE=()=>{
 
-    HEADERVIEW("","forestgreen",(ELEMENT)=>{
+    HEADERVIEW("","#040135ff",(ELEMENT)=>{
 
         STYLED(ELEMENT,"height","100px");
 
@@ -29,7 +29,7 @@ const MOBILEHOMEPAGE=()=>{
             STYLED(ELEMENTS,"position","absolute");
             STYLED(ELEMENTS,"top","0");
 
-            LEFTIMAGE(ELEMENTS,WHITEHOMEICON,"","40px","40px","1%",(ELEMENTS)=>{
+            LEFTIMAGE(ELEMENTS,ELITELOGO,"","40px","40px","1%",(ELEMENTS)=>{
 
                 STYLED(ELEMENTS,"margin-top","1%");
 
