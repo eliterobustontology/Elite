@@ -14,7 +14,7 @@ export const MJOMBALIPAGETWO=(HOLDERS)=>{
         .Updates{
             font-size:30px;
             text-align:center;
-            margin-top:10%;
+            margin-top:2%;
             color:Orange;
             font-weight:bold;
         }
@@ -22,12 +22,13 @@ export const MJOMBALIPAGETWO=(HOLDERS)=>{
         .ProductImage{
             background:white;
             width:50%;
-            height:30%;
+            height:50%;
             border-radius:100%;
             padding:3%;
             margin-left:20%;
-            margin-top:25%;
+            margin-top:5%;
             border:2px solid #000000;
+            object-fit:cover;
             
         }
 
@@ -64,7 +65,7 @@ export const MJOMBALIPAGETWO=(HOLDERS)=>{
 
     setTimeout(() => {
 
-        MJOMBALIPAGETHREE(HOLDERS);
+       MJOMBALIPAGETHREE(HOLDERS);
       
     }, 500);
 

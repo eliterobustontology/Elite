@@ -9,11 +9,10 @@ export const MJOMBALIPAGEFOUR=(HOLDERS)=>{
     const style = document.createElement('style');
 
     style.textContent = `
-    
         .Updates{
             font-size:30px;
             text-align:center;
-            margin-top:10%;
+            margin-top:2%;
             color:Orange;
             font-weight:bold;
         }
@@ -21,12 +20,13 @@ export const MJOMBALIPAGEFOUR=(HOLDERS)=>{
         .ProductImage{
             background:white;
             width:50%;
-            height:30%;
+            height:50%;
             border-radius:100%;
             padding:3%;
             margin-left:20%;
-            margin-top:25%;
-            border:2px solid #000000;
+            margin-top:5%;
+            border:10px solid red;
+            object-fit:cover;
             
         }
 
