@@ -70,4 +70,39 @@ const MOBILEHOMEPAGE=()=>{
 
 const DESKTOPVIEW=()=>{
 
+    ROUTE("",DESKTOPHOMEPAGE,"DESKTOPHOMEPAGE");
+
+};
+
+const DESKTOPHOMEPAGE=()=>{
+
+    HEADERVIEW("","#05143d",(ELEMENT)=>{
+
+        LEFTIMAGE(ELEMENT,ELITELOGO,"","40px","40px","1%",(ELEMENTS)=>{
+
+        });
+
+        TEXT(ELEMENT,"h5","#FFFFFF","auto 5% auto auto","20px","ELITE ROBUST ONTOLOGY",()=>{
+
+        });
+
+        RIGHTTEXT(ELEMENT,"p","#FFFFFF","2%","20px","About",()=>{
+
+        });
+
+        RIGHTTEXT(ELEMENT,"p","#FFFFFF","2%","20px","Services",()=>{
+
+        });
+
+        RIGHTTEXT(ELEMENT,"p","#FFFFFF","2%","20px","Contacts",()=>{
+
+        });
+
+   
+
+    },"transparent",(ELEMENT)=>{
+
+
+    });
+
 };
