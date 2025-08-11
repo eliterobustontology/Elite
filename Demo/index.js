@@ -32,8 +32,8 @@ html,body {
   height: 100%;
   margin: 0;
   padding: 0;
-  background: #333333;
-  color: #ffffff;
+  background: #ffffff;
+  color: #000000;
 }
 
 .loading-container {
