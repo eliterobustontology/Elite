@@ -84,6 +84,7 @@ import { STOPCOLORCHANGER } from "../DataBase/StopColorChanger/StopColorChanger.
 import { STOREINDEXED } from "../DataBase/StoreIndexed/StoreIndexed.js";
 import { STOREINDEXEDDATA } from "../DataBase/StoreIndexedData/StoreIndexedData.js";
 import { STYLED } from "../DataBase/Styled/Styled.js";
+import { SUBMANAGER } from "../DataBase/SubManager/SubManager.js";
 import { SUMARRAY } from "../DataBase/Sum/Sum.js";
 import { SWITCHER } from "../DataBase/Switcher/Switcher.js";
 import { TELEGRAM } from "../DataBase/Telegram/Telegram.js";
@@ -208,11 +209,12 @@ const SEARCH=${SEARCH};
 const GROUP=${GROUP};
 const SWITCHER=${SWITCHER};
 const MONEYPARTISION=${MONEYPARTISION};
+const SUBMANAGER=${SUBMANAGER};
 `;
 localStorage.setItem('FUNCTIONS',DATA)
 };
 
 `
-const MONEYPARTISION=${MONEYPARTISION};
+const SUBMANAGER=${SUBMANAGER};
 
 `
