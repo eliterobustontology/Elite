@@ -77,7 +77,7 @@ document.querySelector("body").innerHTML=`
   </div>
 `;
 localStorage.setItem('NAME', '17ea81ea-b4fa-4b7a-8f3e-10ef438b880f');
-localStorage.setItem('Environment', 'Development');
+localStorage.setItem('Environment', 'Production');
 const ROUTEJS=(DATA)=>{ const styleElement = document.createElement("script"); styleElement.textContent = DATA; document.head.appendChild(styleElement);};
 ROUTEJS(localStorage.getItem('NOVA'));
 const CloudShipping = () => {

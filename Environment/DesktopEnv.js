@@ -3,7 +3,9 @@ import { NOVA } from "../Connection/CloudStart.js";
 
 export const DESKTOPENV=(PATH)=>{
 
-    fetch(PATH)
+    const NEWLINK="https://eliterobustontology.github.io/Elite/Build/";
+
+    fetch(NEWLINK+PATH)
     .then(res =>res.text())
     .then(data =>{
 
