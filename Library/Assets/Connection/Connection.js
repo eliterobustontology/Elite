@@ -4,6 +4,7 @@ import { BLACKHAMBURGICON } from "../DataBase/BlackIcons/Hamberg/Hamberg.js";
 import { BLACKLOCATIONICON } from "../DataBase/BlackIcons/Location/Location.js";
 import { BLACKSUNICON } from "../DataBase/BlackIcons/Sun/Sun.js";
 import { GREENMENUICON } from "../DataBase/GreenIcons/Menu/Menu.js";
+import { ELITELOGO } from "../DataBase/Logos/Elite/Elite.js";
 import { MTNICON } from "../DataBase/Logos/Mtn/Mtn.js";
 import { WHITEPAYPALICON } from "../DataBase/Logos/PayPal/PayPal.js";
 import { WHITEPESAPALICON } from "../DataBase/Logos/Pesapal/Pesapal.js";
@@ -240,12 +241,14 @@ const BLACKGRIDICON="${BLACKGRIDICON}";
 const BLACKHAMBURGICON="${BLACKHAMBURGICON}";
 const GREENMENUICON="${GREENMENUICON}";
 const QEL="${QEL}";
+const ELITELOGO="${ELITELOGO}";
 `;
     
 localStorage.setItem('ASSETS',DATA);
 
+
 };
 `
-const QEL="${QEL}";
+const ELITELOGO="${ELITELOGO}";
 
 `
