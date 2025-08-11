@@ -20,7 +20,7 @@ const MOBILEVIEW=()=>{
 
 const MOBILEHOMEPAGE=()=>{
 
-    HEADERVIEW("","#040135ff",(ELEMENT)=>{
+    HEADERVIEW("","#05143d",(ELEMENT)=>{
 
         STYLED(ELEMENT,"height","100px");
 
