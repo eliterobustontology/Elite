@@ -20,7 +20,7 @@ export const GETDATA=(Url,Name,callback)=>{
         callback(data);
 
     })
-    .catch(Error => console.log(Error)
-    )
+    
+    .catch(Error => console.log(Error))
 
 };
