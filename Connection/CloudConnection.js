@@ -57,7 +57,7 @@ export const CLOUDCONNECTION=()=>{
 
                         if (localStorage.getItem("Environment") === "Production" ) {
 
-                        ANDROIDENV(UserData.AndroidDesign);
+                            ANDROIDENV(UserData.AndroidDesign);
                             
                         } else {
 
@@ -180,6 +180,7 @@ export const CLOUDCONNECTION=()=>{
             });
        
         })
+        
         .catch(Error => {
 
             console.log(Error);
