@@ -1,6 +1,5 @@
-import { TIMECOMPARE } from "../TimeCompare/TimeCompare.js";
-
 export const HOSTINGUPDATER = () => {
+
     if (navigator.onLine) {
 
         if (localStorage.getItem("Environment") === "Development" ) {
