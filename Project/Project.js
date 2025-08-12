@@ -64,7 +64,7 @@ const MOBILEHOMEPAGE=()=>{
 
         STYLED(ELEMENT,"top","100px");
 
-        ICON(ELEMENT,WHITEMOBILEDEVELOPMENTICON,"transparent","30px","30px","2% auto",()=>{
+        ICON(ELEMENT,WHITEMOBILEDEVELOPMENTICON,"transparent","50px","50px","2% auto",()=>{
 
         });
 
