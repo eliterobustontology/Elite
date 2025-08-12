@@ -1,28 +1,16 @@
 export const ACCOUNTCHECKER = (HomeCallBack, VerificationCallBack, LoginCallBack) => {
     
-    CONDITION(
-
-        localStorage.getItem("UserData"),
-
-        () => {
+    CONDITION(localStorage.getItem("UserData"),() => {
 
             HomeCallBack();
 
-        },
+        },() => {
 
-        () => {
-
-            CONDITION(
-
-                localStorage.getItem("VeriifcationCode"),
-
-                () => {
+            CONDITION(localStorage.getItem("VeriifcationCode"),() => {
 
                     VerificationCallBack();
 
-                },
-
-                () => {
+                },() => {
 
                     LoginCallBack();
 
@@ -31,7 +19,7 @@ export const ACCOUNTCHECKER = (HomeCallBack, VerificationCallBack, LoginCallBack
             );
 
         }
-        
+
     );
 
 };
