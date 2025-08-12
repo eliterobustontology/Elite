@@ -22,7 +22,7 @@ export const HOSTINGUPDATER = () => {
 
                         if (result === false ) {
 
-                            console.log("All Services Fully Paid")
+                            console.log("All Services Fully Paid");
                             
                         } else {
 
