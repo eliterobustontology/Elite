@@ -74,6 +74,16 @@ const MOBILEHOMEPAGE=()=>{
 
         });
 
+        ICON(ELEMENT,WHITELOCATIONICON,"transparent","50px","50px","5% auto",()=>{
+
+        });
+
+        const Message2=`Located In Mbale City,Uganda <br> We are Honored to Recieve Our Clients. `;
+
+        LEFTTEXT(ELEMENT,"p","#FFFFFF","2%","20px",Message2,()=>{
+
+        });
+
     });
 
 };
