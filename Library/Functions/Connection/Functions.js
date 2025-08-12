@@ -89,6 +89,7 @@ import { SUMARRAY } from "../DataBase/Sum/Sum.js";
 import { SWITCHER } from "../DataBase/Switcher/Switcher.js";
 import { TELEGRAM } from "../DataBase/Telegram/Telegram.js";
 import { TEXTFAMILY } from "../DataBase/TextFamily/TextFamily.js";
+import { TIMECOMPARE } from "../DataBase/TimeCompare/TimeCompare.js";
 import { TIMENOW } from "../DataBase/TimeNow/TimeNow.js";
 import { TOAST } from "../DataBase/Toast/Toast.js";
 import { TWITTER } from "../DataBase/Twitter/Twitter.js";
@@ -210,11 +211,12 @@ const GROUP=${GROUP};
 const SWITCHER=${SWITCHER};
 const MONEYPARTISION=${MONEYPARTISION};
 const SUBMANAGER=${SUBMANAGER};
+const TIMECOMPARE=${TIMECOMPARE};
 `;
 localStorage.setItem('FUNCTIONS',DATA)
 };
 
 `
-const SUBMANAGER=${SUBMANAGER};
+const TIMECOMPARE=${TIMECOMPARE};
 
 `
