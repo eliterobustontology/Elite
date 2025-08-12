@@ -4,8 +4,6 @@ export const HOSTINGUPDATER = () => {
 
         CONDITION(localStorage.getItem("Environment") === "Development" ,()=>{
 
-            console.log("Project Under Development");
-
         },()=>{
 
             GETDATA("https://docs.google.com/spreadsheets/d/1Utfr1wkoZSRvM9TOKaTxOX6orYE8AuN2mu4dDtQmhFQ/edit?gid=0#gid=0","APPMANAGER",(data)=>{
