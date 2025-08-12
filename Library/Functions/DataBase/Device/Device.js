@@ -10,5 +10,5 @@ export const DEVICE = (callback) => {
     };
     if (typeof callback === "function") {
         callback(deviceInfo);
-    }
+    };
 };
