@@ -16,11 +16,17 @@ export const HOSTINGUPDATER = () => {
 
                         CONDITION(result === false,()=>{
 
-                            console.log("All Services Fully Paid");
-
                         },()=>{
 
-                            console.log(element.ID,result);
+                            CONDITION(element.ID === localStorage.getItem("NAME"),()=>{
+
+                                LOCALCLEAR();
+
+                                RELOAD();
+
+                            },()=>{
+
+                            });
 
                         });
   
