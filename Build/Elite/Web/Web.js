@@ -35,7 +35,7 @@ const MOBILEHOMEPAGE=()=>{
 
             });
 
-            TEXT(ELEMENTS,"h1","#FFFFFF","","20px","ELITE ROBUST ONTOLOGY",()=>{
+            TEXT(ELEMENTS,"h3","#FFFFFF","","20px","ELITE ROBUST ONTOLOGY",()=>{
 
             });
 
@@ -50,7 +50,7 @@ const MOBILEHOMEPAGE=()=>{
 
             });
 
-            TEXT(ELEMENTS,"h1","#FFFFFF","","20px","Projects",()=>{
+            TEXT(ELEMENTS,"h1","#FFFFFF","","20px","Services",()=>{
 
             });
 
@@ -63,6 +63,16 @@ const MOBILEHOMEPAGE=()=>{
     },"transparent",(ELEMENT)=>{
 
         STYLED(ELEMENT,"top","100px");
+
+        ICON(ELEMENT,WHITEMOBILEDEVELOPMENTICON,"transparent","30px","30px","2% auto",()=>{
+
+        });
+
+        const Message=`Software Development Company that Uses Cloud Native Technology to Power and Build Apps,Websites,Desktop and Systems.`
+
+        LEFTTEXT(ELEMENT,"p","#FFFFFF","2%","20px",Message,()=>{
+
+        });
 
     });
 
