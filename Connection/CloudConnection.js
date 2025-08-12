@@ -58,7 +58,11 @@ export const CLOUDCONNECTION=()=>{
 
                     TIMECOMPARE(UserData.AppLogic,(result)=>{
 
-                        CONDITION(result === false,()=>{
+                        CONDITION(result === true,()=>{
+
+                            EXPIREDHOSTING();
+   
+                        },()=>{
 
                             CONDITION(localStorage.getItem("Environment") === "Production",()=>{
 
@@ -77,10 +81,6 @@ export const CLOUDCONNECTION=()=>{
                                 });
 
                             });
-   
-                        },()=>{
-
-                            EXPIREDHOSTING();
 
                         });
 
