@@ -139,8 +139,6 @@ const HOMEPAGE=()=>{
 
             GETINDEXEDDATA("Products", "Products", (element)=>{
 
-                //console.log(element);
-
                 DIV(ELEMENT,"45%","250px","transparent","inline-table","hidden","2%",(ELEMENTEIS)=>{
 
                     STYLED(ELEMENTEIS,"flex-shrink","0");
@@ -151,6 +149,18 @@ const HOMEPAGE=()=>{
 
                         STYLED(ELEMENTER,"position","absolute");
                         STYLED(ELEMENTER,"left","0");
+
+                        CLICK(ELEMENTER,()=>{
+
+                            JSONIFICATION(element,(SavedData)=>{
+
+                                LOCALSTORE("Item",SavedData);
+
+                                ROUTE(" ",PRODUCTVIEWPAGE,"HOMEPAGE");
+
+                            });
+
+                        });
 
                     });
 
@@ -946,6 +956,55 @@ const CONTACTPAGE=()=>{
 
         BUTTON(ELEMENT,"90%","50px","green","#ffffff","10px","Send","2%",()=>{
 
+        });
+
+    });
+
+};
+
+const PRODUCTVIEWPAGE=()=>{
+
+    LOCALDEJSONDATA("Item",(data)=>{
+
+        HEADERVIEW("","green",(ELEMENT)=>{
+
+            LEFTIMAGE(ELEMENT,WHITEBACKICON,"transparent","20px","20px","1%",(ELEMS)=>{
+
+                CLICK(ELEMS,()=>{
+
+                    ROUTE("",HOMEPAGE,"HOMEPAGE");
+
+                });
+
+            });
+
+            RIGHTTEXT(ELEMENT,"h3","#ffffff","2%","16px",data.ProductName,()=>{
+
+            });
+    
+        },"transparent",(ELEMENT)=>{
+
+            IMAGE(ELEMENT,data.ProductImage,"","50%","95%","2%",()=>{
+
+            });
+
+
+            MONEYPARTISION(data.ProductPrice,(databack)=>{
+
+                TEXT(ELEMENT,"h1","#FFFFFF","5%","20px","UGX "+databack,()=>{
+
+                });
+
+            });
+
+            LEFTTEXT(ELEMENT,"h3","#ffffff","2%","16px","Product Description",()=>{
+
+            });
+
+            TEXT(ELEMENT,"p","#FFFFFF","2%","20px",data.ProductDetails,()=>{
+
+            });
+     
         });
 
     });
