@@ -58,6 +58,7 @@ import { LOCALDEJSONDATA } from "../DataBase/LocalDejson/LocalDejson.js";
 import { LOCALDELETE } from "../DataBase/LocalDelete/LocalDelete.js";
 import { LOCALSTORE } from "../DataBase/LocalStore/LocalStore.js";
 import { MONEYPARTISION } from "../DataBase/MoneyPartision/MoneyPartision.js";
+import { MONTHS } from "../DataBase/Months/Months.js";
 import { MONTHTIME } from "../DataBase/MonthTime/MonthTime.js";
 import { OPERATINGSYSTEM } from "../DataBase/OperatingSystem/operatingSystem.js";
 import { POSTDRIVEFILE } from "../DataBase/PostDriveFile/PostDriveFile.js";
@@ -216,11 +217,12 @@ const SUBMANAGER=${SUBMANAGER};
 const TIMECOMPARE=${TIMECOMPARE};
 const COUNTRIES=${COUNTRIES};
 const UGANDANDISTRICITS=${UGANDANDISTRICITS};
+const MONTHS=${MONTHS};
 `;
 localStorage.setItem('FUNCTIONS',DATA)
 };
 
 `
-const UGANDANDISTRICITS=${UGANDANDISTRICITS};
+const MONTHS=${MONTHS};
 
 `
