@@ -50,7 +50,7 @@ const MOBILEHOMEPAGE=()=>{
 
             });
 
-            TEXT(ELEMENTS,"h1","#FFFFFF","","20px","Services",()=>{
+            TEXT(ELEMENTS,"h1","#FFFFFF","","20px","Products",()=>{
 
             });
 
@@ -63,6 +63,37 @@ const MOBILEHOMEPAGE=()=>{
     },"transparent",(ELEMENT)=>{
 
         STYLED(ELEMENT,"top","100px");
+
+        INLINEVIEW(ELEMENT,"100%","50px","transparent","hidden","",(ELEMENTIS)=>{
+
+            TEXT(ELEMENTIS,"h1","#FFFFFF","auto","16px","Imagine",(ELEMENTS)=>{
+
+                STYLED(ELEMENTS,"border","1px solid teal ");
+                STYLED(ELEMENTS,"width","20%");
+                STYLED(ELEMENTS,"padding","2%");
+                STYLED(ELEMENTS,"border-radius","10px");
+                
+            });
+
+            TEXT(ELEMENTIS,"h1","#FFFFFF","auto","20px","Innovate",(ELEMENTS)=>{
+
+                STYLED(ELEMENTS,"border","1px solid #05143d ");
+                STYLED(ELEMENTS,"width","35%");
+                STYLED(ELEMENTS,"padding","2%");
+                STYLED(ELEMENTS,"border-radius","10px");
+                
+            });
+
+            TEXT(ELEMENTIS,"h1","#FFFFFF","auto","16px","Inspire",(ELEMENTS)=>{
+
+                STYLED(ELEMENTS,"border","1px solid forestgreen ");
+                STYLED(ELEMENTS,"width","20%");
+                STYLED(ELEMENTS,"padding","2%");
+                STYLED(ELEMENTS,"border-radius","10px");
+                
+            });
+
+        });
 
         ICON(ELEMENT,WHITEMOBILEDEVELOPMENTICON,"transparent","50px","50px","2% auto",()=>{
 
@@ -83,6 +114,52 @@ const MOBILEHOMEPAGE=()=>{
         LEFTTEXT(ELEMENT,"p","#FFFFFF","2%","20px",Message2,()=>{
 
         });
+
+        TEXT(ELEMENT,"h1","#FFFFFF","","20px","Services",(ELEMENTS)=>{
+
+            STYLED(ELEMENTS,"border","1px solid #05143d ");
+            STYLED(ELEMENTS,"width","50%");
+            STYLED(ELEMENTS,"padding","2%");
+            STYLED(ELEMENTS,"border-radius","20px");
+            
+        });
+
+        BREAK(ELEMENT);
+
+        DIV(ELEMENT,"90%","300px","transparent","block","hidden","",(ELEMENTS)=>{
+
+            TABLEVIEW(ELEMENTS,"45%","45%","#05143d","hidden","2%",()=>{
+
+            });
+
+            TABLEVIEW(ELEMENTS,"45%","45%","#05143d","hidden","2%",()=>{
+
+            });
+
+            TABLEVIEW(ELEMENTS,"45%","45%","#05143d","hidden","2%",()=>{
+
+            });
+
+            TABLEVIEW(ELEMENTS,"45%","45%","#05143d","hidden","2%",()=>{
+
+            });
+
+        });
+
+        TEXT(ELEMENT,"p","#FFFFFF","2% auto auto 8%","20px","lets Innovate Together",(ELEMENTS)=>{
+
+            STYLED(ELEMENTS,"border","1px solid #05143d ");
+            STYLED(ELEMENTS,"width","80%");
+            STYLED(ELEMENTS,"padding","2%");
+            STYLED(ELEMENTS,"border-radius","20px");
+
+        });
+
+        BUTTON(ELEMENT,"90%","50px","#05143d","#ffffff","10px","Book Now","2%",()=>{
+
+        });
+
+        BREAK(ELEMENT);BREAK(ELEMENT);
 
     });
 
@@ -117,8 +194,6 @@ const DESKTOPHOMEPAGE=()=>{
         RIGHTTEXT(ELEMENT,"p","#FFFFFF","2%","20px","Contacts",()=>{
 
         });
-
-   
 
     },"transparent",(ELEMENT)=>{
 

@@ -1,3 +1,4 @@
+import { CONDITION } from "../../../Functions/DataBase/Condition/Condition.js";
 import { ELEMENTED } from "../../../Functions/DataBase/Elemented/Elemented.js";
 import { STYLED } from "../../../Functions/DataBase/Styled/Styled.js";
 
@@ -9,9 +10,20 @@ export const DIV=(HOLDER,WIDTH,HEIGHT,COLOR,DISPLAY,SCROLL,MARGIN,callback)=>{
         STYLED(ELEMENTS,"width",WIDTH||"100%");
         STYLED(ELEMENTS,"height",HEIGHT||"100%");
         STYLED(ELEMENTS,"background",COLOR||"#cdcdcd");
-        STYLED(ELEMENTS,"display",DISPLAY||"block");
         STYLED(ELEMENTS,"overflow",SCROLL||"hidden");
         STYLED(ELEMENTS,"margin",MARGIN||"auto");
+
+        CONDITION(DISPLAY === "inline-flex",()=>{
+
+            STYLED(ELEMENTS,"display",DISPLAY||"inline-flex");
+            STYLED(ELEMENTS,"overflowX",SCROLL||"hidden");
+
+        },()=>{
+
+            STYLED(ELEMENTS,"display",DISPLAY||"block");
+            STYLED(ELEMENTS,"overflowY",SCROLL||"hidden");
+
+        });
 
         callback(ELEMENTS);
         

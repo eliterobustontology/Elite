@@ -1,5 +1,11 @@
 export const BODIED = () => {
 
+    SCREENWIDTH((data)=>{
+
+        LOCALSTORE("Width",data);
+
+    });
+
     const ELEMENT = document.querySelector("body");
 
     ELEMENT.style.width = "100%";
@@ -23,5 +29,25 @@ export const BODIED = () => {
         ELEMENT.style.position = "fixed";
 
     }
+
+    ELEMENT.addEventListener("click",()=>{
+
+        SCREENWIDTH((data)=>{
+
+            CONDITION(data != localStorage.getItem("Width") ,()=>{
+
+                LOCALSTORE("Width",data);
+
+                RELOAD();
+
+            },()=>{
+
+                LOCALSTORE("Width",data);
+
+            });
+
+        });
+
+    });
     
 };

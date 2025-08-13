@@ -11,7 +11,8 @@ export const INLINEVIEW=(HOLDER,WIDTH,HEIGHT,COLOR,SCROLL,MARGIN,callback)=>{
         STYLED(ELEMENTS,"background",COLOR||"#cdcdcd");
         STYLED(ELEMENTS,"display","inline-flex");
         STYLED(ELEMENTS,"flexShrink","0");
-        STYLED(ELEMENTS,"overflow",SCROLL||"hidden");
+        STYLED(ELEMENTS,"overflowX",SCROLL||"hidden");
+        STYLED(ELEMENTS,"overflowY","hidden");
         STYLED(ELEMENTS,"margin",MARGIN||"auto");
 
         callback(ELEMENTS);
