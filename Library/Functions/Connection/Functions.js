@@ -14,6 +14,7 @@ import { CLICK } from "../DataBase/Click/Click.js";
 import { COLORCHANGER } from "../DataBase/ColorChanger/ColorChanger.js";
 import { CONDITION } from "../DataBase/Condition/Condition.js";
 import { COPY } from "../DataBase/Copy/Copy.js";
+import { COUNTRIES } from "../DataBase/Countries/Countries.js";
 import { CREATEDATABASE } from "../DataBase/CreateDataBase/CreateDataBase.js";
 import { CREATETABLE } from "../DataBase/CreateTable/CreateTable.js";
 import { DATASORTER } from "../DataBase/DataSorter/DataSorter.js";
@@ -93,6 +94,7 @@ import { TIMECOMPARE } from "../DataBase/TimeCompare/TimeCompare.js";
 import { TIMENOW } from "../DataBase/TimeNow/TimeNow.js";
 import { TOAST } from "../DataBase/Toast/Toast.js";
 import { TWITTER } from "../DataBase/Twitter/Twitter.js";
+import { UGANDANDISTRICITS } from "../DataBase/UgandanDistricits/UgandanDistricit.js";
 import { UPDATEDATA } from "../DataBase/UpdateData/UpdateData.js";
 import { UPDATEINDEX } from "../DataBase/UpdateIndex/UpdateIndex.js";
 import { URLCOLLECTED } from "../DataBase/UrlCollected/UrlCollected.js";
@@ -212,11 +214,13 @@ const SWITCHER=${SWITCHER};
 const MONEYPARTISION=${MONEYPARTISION};
 const SUBMANAGER=${SUBMANAGER};
 const TIMECOMPARE=${TIMECOMPARE};
+const COUNTRIES=${COUNTRIES};
+const UGANDANDISTRICITS=${UGANDANDISTRICITS};
 `;
 localStorage.setItem('FUNCTIONS',DATA)
 };
 
 `
-const TIMECOMPARE=${TIMECOMPARE};
+const UGANDANDISTRICITS=${UGANDANDISTRICITS};
 
 `
