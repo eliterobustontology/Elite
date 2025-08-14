@@ -72,6 +72,16 @@ const MOBILEHOMEPAGE=()=>{
                 STYLED(ELEMENTS,"width","20%");
                 STYLED(ELEMENTS,"padding","2%");
                 STYLED(ELEMENTS,"border-radius","10px");
+
+                HOVER(ELEMENTS, (ELEMENTS)=>{
+
+                    STYLED(ELEMENTS,"background","green");
+
+                }, (ELEMENTS)=>{
+
+                    STYLED(ELEMENTS,"background","transparent");
+
+                });
                 
             });
 

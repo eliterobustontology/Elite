@@ -45,6 +45,7 @@ import { GMAIL } from "../DataBase/Gmail/Gmail.js";
 import { GROUP } from "../DataBase/Group/Group.js";
 import { HIDER } from "../DataBase/Hider/Hider.js";
 import { HOSTINGUPDATER } from "../DataBase/HostingUpdater/HostingUpdater.js";
+import { HOVER } from "../DataBase/Hover/Hover.js";
 import { IMAGEPICKER } from "../DataBase/ImagePicker/ImagePicker.js";
 import { INPUTED } from "../DataBase/Inputed/Inputted.js";
 import { INSERTDATA } from "../DataBase/InsertData/InsertData.js";
@@ -218,11 +219,12 @@ const TIMECOMPARE=${TIMECOMPARE};
 const COUNTRIES=${COUNTRIES};
 const UGANDANDISTRICITS=${UGANDANDISTRICITS};
 const MONTHS=${MONTHS};
+const HOVER=${HOVER};
 `;
 localStorage.setItem('FUNCTIONS',DATA)
 };
 
 `
-const MONTHS=${MONTHS};
+const HOVER=${HOVER};
 
 `
