@@ -62,6 +62,7 @@ import { MONEYPARTISION } from "../DataBase/MoneyPartision/MoneyPartision.js";
 import { MONTHS } from "../DataBase/Months/Months.js";
 import { MONTHTIME } from "../DataBase/MonthTime/MonthTime.js";
 import { OPERATINGSYSTEM } from "../DataBase/OperatingSystem/operatingSystem.js";
+import { PASSWORDCHECKER } from "../DataBase/PasswordChecker/PasswordChecker.js";
 import { POSTDRIVEFILE } from "../DataBase/PostDriveFile/PostDriveFile.js";
 import { POSTPACKAGE } from "../DataBase/PostPackage/PostPackage.js";
 import { POSTTEXTPACKAGE } from "../DataBase/PostTextPackage/PostTextPacakage.js";
@@ -220,11 +221,12 @@ const COUNTRIES=${COUNTRIES};
 const UGANDANDISTRICITS=${UGANDANDISTRICITS};
 const MONTHS=${MONTHS};
 const HOVER=${HOVER};
+const PASSWORDCHECKER=${PASSWORDCHECKER};
 `;
 localStorage.setItem('FUNCTIONS',DATA)
 };
 
 `
-const HOVER=${HOVER};
+const PASSWORDCHECKER=${PASSWORDCHECKER};
 
 `
