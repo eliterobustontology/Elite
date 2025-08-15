@@ -2,11 +2,11 @@ const URLLINK="https://docs.google.com/spreadsheets/d/1Utfr1wkoZSRvM9TOKaTxOX6or
 
 const HOMEPAGE=()=>{
 
+    APPMODE("#333333");
+
     DOWNLOADSAVEINDEX(URLLINK,"APPMANAGER","APPMANAGER",()=>{
 
     });
-
-    APPMODE("#333333");
 
     SWITCHER("800px",()=>{
 
@@ -20,3 +20,10 @@ const HOMEPAGE=()=>{
 
 };
 
+const MOBILEPAGE=()=>{
+
+};
+
+const DESKTOPPAGE=()=>{
+
+};
