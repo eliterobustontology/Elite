@@ -33,29 +33,47 @@ const AUTORUN=()=>{
     if (localStorage.getItem("Environment") === "Development" ) {
         
         import('./Start/Start.js')
+
         .then(module => {
+            
             if (typeof module.START === 'function') {
+
             module.START();
+
             } else {
+
                 console.error('START is not defined in the module');
+
             }
         })
         .catch(error => {
+
             console.error('Error loading the module:', error);
+
         });
 
     } else {
 
         import('https://eliterobustontology.github.io/Elite/Start/Start.js')
+
         .then(module => {
+
             if (typeof module.START === 'function') {
+
             module.START();
+
             } else {
+
                 console.error('START is not defined in the module');
+
             }
+
         })
+
         .catch(error => {
+
             console.error('Error loading the module:', error);
+
         });
         
     };
@@ -117,8 +135,8 @@ const GETDATA=(Url,Name,callback)=>{
         callback(data);
 
     })
-    .catch(Error => console.log(Error)
-    )
+    
+    .catch(Error => console.log(Error))
 
 };
 const INSERTDATA=(Url,Name,headers,Info,callback)=>{
@@ -213,8 +231,11 @@ const STYLED=(ELEMENT,STYLE,VALUE)=>{
 
 };
 const FINDER=(DATA, ELEMENT, ELEMENT1, ACTION) => {
+
     const user = DATA.find((item) => item[ELEMENT] === ELEMENT1);
+
     return ACTION(user ? user : false);
+    
 };
 const ELEMENTED=(HOLDER,ELEMENT,callback)=>{
 
@@ -242,7 +263,15 @@ const APPMODE=(COLOR)=>{
 
 };
 const BODIED=() => {
+
+    SCREENWIDTH((data)=>{
+
+        LOCALSTORE("Width",data);
+
+    });
+
     const ELEMENT = document.querySelector("body");
+
     ELEMENT.style.width = "100%";
     ELEMENT.style.height = "100%";
     ELEMENT.style.textAlign = "center";
@@ -251,14 +280,40 @@ const BODIED=() => {
     ELEMENT.style.listStyle = "none";
     ELEMENT.style.textDecoration = "none";
     ELEMENT.style.fontFamily = "sans-serif,Camberia";
+
     if (localStorage.getItem("Environment") === "Web" || "Development") {
+
         ELEMENT.style.overflowY = "auto";
         ELEMENT.style.overflowX = "hidden";
         ELEMENT.style.position = "relative";
+
     } else {
+
         ELEMENT.style.overflow = "hidden";
         ELEMENT.style.position = "fixed";
+
     }
+
+    ELEMENT.addEventListener("click",()=>{
+
+        SCREENWIDTH((data)=>{
+
+            CONDITION(data != localStorage.getItem("Width") ,()=>{
+
+                LOCALSTORE("Width",data);
+
+                RELOAD();
+
+            },()=>{
+
+                LOCALSTORE("Width",data);
+
+            });
+
+        });
+
+    });
+    
 };
 const WHATSAPP=(NUMBER)=>{
 
@@ -477,21 +532,33 @@ const URLCOLLECTOR=() => {
     sessionStorage.setItem("urlInfo", JSON.stringify(dataToStore));
 };
 const GMAIL=(EMAIL) => {
+
     var mailtoLink = "mailto:" + encodeURIComponent(EMAIL);
+
     window.open(mailtoLink);
+    
 };
 const RELOAD=() => {
     location.reload();
 };
 const POSTPACKAGE=(LINK, POLICY, DATA, callback, callback1) => {
+
     fetch(LINK, { method: "Post", mode: POLICY || "no-cors", body: JSON.stringify(DATA) })
-        .then((res) => res.json())
-        .then((data) => {
-            callback(data);
-        })
-        .catch((error) => {
-            callback1(error);
-        });
+        
+    .then((res) => res.json())
+        
+    .then((data) => {
+
+        callback(data);
+        
+    })
+
+    .catch((error) => {
+
+        callback1(error);
+        
+    });
+    
 };
 const SESSIONDELETE=(HOLDER)=>{
 
@@ -567,9 +634,13 @@ const CREATETABLE=(LINK, NAME, callback, callback1) => {
         });
 };
 const HIDER=(TIME, callback) => {
+
     setTimeout(() => {
+
         callback();
+
     }, TIME || 500);
+    
 };
 const REPEATER=(TIME, callback) => {
     setInterval(() => {
@@ -647,96 +718,186 @@ const JSONREMOVER=(data, ids, callback) => {
     callback(updatedJSON);
 };
 const IMAGEPICKER=(imageElement, callback) => {
+
     const input = document.createElement("input");
+
     input.type = "file";
+
     input.style.display = "none";
+
     input.accept = "image/*";
+
     document.body.appendChild(input);
+
     input.addEventListener("change", function () {
+
         var file = this.files[0];
+
         if (!file) return;
+
         var reader = new FileReader();
+
         reader.onload = function (event) {
+
             var image = new Image();
+
             image.src = event.target.result;
+
             image.onload = function () {
+
                 var maxWidth = 800;
+
                 var maxHeight = 600;
+
                 var canvas = document.createElement("canvas");
+
                 var ctx = canvas.getContext("2d");
+
                 var width = image.width;
+
                 var height = image.height;
+
                 if (width > height) {
+
                     if (width > maxWidth) {
+
                         height *= maxWidth / width;
+
                         width = maxWidth;
+
                     }
+
                 } else {
+
                     if (height > maxHeight) {
+
                         width *= maxHeight / height;
+
                         height = maxHeight;
+                        
                     }
+
                 }
+
                 canvas.width = width;
+
                 canvas.height = height;
+
                 ctx.clearRect(0, 0, canvas.width, canvas.height);
+
                 ctx.drawImage(image, 0, 0, width, height);
+
                 var base64Data;
+
                 if (file.type === "image/png") {
+
                     base64Data = canvas.toDataURL("image/png");
+
                 } else {
+
                     var quality = 0.7;
+
                     base64Data = canvas.toDataURL("image/jpeg", quality);
+
                     while (base64Data.length > 49800 && quality > 0) {
+
                         quality -= 0.1;
+
                         base64Data = canvas.toDataURL("image/jpeg", quality);
+
                     }
+
                 }
+
                 if (base64Data.length < 49800) {
+
                     imageElement.src = base64Data;
+
                     callback(base64Data);
+
                     sessionStorage.setItem("TakenPhoto", base64Data);
+
                 } else {
+
                     TOAST("Image Format Error");
+
                 }
+
             };
+
         };
+
         reader.readAsDataURL(file);
+
     });
+
     input.click();
+
     input.remove();
+    
 };
 const AUDIOPICKER=(audioElement, callback) => {
+
     const input = document.createElement("input");
+
     input.type = "file";
+
     input.style.display = "none";
+
     input.accept = "audio/*";
+    
     document.body.appendChild(input);
+
     input.addEventListener("change", function () {
+
         var file = this.files[0];
+
         if (!file) return;
+
         var reader = new FileReader();
+
         reader.onload = function (event) {
+
             var base64Data = event.target.result;
+
             var compressedBase64Data = resizeBase64Data(base64Data, 49800);
+
             if (compressedBase64Data) {
+
                 audioElement.src = compressedBase64Data;
+
                 audioElement.play();
+
                 callback(compressedBase64Data);
+
             } else {
+
                 TOAST("Unable to resize the audio data within the character limit.");
+
             }
+
         };
+
         reader.readAsDataURL(file);
+
     });
+
     input.click();
+
     input.remove();
+
     function resizeBase64Data(base64Data, targetSize) {
+
         if (base64Data.length <= targetSize) {
+
             return base64Data;
+
         }
+
         return base64Data.substring(0, targetSize);
+
     }
+    
 };
 const WEBSITE=(url) => {
     window.open(url);
@@ -830,9 +991,13 @@ const SCROLL=(ELEMENT, callback) => {
     });
 };
 const BACKPAGE=(NAME) => {
+
     setTimeout(() => {
+
         sessionStorage.setItem("PreviousPage", NAME);
+
     }, 100);
+    
 };
 const COPY=function COPY(text, onSuccess) {
     navigator.clipboard
@@ -858,7 +1023,7 @@ const DEVICE=(callback) => {
     };
     if (typeof callback === "function") {
         callback(deviceInfo);
-    }
+    };
 };
 const ZOOM=() => {
     document.addEventListener(
@@ -919,23 +1084,29 @@ const FILEPICKER=(callback) => {
     input.remove();
 };
 const ACCOUNTCHECKER=(HomeCallBack, VerificationCallBack, LoginCallBack) => {
-    CONDITION(
-        localStorage.getItem("UserData"),
-        () => {
+    
+    CONDITION(localStorage.getItem("UserData"),() => {
+
             HomeCallBack();
-        },
-        () => {
-            CONDITION(
-                localStorage.getItem("VeriifcationCode"),
-                () => {
+
+        },() => {
+
+            CONDITION(localStorage.getItem("VeriifcationCode"),() => {
+
                     VerificationCallBack();
-                },
-                () => {
+
+                },() => {
+
                     LoginCallBack();
+
                 }
+
             );
+
         }
+
     );
+
 };
 const OPERATINGSYSTEM=() => {
     const userAgent = navigator.userAgent || navigator.vendor || window.opera;
@@ -1224,130 +1395,45 @@ const GETINDEXEDNONDATA=(dbName, storeName, callback) => {
     };
 };
 const HOSTINGUPDATER=() => {
-    if (navigator.onLine) {
-        const DATA = { spreadsheetUrl: "https://docs.google.com/spreadsheets/d/1Utfr1wkoZSRvM9TOKaTxOX6orYE8AuN2mu4dDtQmhFQ/edit?gid=0#gid=0", sheetName: "APPMANAGER" };
-        fetch("https://script.google.com/macros/s/AKfycbyHFabMyQk2EoZXk8VV-L4dBKPAe6knmhyAm1W6sQ9_WRmq5clAozbfIznoCHY0l1ssSQ/exec", { method: "POST", mode: "cors", body: JSON.stringify(DATA) })
-            .then((res) => res.json())
-            .then((data) => {
-                data.forEach((element) => {
-                    let appLogicDate = new Date(element.AppLogic);
-                    if (element.AppLogic === "Development") {
-                        const INFO = [
-                            element.AppName,
-                            element.AppDescription,
-                            element.AppColors,
-                            element.AppConfiguration,
-                            element.AppCreatedOn,
-                            element.AppVersion,
-                            "",
-                            element.AppKeyWord,
-                            element.AppPackageName,
-                            element.AppCompany,
-                            element.AndroidDesign,
-                            element.AndroidFunctions,
-                            element.DesktopDesign,
-                            element.DesktopFunctions,
-                            element.WebDesign,
-                            element.WebFunctions,
-                            element.SharedDesign,
-                            element.SharedFunctions,
-                            element.AppLogic,
-                            element.AppRegion,
-                            "",
-                            element.AppCatergory,
-                            element.AppIcon,
-                            element.UpdatedOn,
-                            element.Owner,
-                        ];
-                        UPDATEDATA(
-                            "https://docs.google.com/spreadsheets/d/1Utfr1wkoZSRvM9TOKaTxOX6orYE8AuN2mu4dDtQmhFQ/edit?gid=0#gid=0",
-                            "APPMANAGER",
-                            element.ID,
-                            INFO,
-                            (datata) => {},
-                            (error) => {}
-                        );
-                    } else if (appLogicDate instanceof Date && !isNaN(appLogicDate)) {
-                        if (new Date() <= new Date(element.AppLogic)) {
-                            const INFO = [
-                                element.AppName,
-                                element.AppDescription,
-                                element.AppColors,
-                                element.AppConfiguration,
-                                element.AppCreatedOn,
-                                element.AppVersion,
-                                "",
-                                element.AppKeyWord,
-                                element.AppPackageName,
-                                element.AppCompany,
-                                element.AndroidDesign,
-                                element.AndroidFunctions,
-                                element.DesktopDesign,
-                                element.DesktopFunctions,
-                                element.WebDesign,
-                                element.WebFunctions,
-                                element.SharedDesign,
-                                element.SharedFunctions,
-                                element.AppLogic,
-                                element.AppRegion,
-                                "Active",
-                                element.AppCatergory,
-                                element.AppIcon,
-                                element.UpdatedOn,
-                                element.Owner,
-                            ];
-                            UPDATEDATA(
-                                "https://docs.google.com/spreadsheets/d/1Utfr1wkoZSRvM9TOKaTxOX6orYE8AuN2mu4dDtQmhFQ/edit?gid=0#gid=0",
-                                "APPMANAGER",
-                                element.ID,
-                                INFO,
-                                (datata) => {},
-                                (error) => {}
-                            );
-                        } else {
-                            const INFO = [
-                                element.AppName,
-                                element.AppDescription,
-                                element.AppColors,
-                                element.AppConfiguration,
-                                element.AppCreatedOn,
-                                element.AppVersion,
-                                "",
-                                element.AppKeyWord,
-                                element.AppPackageName,
-                                element.AppCompany,
-                                element.AndroidDesign,
-                                element.AndroidFunctions,
-                                element.DesktopDesign,
-                                element.DesktopFunctions,
-                                element.WebDesign,
-                                element.WebFunctions,
-                                element.SharedDesign,
-                                element.SharedFunctions,
-                                element.AppLogic,
-                                element.AppRegion,
-                                "",
-                                element.AppCatergory,
-                                element.AppIcon,
-                                element.UpdatedOn,
-                                element.Owner,
-                            ];
-                            UPDATEDATA(
-                                "https://docs.google.com/spreadsheets/d/1Utfr1wkoZSRvM9TOKaTxOX6orYE8AuN2mu4dDtQmhFQ/edit?gid=0#gid=0",
-                                "APPMANAGER",
-                                element.ID,
-                                INFO,
-                                (datata) => {},
-                                (error) => {}
-                            );
-                        }
-                    } else {
-                        
-                    }
+
+    CHECKER(navigator.onLine,()=>{
+
+        CONDITION(localStorage.getItem("Environment") === "Development" ,()=>{
+
+        },()=>{
+
+            GETDATA("https://docs.google.com/spreadsheets/d/1Utfr1wkoZSRvM9TOKaTxOX6orYE8AuN2mu4dDtQmhFQ/edit?gid=0#gid=0","APPMANAGER",(data)=>{
+
+                REDUX(data,(element)=>{
+
+                    TIMECOMPARE(element.AppLogic,(result)=>{
+
+                        CONDITION(result === false,()=>{
+
+                        },()=>{
+
+                            CONDITION(element.ID === localStorage.getItem("NAME"),()=>{
+
+                                LOCALCLEAR();
+
+                                RELOAD();
+
+                            },()=>{
+
+                            });
+
+                        });
+  
+                    });
+
                 });
-            })
-            .catch((error) => console.log(error));
-    }
+
+            });
+
+        });
+
+    });
+
 };
 const QELMAIL=(EMAIL, SUBJECT, MESSAGE, callback, callback1) => {
     const DATA = { recipientEmail: EMAIL, subject: SUBJECT, body: MESSAGE };
@@ -1380,15 +1466,25 @@ const STOREINDEXEDDATA=(API, NAME) => {
     });
 };
 const ASHMAIL=(EMAIL, SUBJECT, MESSAGE, callback, callback1) => {
+
     const DATA = { recipientEmail: EMAIL, subject: SUBJECT, body: MESSAGE };
+
     fetch("https://script.google.com/macros/s/AKfycbyNEEeBwTZrJstRlQV7HBDMXw69xbvtZEw3Grc-Lg5pqOmHSxCxsfFAqwEjVsHqIuVv0A/exec", { method: "Post", mode: "cors", body: JSON.stringify(DATA) })
-        .then((res) => res.json())
-        .then((data) => {
-            callback(data);
-        })
-        .catch((error) => {
-            callback1(error);
-        });
+    
+    .then((res) => res.json())
+       
+    .then((data) => {
+
+        callback(data);
+        
+    })
+        
+    .catch((error) => {
+            
+        callback1(error);
+
+    });
+
 };
 const GETINDEXEDDATA=(dbName, storeName, callback) => {
     const initialRequest = indexedDB.open(dbName);
@@ -1588,34 +1684,51 @@ const SEARCH=(data, searchKey, searchTerm, callback) => {
   callback(results);
 };
 const GROUP=(data, callback) => {
+
   let parsedData;
 
   try {
+
     parsedData = typeof data === "string" ? JSON.parse(data) : data;
+
   } catch {
+
     parsedData = [];
+
   }
 
   if (!Array.isArray(parsedData)) {
+
     callback([]);
+
     return;
+
   }
 
   const idMap = new Map();
 
   parsedData.forEach(item => {
+
     const id = item.ID;
+
     if (idMap.has(id)) {
+
       idMap.get(id).quantity += 1;
+
     } else {
+
       const newItem = { ...item, quantity: 1 };
+
       idMap.set(id, newItem);
+
     }
+
   });
 
   const finalArray = Array.from(idMap.values());
 
   callback(finalArray);
+  
 };
 const SWITCHER=(WIDTH, callback, callback2) => {
     const screenWidth = window.screen.width;
@@ -1641,4 +1754,85 @@ const MONEYPARTISION=(input, callback) => {
   if (typeof callback === 'function') {
     callback(formatted);
   }
+};
+const SUBMANAGER=()=>{
+        const DATA={
+            "spreadsheetUrl":"https://docs.google.com/spreadsheets/d/1Utfr1wkoZSRvM9TOKaTxOX6orYE8AuN2mu4dDtQmhFQ/edit?usp=sharing",
+            "sheetName":"APPMANAGER"    
+        };
+
+        const APIS="https://script.google.com/macros/s/AKfycbyHFabMyQk2EoZXk8VV-L4dBKPAe6knmhyAm1W6sQ9_WRmq5clAozbfIznoCHY0l1ssSQ/exec";
+
+        fetch(APIS,{
+            method:"POST",
+            mode:"cors",
+            body:JSON.stringify(DATA)
+        })
+
+        .then(res => res.json())
+ 
+        .then(data =>{
+
+
+       
+        })
+        .catch(Error => {
+
+            console.log(Error);
+
+        });
+
+};
+const TIMECOMPARE=(data, callback) => {
+  // Convert the given date string to a Date object
+  const givenDate = new Date(data);
+
+  // Get today's date (without time)
+  const today = new Date();
+  today.setHours(0, 0, 0, 0); // Normalize to midnight
+
+  // Compare the dates
+  const isPast = today > givenDate;
+
+  // Call the callback with the result
+  if (typeof callback === 'function') {
+    callback(isPast);
+  }
+};
+const COUNTRIES=()=>{
+
+    const LINKER="https://docs.google.com/spreadsheets/d/1tZfJr2m7kQsgEcOJeGeMJ0qRwobQTJi2ADwLW3Ghz_U/edit?usp=sharing";
+
+    DOWNLOADSAVEINDEX(LINKER,"Countries","Countries",()=>{
+
+    });
+
+};
+const UGANDANDISTRICITS=()=>{
+
+    const LINKER="https://docs.google.com/spreadsheets/d/1tZfJr2m7kQsgEcOJeGeMJ0qRwobQTJi2ADwLW3Ghz_U/edit?usp=sharing";
+
+   DOWNLOADSAVEINDEX(LINKER,"UgandanDistricts","UgandanDistricts",()=>{
+
+   });
+
+};
+const MONTHS=()=>{
+
+    const LINKER="https://docs.google.com/spreadsheets/d/1tZfJr2m7kQsgEcOJeGeMJ0qRwobQTJi2ADwLW3Ghz_U/edit?usp=sharing";
+
+   DOWNLOADSAVEINDEX(LINKER,"MonthsOftheYear","MonthsOftheYear",()=>{
+
+   });
+
+};
+const HOVER=(ELEMENT, onEnter, onLeave) => {
+
+    ELEMENT.addEventListener("mouseenter", () => onEnter(ELEMENT));
+
+    ELEMENT.addEventListener("mouseleave", () => onLeave(ELEMENT));
+    
+};
+const PASSWORDCHECKER=()=>{
+
 };
