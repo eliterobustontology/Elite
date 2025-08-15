@@ -3,7 +3,7 @@ import { STYLED } from "../../../Functions/DataBase/Styled/Styled.js";
 import { DIV } from "../Div/Div.js";
 import { HEADER } from "../Header/Header.js";
 
-export const HEADERVIEW=(HOLDERS,HEADERCOLOR,callback,VIEWCOLOR,callbackTwo)=>{
+export const HEADERVIEW=(HOLDERS,HEADERCOLOR,callback,VIEWCOLOR,callbackOne)=>{
 
     CLEAR(HOLDERS);
 
@@ -19,7 +19,7 @@ export const HEADERVIEW=(HOLDERS,HEADERCOLOR,callback,VIEWCOLOR,callbackTwo)=>{
         STYLED(ELEMENT,"top","50px");
         STYLED(ELEMENT,"bottom","0px");
 
-        callbackTwo(ELEMENT);
+        callbackOne(ELEMENT);
 
     });
 

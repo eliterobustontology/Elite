@@ -26,4 +26,11 @@ const MOBILEPAGE=()=>{
 
 const DESKTOPPAGE=()=>{
 
+    HEADERVIEW("","forestgreen",(ELEMENT)=>{
+
+    },"blue",(ELEMENT)=>{
+
+
+    });
+
 };

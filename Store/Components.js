@@ -363,7 +363,7 @@ const FOOTERVIEW=(HOLDERS,VIEWCOLOR,callback,HEADERCOLOR,callbackTwo)=>{
     });
 
 };
-const HEADERVIEW=(HOLDERS,HEADERCOLOR,callback,VIEWCOLOR,callbackTwo)=>{
+const HEADERVIEW=(HOLDERS,HEADERCOLOR,callback,VIEWCOLOR,callbackOne)=>{
 
     CLEAR(HOLDERS);
 
@@ -378,8 +378,8 @@ const HEADERVIEW=(HOLDERS,HEADERCOLOR,callback,VIEWCOLOR,callbackTwo)=>{
         STYLED(ELEMENT,"position","absolute");
         STYLED(ELEMENT,"top","50px");
         STYLED(ELEMENT,"bottom","0px");
-
-        callbackTwo(ELEMENT);
+        
+        callbackOne(ELEMENT);
 
     });
 
