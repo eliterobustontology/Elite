@@ -13,7 +13,7 @@ import { NOVA } from "./CloudStart.js";
 
 export const CLOUDCONNECTION=()=>{
 
-    CHECKER(!localStorage.getItem("PROJECT"),()=>{
+    CHECKER(!localStorage.getItem("PROJECT")&&!localStorage.getItem("State"),()=>{
 
         LOCALDELETE("Updates");
 
