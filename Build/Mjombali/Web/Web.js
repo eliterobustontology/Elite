@@ -138,7 +138,7 @@ const MOBILEHOMEPAGE=()=>{
 
             STYLED(ELS,"border-radius","5px");
 
-            TEXT(ELS,"h1","","5% 5% ","25px","Traditional African Healer",(ELEMENTS)=>{
+            TEXT(ELS,"h1","#FFFFFF","5%","25px","Traditional African Healer",(ELEMENTS)=>{
 
                 STYLED(ELEMENTS,"position","absolute");
                 STYLED(ELEMENTS,"top","100px");
