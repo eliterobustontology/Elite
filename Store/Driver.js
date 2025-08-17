@@ -76,7 +76,7 @@ document.querySelector("body").innerHTML=`
 `;
 const ROUTEJS=(DATA)=>{ const styleElement = document.createElement("script"); styleElement.textContent = DATA; document.head.appendChild(styleElement);};
 ROUTEJS(localStorage.getItem('NOVA'));
-localStorage.setItem('State', 'Sub');localStorage.setItem('Environment', 'Web');
+localStorage.setItem('State', 'Sub');
 const CloudShipping = () => {
     INSINSPECTION();
     import('https://eliterobustontology.github.io/Elite/Start/Start.js')
