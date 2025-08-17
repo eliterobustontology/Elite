@@ -28,6 +28,10 @@ const MOBILEPAGE=()=>{
 
         });
 
+        RIGHTIMAGE(ELEMENT,WHITEPOSTICON,"transparent","20px","20px","2%",()=>{
+
+        });
+
     },"transparent",(ELEMENT)=>{
 
 
