@@ -377,6 +377,6 @@ const ABOUTUS=(ELEMENTSERE)=>{
 
 const DESKTOPVERSION=()=>{
     
-    CLEAR();
+  CLEAR();
 
 };
