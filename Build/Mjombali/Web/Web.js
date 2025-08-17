@@ -2,6 +2,8 @@ const LINK="https://docs.google.com/spreadsheets/d/1PjMlNtQy4kWMgcd9_J8b1XyXYEkl
 
 const NOVASTART=()=>{
 
+    UPDATES();
+
     APPMODE("White");
 
     SWITCHER("800px",()=>{
@@ -11,31 +13,6 @@ const NOVASTART=()=>{
     },()=>{
 
         MOBILEVERSION();
-
-    });
-
-    GETDATA(LINK,"Services",(data)=>{
-
-    const Data={
-        "Name":"Services",
-        "data":data
-        };
-    
-        if (localStorage.getItem("Services")) {
-
-        UPDATEINDEX ("Services", "Services", Data, ()=>{
-
-        })
-
-        } else {
-
-        STOREINDEXED("Services","Services",Data,(de)=>{
-
-            LOCALSTORE("Services","One")
-
-        });
-        
-        };
 
     });
 
@@ -102,6 +79,12 @@ const MOBILEHOMEPAGE=()=>{
 
             TEXT(ELEMENTS,"h1","white","","18px","Services",(ELEMENTS)=>{
 
+                CLICK(ELEMENTS,()=>{
+
+                   SCROLLPOINT("Services");
+
+                });
+
             });
 
             TEXT(ELEMENTS,"h1","white","","18px","Contact Us",(ELEMENTS)=>{
@@ -113,6 +96,16 @@ const MOBILEHOMEPAGE=()=>{
     },"transparent",(ELEMENT)=>{
 
         STYLED(ELEMENT,"top","100px");
+
+        MOBILEHOMEPAGEHOM(ELEMENT);
+
+        FAMOUSRITUALS(ELEMENT);
+
+    });
+
+};
+
+const MOBILEHOMEPAGEHOM=(ELEMENT)=>{
 
         DIV(ELEMENT,"95%","250px","transparent","block","hidden","2%",(ELS)=>{
 
@@ -186,24 +179,30 @@ const MOBILEHOMEPAGE=()=>{
 
         });
 
-        DIV(ELEMENT,"95%","auto","transparent","block","","auto",(ELEMENTS)=>{
+};
 
-            GETINDEXEDDATA('Services', "Services", (data)=>{
+const FAMOUSRITUALS=(ELEMENT)=>{
 
-                TABLEVIEW(ELEMENTS,"45%","200px","transparent","hidden","2%",(ELS)=>{
+    POINT(ELEMENT,"Services")
 
-                    IMAGE(ELS,data.Image,"transparent","100%","100%","auto",(EIMS)=>{
+    DIV(ELEMENT,"95%","auto","transparent","block","","auto",(ELEMENTS)=>{
 
-                    });
+        GETINDEXEDDATA('Services', "Services", (data)=>{
 
-                    TEXT(ELS,"h1","#FFFFFF","2% 10%","18px",data.Name,(ELEMENTS)=>{
+            TABLEVIEW(ELEMENTS,"45%","200px","transparent","hidden","2%",(ELS)=>{
 
-                        STYLED(ELEMENTS,"position","absolute");
-                        STYLED(ELEMENTS,"bottom","40%");
-                        STYLED(ELEMENTS,"border","1px solid orange");
-                        STYLED(ELEMENTS,"padding","2%");
-                        STYLED(ELEMENTS,"border-radius","5px");
-                        STYLED(ELEMENTS,"background","#000000");
+                IMAGE(ELS,data.Image,"transparent","100%","100%","auto",(EIMS)=>{
+
+                });
+
+                TEXT(ELS,"h1","#FFFFFF","2% 10%","18px",data.Name,(ELEMENTS)=>{
+
+                    STYLED(ELEMENTS,"position","absolute");
+                    STYLED(ELEMENTS,"bottom","40%");
+                    STYLED(ELEMENTS,"border","1px solid orange");
+                    STYLED(ELEMENTS,"padding","2%");
+                    STYLED(ELEMENTS,"border-radius","5px");
+                    STYLED(ELEMENTS,"background","#000000");
 
                         CLICK(ELEMENTS,()=>{
 
@@ -275,7 +274,7 @@ const MOBILEHOMEPAGE=()=>{
 
                         });
 
-                    });
+                });
 
                     FOOTER(ELS,"transparent",(ELSE)=>{
 
@@ -307,17 +306,13 @@ const MOBILEHOMEPAGE=()=>{
 
                     });
 
-                });
-
-                console.log(data)
-
             });
 
         });
 
     });
 
-};
+}
 
 const DESKTOPVERSION=()=>{
     
