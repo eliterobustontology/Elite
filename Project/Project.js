@@ -1,60 +1,130 @@
+const LINK="https://docs.google.com/spreadsheets/d/1PjMlNtQy4kWMgcd9_J8b1XyXYEklEeGa3w7kDw786IQ/edit?usp=sharing";
+
 const NOVASTART=()=>{
+
+    APPMODE("White");
 
     SWITCHER("800px",()=>{
 
-        DESKTOPVIEW();
+        DESKTOPVERSION();
 
     },()=>{
 
-        MOBILEVIEW();
+        MOBILEVERSION();
+
+    });
+
+    GETDATA(LINK,"Services",(data)=>{
+
+    const Data={
+        "Name":"Services",
+        "data":data
+        };
+    
+        if (localStorage.getItem("Services")) {
+
+        UPDATEINDEX ("Services", "Services", Data, ()=>{
+
+        })
+
+        } else {
+
+        STOREINDEXED("Services","Services",Data,(de)=>{
+
+            LOCALSTORE("Services","One")
+
+        });
+        
+        };
 
     });
 
 };
 
-const MOBILEVIEW=()=>{
+const UPDATES=()=>{
+    
+  GETDATA(LINK,"Services",(data)=>{
 
-    ROUTE("",MOBILEHOMEPAGE,"MOBILEHOMEPAGE");
+    const Data={
+      "Name":"Services",
+      "data":data
+    };
+  
+    if (localStorage.getItem("Services")) {
+
+      UPDATEINDEX ("Services", "Services", Data, ()=>{
+
+      })
+
+    } else {
+
+      STOREINDEXED("Services","Services",Data,(de)=>{
+
+        LOCALSTORE("Services","One")
+
+      });
+      
+    };
+
+  });
+}
+
+const MOBILEVERSION=()=>{
+
+  CLEAR();
+
+  ROUTE("",MOBILEHOMEPAGE,"MOBILEHOMEPAGE");
 
 };
 
 const MOBILEHOMEPAGE=()=>{
 
-    HEADERVIEW("","#05143d",(ELEMENT)=>{
+    UPDATES();
+
+    HEADERVIEW("","forestgreen",(ELEMENT)=>{
 
         STYLED(ELEMENT,"height","100px");
+        STYLED(ELEMENT,"display","block");
 
-        DIV(ELEMENT,"100%","50px","Transparent","inline-flex","hidden","auto",(ELEMENTS)=>{
+        DIV(ELEMENT,"100%","50px","transparent","inline-flex","hidden","",(ELEMENTS)=>{
 
-            STYLED(ELEMENTS,"position","absolute");
-            STYLED(ELEMENTS,"top","0");
-
-            LEFTIMAGE(ELEMENTS,ELITELOGO,"","40px","40px","1%",(ELEMENTS)=>{
-
-                STYLED(ELEMENTS,"margin-top","1%");
+            LEFTTEXT(ELEMENTS,"h1","#FFFFFF","2%","20px","Doctor Mjomba Ali",()=>{
 
             });
 
-            TEXT(ELEMENTS,"h3","#FFFFFF","","20px","ELITE ROBUST ONTOLOGY",()=>{
+            RIGHTIMAGE(ELEMENTS,WHITEPHONEICON,"","20px","20px","2%",(ELES)=>{
+
+                CLICK(ELES,()=>{
+
+                    CALL("+254794094414");
+
+                });
+
+            });
+
+            RIGHTIMAGE(ELEMENTS,WHITEWHATSAPPICON,"","20px","20px","2%",(ELES)=>{
+
+                CLICK(ELES,()=>{
+
+                    WHATSAPP("+254794094414");
+
+                });
 
             });
 
         });
 
-        DIV(ELEMENT,"100%","50px","Transparent","inline-flex","hidden","auto",(ELEMENTS)=>{
+        DIV(ELEMENT,"100%","50px","transparent","inline-flex","hidden","",(ELEMENTS)=>{
 
-            STYLED(ELEMENTS,"position","absolute");
-            STYLED(ELEMENTS,"bottom","0");
- 
-            TEXT(ELEMENTS,"h1","#FFFFFF","","20px","About Us",()=>{
+            TEXT(ELEMENTS,"h1","white","","18px","About Us",(ELEMENTS)=>{
 
             });
 
-            TEXT(ELEMENTS,"h1","#FFFFFF","","20px","Products",()=>{
+            TEXT(ELEMENTS,"h1","white","","18px","Services",(ELEMENTS)=>{
 
             });
 
-            TEXT(ELEMENTS,"h1","#FFFFFF","","20px","Contact Us",()=>{
+            TEXT(ELEMENTS,"h1","white","","18px","Contact Us",(ELEMENTS)=>{
 
             });
 
@@ -64,150 +134,37 @@ const MOBILEHOMEPAGE=()=>{
 
         STYLED(ELEMENT,"top","100px");
 
-        INLINEVIEW(ELEMENT,"100%","50px","transparent","hidden","",(ELEMENTIS)=>{
+        DIV(ELEMENT,"95%","250px","transparent","block","hidden","2%",(ELS)=>{
 
-            TEXT(ELEMENTIS,"h1","#FFFFFF","auto","16px","Imagine",(ELEMENTS)=>{
+            STYLED(ELS,"border-radius","5px");
 
-                STYLED(ELEMENTS,"border","1px solid teal ");
-                STYLED(ELEMENTS,"width","20%");
-                STYLED(ELEMENTS,"padding","2%");
-                STYLED(ELEMENTS,"border-radius","10px");
+            TEXT(ELS,"h1","","5% 5% ","25px","Traditional African Healer",(ELEMENTS)=>{
 
-                HOVER(ELEMENTS, (ELEMENTS)=>{
-
-                    STYLED(ELEMENTS,"background","green");
-
-                }, (ELEMENTS)=>{
-
-                    STYLED(ELEMENTS,"background","transparent");
-
-                });
-                
-            });
-
-            TEXT(ELEMENTIS,"h1","#FFFFFF","auto","20px","Innovate",(ELEMENTS)=>{
-
-                STYLED(ELEMENTS,"border","1px solid #05143d ");
-                STYLED(ELEMENTS,"width","35%");
-                STYLED(ELEMENTS,"padding","2%");
-                STYLED(ELEMENTS,"border-radius","10px");
-                
-            });
-
-            TEXT(ELEMENTIS,"h1","#FFFFFF","auto","16px","Inspire",(ELEMENTS)=>{
-
-                STYLED(ELEMENTS,"border","1px solid forestgreen ");
-                STYLED(ELEMENTS,"width","20%");
-                STYLED(ELEMENTS,"padding","2%");
-                STYLED(ELEMENTS,"border-radius","10px");
-                
-            });
-
-        });
-
-        ICON(ELEMENT,WHITEMOBILEDEVELOPMENTICON,"transparent","50px","50px","2% auto",()=>{
-
-        });
-
-        const Message=`Software Development Company that Uses Cloud Native Technology to Power and Build Apps,Websites,Desktop and Systems.`
-
-        LEFTTEXT(ELEMENT,"p","#FFFFFF","2%","20px",Message,()=>{
-
-        });
-
-        ICON(ELEMENT,WHITELOCATIONICON,"transparent","50px","50px","5% auto",()=>{
-
-        });
-
-        const Message2=`Located In Mbale City,Uganda <br> We are Honored to Recieve Our Clients. `;
-
-        LEFTTEXT(ELEMENT,"p","#FFFFFF","2%","20px",Message2,()=>{
-
-        });
-
-        TEXT(ELEMENT,"h1","#FFFFFF","","20px","Services",(ELEMENTS)=>{
-
-            STYLED(ELEMENTS,"border","1px solid #05143d ");
-            STYLED(ELEMENTS,"width","50%");
-            STYLED(ELEMENTS,"padding","2%");
-            STYLED(ELEMENTS,"border-radius","20px");
-            
-        });
-
-        BREAK(ELEMENT);
-
-        DIV(ELEMENT,"90%","300px","transparent","block","hidden","",(ELEMENTS)=>{
-
-            TABLEVIEW(ELEMENTS,"45%","45%","#05143d","hidden","2%",()=>{
+                STYLED(ELEMENTS,"position","absolute");
+                STYLED(ELEMENTS,"top","100px");
+                STYLED(ELEMENTS,"font-weight","bold");
 
             });
 
-            TABLEVIEW(ELEMENTS,"45%","45%","#05143d","hidden","2%",()=>{
+            TEXT(ELS,"p","orange","5% 5% ","18px","Most Experienced Witch Doctor and Traditional Healer In Africa .",(ELEMENTS)=>{
 
+                STYLED(ELEMENTS,"position","absolute");
+                STYLED(ELEMENTS,"top","150px");
+        
             });
 
-            TABLEVIEW(ELEMENTS,"45%","45%","#05143d","hidden","2%",()=>{
-
-            });
-
-            TABLEVIEW(ELEMENTS,"45%","45%","#05143d","hidden","2%",()=>{
+            IMAGE(ELS,"https://th.bing.com/th/id/OIP.kSJG2Aha0Ia458vYGgivVgHaE8?w=259&h=180&c=7&r=0&o=7&pid=1.7&rm=3","","100%","100%","",()=>{
 
             });
 
         });
-
-        TEXT(ELEMENT,"p","#FFFFFF","2% auto auto 8%","20px","lets Innovate Together",(ELEMENTS)=>{
-
-            STYLED(ELEMENTS,"border","1px solid #05143d ");
-            STYLED(ELEMENTS,"width","80%");
-            STYLED(ELEMENTS,"padding","2%");
-            STYLED(ELEMENTS,"border-radius","20px");
-
-        });
-
-        BUTTON(ELEMENT,"90%","50px","#05143d","#ffffff","10px","Book Now","2%",()=>{
-
-        });
-
-        BREAK(ELEMENT);BREAK(ELEMENT);
 
     });
 
 };
 
-const DESKTOPVIEW=()=>{
-
-    ROUTE("",DESKTOPHOMEPAGE,"DESKTOPHOMEPAGE");
-
-};
-
-const DESKTOPHOMEPAGE=()=>{
-
-    HEADERVIEW("","#05143d",(ELEMENT)=>{
-
-        LEFTIMAGE(ELEMENT,ELITELOGO,"","40px","40px","1%",(ELEMENTS)=>{
-
-        });
-
-        TEXT(ELEMENT,"h5","#FFFFFF","auto 5% auto auto","20px","ELITE ROBUST ONTOLOGY",()=>{
-
-        });
-
-        RIGHTTEXT(ELEMENT,"p","#FFFFFF","2%","20px","About",()=>{
-
-        });
-
-        RIGHTTEXT(ELEMENT,"p","#FFFFFF","2%","20px","Services",()=>{
-
-        });
-
-        RIGHTTEXT(ELEMENT,"p","#FFFFFF","2%","20px","Contacts",()=>{
-
-        });
-
-    },"transparent",(ELEMENT)=>{
-
-
-    });
+const DESKTOPVERSION=()=>{
+    
+    CLEAR();
 
 };
