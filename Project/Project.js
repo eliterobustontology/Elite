@@ -205,6 +205,14 @@ const MOBILEHOMEPAGE=()=>{
                         STYLED(ELEMENTS,"border-radius","5px");
                         STYLED(ELEMENTS,"background","#000000");
 
+                        CLICK(ELEMENTS,()=>{
+
+                            DIV(ELEMENT,"95%","auto","transparent","block","","auto",(ELEMENTS)=>{
+
+                            });
+
+                        });
+
                     });
 
                     FOOTER(ELS,"transparent",(ELSE)=>{
