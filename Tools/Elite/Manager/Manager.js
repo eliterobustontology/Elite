@@ -22,6 +22,13 @@ const HOMEPAGE=()=>{
 
 const MOBILEPAGE=()=>{
 
+    HEADERVIEW("","forestgreen",(ELEMENT)=>{
+
+    },"blue",(ELEMENT)=>{
+
+
+    });
+
 };
 
 const DESKTOPPAGE=()=>{

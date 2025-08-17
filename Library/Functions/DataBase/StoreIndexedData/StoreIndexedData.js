@@ -1,19 +1,29 @@
 export const STOREINDEXEDDATA = (API, NAME) => {
+
     CHECKER(navigator.onLine, () => {
-        GETDATA(
-            API,
-            NAME,
-            (data) => {
+
+        GETDATA(API,NAME,(data) => {
+
                 const DATA = { Name: NAME, data: data };
+
                 STOREINDEXED(NAME, NAME, DATA, (data) => {
+
                     CHECKER(data === false, () => {
+
                         UPDATEINDEX(NAME, NAME, DATA, () => {});
+
                     });
+
                 });
-            },
-            (data) => {
+
+            },(data) => {
+
                 console.log(data);
+
             }
+
         );
+
     });
+    
 };

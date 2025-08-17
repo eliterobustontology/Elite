@@ -23,6 +23,7 @@ export const UPDATEDATA=(Url,Name,headers,Info,callback)=>{
         callback(data);
 
     })
+    
     .catch(Error => console.log(Error)
     )
 

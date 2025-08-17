@@ -16,9 +16,8 @@ export const SUBMANAGER=()=>{
  
         .then(data =>{
 
-
-       
         })
+        
         .catch(Error => {
 
             console.log(Error);
