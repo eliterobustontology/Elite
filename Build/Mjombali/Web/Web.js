@@ -216,6 +216,46 @@ const MOBILEHOMEPAGE=()=>{
 
                     });
 
+                    TEXT(ELS,"h1","#FFFFFF","2% 10%","18px",data.Name,(ELEMENTS)=>{
+
+                        STYLED(ELEMENTS,"position","absolute");
+                        STYLED(ELEMENTS,"bottom","40%");
+                        STYLED(ELEMENTS,"border","1px solid orange");
+                        STYLED(ELEMENTS,"padding","2%");
+                        STYLED(ELEMENTS,"border-radius","5px");
+
+                    });
+
+                    FOOTER(ELS,"transparent",(ELSE)=>{
+
+                        LEFTIMAGE(ELSE,WHITEPHONEICON,"green","20px","20px","2%",(ELES)=>{
+
+                            STYLED(ELES,"padding","5%");
+                            STYLED(ELES,"border-radius","100%");
+
+                            CLICK(ELES,()=>{
+
+                                CALL("+254794094414");
+
+                            });
+
+                        });
+
+                        RIGHTIMAGE(ELSE,WHITEWHATSAPPICON,"green","30px","30px","2%",(ELES)=>{
+
+                            STYLED(ELES,"padding","5%");
+                            STYLED(ELES,"border-radius","100%");
+
+                            CLICK(ELES,()=>{
+
+                                WHATSAPP("+254794094414");
+
+                            });
+
+                        });
+
+                    });
+
                 });
 
                 console.log(data)
