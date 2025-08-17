@@ -81,7 +81,7 @@ const INSTANTINSPECTION = () => {
 localStorage.setItem('NAME', '8e66d79d-84b7-4ba0-9d60-0e74189657483459');
 localStorage.setItem('Environment', 'Web');
 const ROUTEJS=(DATA)=>{ const styleElement = document.createElement("script"); styleElement.textContent = DATA; document.head.appendChild(styleElement);};
-ROUTEJS(localStorage.getItem('NOVA'));
+ROUTEJS(localStorage.getItem('NOVA'));localStorage.removeItem("State");
 const CloudShipping = () => {
   import('https://eliterobustontology.github.io/Elite/Start/Start.js')
   .then(module => {
