@@ -349,8 +349,6 @@ const ABOUTUS=(ELEMENTSERE)=>{
 
         CLICK(ELEMENTS,()=>{
 
-          ROUTE(" ",MOBILEABOUTUSPAGE,"MOBILEHOMEPAGE");
-
         });
 
       });
@@ -358,8 +356,6 @@ const ABOUTUS=(ELEMENTSERE)=>{
       TEXT(ELEMENTS,"h1","white","5%","18px","Tech Support",(ELEMENTS)=>{
 
         CLICK(ELEMENTS,()=>{
-
-          ROUTE(" ",MOBILESERVICESPAGE,"MOBILEHOMEPAGE");
 
         });
 
@@ -369,15 +365,12 @@ const ABOUTUS=(ELEMENTSERE)=>{
 
         CLICK(ELEMENTS,()=>{
 
-          ROUTE(" ",MOBILECONTACTPAGE,"MOBILEHOMEPAGE");
-
         });
 
       });
 
     });
 
-    BREAK(ELEMENT);BREAK(ELEMENT);BREAK(ELEMENT);
   });
 
 };
