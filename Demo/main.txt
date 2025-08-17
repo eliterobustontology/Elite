@@ -1,3 +1,1 @@
-https://eroinnovations.github.io/Elite/
-
-https://eroinnovations.github.io/Elite/Start/SubStart.js
+https://eliterobustontology.github.io/Elite/
