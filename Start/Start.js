@@ -1,7 +1,10 @@
+import { CLOUDSTART } from "../Connection/Cloud.js";
 import { CLOUDCONNECTION } from "../Connection/CloudConnection.js";
+import { NOVA } from "../Connection/CloudStart.js";
 import { FUNCTIONS } from "../Connection/Functions.js";
 import { ASSETSCONNECTION } from "../Library/Assets/Connection/Connection.js";
 import { COMPONENTSCONNECTION } from "../Library/Components/Connection/Connection.js";
+import { CONDITION } from "../Library/Functions/DataBase/Condition/Condition.js";
 import { PLUGINSCONECTION } from "../Library/Plugins/Connection/Connection.js";
 import { LOADINGSECTION } from "../Pages/LoadingSection.js";
 
@@ -9,7 +12,7 @@ export const START=()=>{
 
     const HOLDERS=document.querySelector("body");
 
-    if (localStorage.getItem("Updates")) {
+    CONDITION(localStorage.getItem("Updates"),()=>{
 
         ASSETSCONNECTION();
 
@@ -21,12 +24,30 @@ export const START=()=>{
 
         CLOUDCONNECTION();
 
-    } else {
+    },()=>{
 
-        ASSETSCONNECTION();
+        CONDITION(localStorage.getItem("State"),()=>{
 
-        LOADINGSECTION(HOLDERS);
+            ASSETSCONNECTION();
 
-    };
+            FUNCTIONS();
+
+            COMPONENTSCONNECTION();
+
+            PLUGINSCONECTION();
+
+            CLOUDSTART();
+
+            NOVA();
+
+        },()=>{
+
+            ASSETSCONNECTION();
+
+            LOADINGSECTION(HOLDERS);
+
+        });
+
+    });
    
 };

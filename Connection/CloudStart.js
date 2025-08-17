@@ -1,28 +1,33 @@
+import { CONDITION } from "../Library/Functions/DataBase/Condition/Condition.js";
+import { HIDER } from "../Library/Functions/DataBase/Hider/Hider.js";
+import { LOCALSTORE } from "../Library/Functions/DataBase/LocalStore/LocalStore.js";
+import { RELOAD } from "../Library/Functions/DataBase/Reload/Reload.js";
+
 export const NOVA=()=>{
 
-const DATA=`ROUTEJS(localStorage.getItem('FUNCTIONS'));
-ROUTEJS(localStorage.getItem('PROJECT'));
-ROUTEJS(localStorage.getItem('RUN'));
-ROUTEJS(localStorage.getItem('COMPONENTS'));
-ROUTEJS(localStorage.getItem('ASSETS'));
-`;
+    const DATA=`ROUTEJS(localStorage.getItem('FUNCTIONS'));
+    ROUTEJS(localStorage.getItem('PROJECT'));
+    ROUTEJS(localStorage.getItem('RUN'));
+    ROUTEJS(localStorage.getItem('COMPONENTS'));
+    ROUTEJS(localStorage.getItem('ASSETS'));
+    `;
 
-localStorage.setItem('NOVA',DATA);
+    LOCALSTORE("NOVA",DATA);
 
-    if (localStorage.getItem('Updates')) {
+    CONDITION(localStorage.getItem('Updates'),()=>{
 
-        localStorage.setItem('Updates', new Date());
+        LOCALSTORE("Updates",new Date());
 
-    }else{
+    },()=>{
 
-        setTimeout(() => {
+        HIDER(2000,()=>{
 
-            localStorage.setItem('Updates', new Date());
+            LOCALSTORE("Updates",new Date());
 
-            location.reload();
-                    
-        }, 2000);
+            RELOAD();
 
-    };
+        });
+
+    });
 
 };
