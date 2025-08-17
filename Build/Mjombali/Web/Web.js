@@ -159,6 +159,71 @@ const MOBILEHOMEPAGE=()=>{
 
         });
 
+        TEXT(ELEMENT,"h1","forestgreen","auto","20px","About Doctor Mjomba Ali",(ELEMENTS)=>{
+
+        });
+
+        const Message=`Renowned African witch doctor and spiritual Healer.
+            <br><br>
+            With decades of experience in traditional African healing practices, Dr. Mjombali combines ancestral wisdom, spiritual guidance and potent rituals to provide transformative solutions to life's most challenging problems. Whether you are seeking help with love, prosperity protection and spiritual guidance.
+            <br><br>
+            Dr.Mjombali offers authentic, personalised services rooted in ancient African traditions.
+            <br><br>
+            As a trusted healer Dr. Mjombali works with the forces of nature, ancestral spirits, and powerful rituals to bring balance, healing, and clarity to your life. With a compassionate heart and profound knowledge, Dr. Mjombali is committed to chihelping you overcome obstacles and and achive peace, succes, and happiness.
+            <br><br>
+            Explore the services offered, and discover how Dr.Mjombali can guide you on your path to spiritural renewal and empowerment.
+        `;
+
+        DIV(ELEMENT,"95%","40%","transparent","","","2%",(ELEMENTS)=>{
+
+            TEXT(ELEMENTS,"p","#000000","2% 3% ","18px",Message,(ELEMENTS)=>{
+
+                STYLED(ELEMENTS,"text-align","left")
+
+            });
+
+        });
+
+        DIV(ELEMENT,"95%","10%","green","inline-flex","","2%",(ELEMENTS)=>{
+
+            TEXT(ELEMENTS,"h1","white","auto 3% ","16px","Western Kenya",(ELEMENTS)=>{
+
+            });
+
+            RIGHTIMAGE(ELEMENTS,WHITELOCATIONICON,"transparent","20px","20px","5%",(ELES)=>{
+
+            });
+
+            CLICK(ELEMENTS,()=>{
+
+                WHATSAPP("+254794094414");
+
+            });
+
+        });
+
+        TEXT(ELEMENT,"h1","forestgreen","auto 3% ","25px","Our Famous Rituals",(ELEMENTS)=>{
+
+        });
+
+        DIV(ELEMENT,"95%","auto","transparent","block","","auto",(ELEMENTS)=>{
+
+            GETINDEXEDDATA('Services', "Services", (data)=>{
+
+                TABLEVIEW(ELEMENTS,"45%","200px","transparent","hidden","2%",(ELS)=>{
+
+                    IMAGE(ELS,data.Image,"transparent","100%","100%","auto",(EIMS)=>{
+
+                    });
+
+                });
+
+                console.log(data)
+
+            });
+
+        });
+
     });
 
 };
