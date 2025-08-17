@@ -58,6 +58,8 @@ export const CLOUDCONNECTION=()=>{
 
                     TIMECOMPARE(UserData.AppLogic,(result)=>{
 
+                        console.log(result)
+
                         CONDITION(result === true,()=>{
 
                             EXPIREDHOSTING();

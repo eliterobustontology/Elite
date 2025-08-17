@@ -1,15 +1,38 @@
 export const TIMECOMPARE = (data, callback) => {
 
-  const givenDate = new Date(data);
+  try {
 
-  const today = new Date();
-  today.setHours(0, 0, 0, 0); 
+    const [datePart, timePart] = data.split('T');
+    const [year, day, month] = datePart.split('-');
+    const fixedDateString = `${year}-${month}-${day}T${timePart}`;
 
-  const isPast = today > givenDate;
+    const givenDate = new Date(fixedDateString);
 
-  if (typeof callback === 'function') {
+    if (isNaN(givenDate)) {
 
-    callback(isPast);
+      throw new Error("Invalid date format.");
+
+    }
+
+    const today = new Date();
+
+    today.setHours(0, 0, 0, 0); 
+
+    const isPast = today > givenDate;
+
+    if (typeof callback === 'function') {
+
+      callback(isPast);
+
+    } else {
+
+      console.warn("Callback is not a function.");
+
+    }
+
+  } catch (err) {
+
+    console.error("TIMECOMPARE error:", err.message);
 
   }
   
