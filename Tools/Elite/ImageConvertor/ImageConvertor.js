@@ -1,5 +1,7 @@
 const HOMEPAGE=()=>{
 
+    CLEAR();
+
     APPMODE("#333333");
 
     IMAGE("",WHITEHOMEICON,"forestgreen","50%","96%","2%",(ELEMENT)=>{
