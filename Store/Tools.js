@@ -2008,9 +2008,17 @@ const HOSTINGUPDATER=() => {
 
                             CONDITION(element.ID === localStorage.getItem("NAME"),()=>{
 
-                                LOCALCLEAR();
+                                CONDITION(localStorage.getItem("State"),()=>{
 
-                                RELOAD();
+                                    window.location.href = "/index.html";
+
+                                },()=>{
+
+                                    LOCALCLEAR();
+
+                                    RELOAD();
+
+                                });
 
                             },()=>{
 
