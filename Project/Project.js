@@ -42,36 +42,16 @@ const NOVASTART=()=>{
 };
 
 const UPDATES=()=>{
+
+    DOWNLOADSAVEINDEX (LINK,"Services","Services", ()=>{
+
+       RELOAD();
+
+    });
     
-  GETDATA(LINK,"Services",(data)=>{
-
-    const Data={
-      "Name":"Services",
-      "data":data
-    };
-  
-    if (localStorage.getItem("Services")) {
-
-      UPDATEINDEX ("Services", "Services", Data, ()=>{
-
-      })
-
-    } else {
-
-      STOREINDEXED("Services","Services",Data,(de)=>{
-
-        LOCALSTORE("Services","One")
-
-      });
-      
-    };
-
-  });
-}
+};
 
 const MOBILEVERSION=()=>{
-
-  CLEAR();
 
   ROUTE("",MOBILEHOMEPAGE,"MOBILEHOMEPAGE");
 
