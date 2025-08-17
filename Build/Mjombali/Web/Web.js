@@ -203,6 +203,7 @@ const MOBILEHOMEPAGE=()=>{
                         STYLED(ELEMENTS,"border","1px solid orange");
                         STYLED(ELEMENTS,"padding","2%");
                         STYLED(ELEMENTS,"border-radius","5px");
+                        STYLED(ELEMENTS,"background","#000000");
 
                     });
 
