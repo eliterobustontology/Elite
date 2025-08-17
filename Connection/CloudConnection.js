@@ -1,6 +1,7 @@
 import { ANDROIDENV } from "../Environment/AndroidEnv.js";
 import { DESKTOPENV } from "../Environment/DesktopEnv.js";
 import { WEBENV } from "../Environment/WebEnv.js";
+import { CHECKER } from "../Library/Functions/DataBase/Checker/Checker.js";
 import { CONDITION } from "../Library/Functions/DataBase/Condition/Condition.js";
 import { FINDER } from "../Library/Functions/DataBase/Finder/Finder.js";
 import { LOCALDELETE } from "../Library/Functions/DataBase/LocalDelete/LocalDelete.js";
@@ -11,6 +12,12 @@ import { CLOUDSTART } from "./Cloud.js";
 import { NOVA } from "./CloudStart.js";
 
 export const CLOUDCONNECTION=()=>{
+
+    CHECKER(!localStorage.getItem("PROJECT"),()=>{
+
+        LOCALDELETE("Updates");
+
+    });
 
     CONDITION(localStorage.getItem("Environment") === "Development",()=>{
 
