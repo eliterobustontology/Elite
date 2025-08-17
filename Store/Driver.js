@@ -1,2 +1,2 @@
-localStorage.setItem('State', 'Sub');
+localStorage.setItem('State', 'Sub');localStorage.setItem('Environment', 'Web');
 BODIED();INSPECTION();URLCOLLECTOR();ZOOM();HOSTINGUPDATER();OPERATINGSYSTEM();OPERATINGSYSTEM();UGANDANDISTRICITS();MONTHS();COUNTRIES();
