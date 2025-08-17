@@ -24,7 +24,11 @@ const MOBILEPAGE=()=>{
 
     HEADERVIEW("","forestgreen",(ELEMENT)=>{
 
-    },"blue",(ELEMENT)=>{
+        LEFTTEXT(ELEMENT,"h2","#FFFFFF","1%","20px","Elite Manager",()=>{
+
+        });
+
+    },"transparent",(ELEMENT)=>{
 
 
     });
@@ -35,7 +39,9 @@ const DESKTOPPAGE=()=>{
 
     HEADERVIEW("","forestgreen",(ELEMENT)=>{
 
-    },"blue",(ELEMENT)=>{
+    },"transparent",(ELEMENT)=>{
+
+        
 
 
     });
