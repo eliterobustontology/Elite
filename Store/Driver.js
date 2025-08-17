@@ -79,7 +79,7 @@ ROUTEJS(localStorage.getItem('NOVA'));
 localStorage.setItem('State', 'Sub');localStorage.setItem('Environment', 'Web');
 const CloudShipping = () => {
     INSINSPECTION();
-    import('../Start/Start.js')
+    import('https://eliterobustontology.github.io/Elite/Start/Start.js')
     .then(module => {
         if (typeof module.START === 'function') {
         module.START();
