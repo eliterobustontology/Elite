@@ -87,7 +87,7 @@ const CREATEMOBILEPAGE=()=>{
 
     });
 
-    ROUNDINPUT("","90%","32px","5px","auto","#cdcdcd","email","Email",()=>{
+    ROUNDINPUT("","90%","32px","5px","3% auto","#cdcdcd","email","Email",()=>{
 
     });
 
