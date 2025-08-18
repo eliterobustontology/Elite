@@ -43,7 +43,7 @@ const LOGINMOBILEPAGE=()=>{
 
     });
 
-    TEXT("","p","#FFFFFF","3% auto","16px","Imagine | Innovate | Inspire ",()=>{
+    TEXT("","p","#FFFFFF","3% auto","16px","Imagine | Innovate | Inspire ",(ELEMENT)=>{
 
     });
 
@@ -68,6 +68,8 @@ const LOGINMOBILEPAGE=()=>{
         });
 
     });
+
+    TOAST("Hello");
 
 };
 
