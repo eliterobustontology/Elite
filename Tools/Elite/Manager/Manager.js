@@ -59,7 +59,54 @@ const LOGINMOBILEPAGE=()=>{
 
     });
 
-    BUTTON("","92%","50px","teal","#FFFFFF","5px","Create Account","2% auto",()=>{
+    BUTTON("","92%","50px","teal","#FFFFFF","5px","Create Account","2% auto",(ELEMENT)=>{
+
+        CLICK(ELEMENT,()=>{
+
+            ROUTE(" ",CREATEMOBILEPAGE,"LOGINMOBILEPAGE");
+
+        });
+
+    });
+
+};
+
+const CREATEMOBILEPAGE=()=>{
+
+    CLEAR();
+
+    TEXT("","h1","#FFFFFF","5% auto","20px","ELITE MANAGER",()=>{
+
+    });
+
+    TEXT("","p","#FFFFFF","3% auto","16px","Imagine | Innovate | Inspire ",()=>{
+
+    });
+
+    ROUNDINPUT("","90%","32px","5px","auto","#cdcdcd","text","User Name",()=>{
+
+    });
+
+    ROUNDINPUT("","90%","32px","5px","auto","#cdcdcd","email","Email",()=>{
+
+    });
+
+    ROUNDINPUT("","90%","32px","5px","3% auto","#cdcdcd","password","*******",()=>{
+
+    });
+
+    BUTTON("","92%","50px","forestgreen","#FFFFFF","5px","Sign Up","2% auto",()=>{
+
+    });
+
+    BUTTON("","92%","50px","teal","#FFFFFF","5px","Sign In","2% auto",(ELEMENT)=>{
+
+        CLICK(ELEMENT,()=>{
+
+            ROUTE("",LOGINMOBILEPAGE,"LOGINMOBILEPAGE");
+
+        });
+
 
     });
 
