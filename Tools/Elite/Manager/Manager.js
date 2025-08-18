@@ -95,7 +95,7 @@ const CREATEMOBILEPAGE=()=>{
 
     });
 
-    BUTTON("","92%","50px","forestgreen","#FFFFFF","5px","Sign Up","2% auto",()=>{
+    BUTTON("","92%","50px","forestgreen","#FFFFFF","5px","Register","2% auto",()=>{
 
     });
 
