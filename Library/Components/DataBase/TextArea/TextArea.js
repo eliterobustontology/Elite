@@ -1,6 +1,3 @@
-import { ELEMENTED } from "../../../Functions/DataBase/Elemented/Elemented.js";
-import { STYLED } from "../../../Functions/DataBase/Styled/Styled.js";
-
 export const TEXTAREA=(HOLDER,WIDTH,HEIGHT,RADIUS,MARGIN,COLOR,PLACE,callback)=>{
 
     ELEMENTED(HOLDER,"textarea",(ELEMENTS)=>{

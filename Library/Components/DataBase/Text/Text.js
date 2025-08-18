@@ -1,6 +1,3 @@
-import { ELEMENTED } from "../../../Functions/DataBase/Elemented/Elemented.js";
-import { STYLED } from "../../../Functions/DataBase/Styled/Styled.js";
-
 export const TEXT=(HOLDER,TYPE,COLOR,MARGIN,SIZE,WORDS,callback)=>{
     
     ELEMENTED(HOLDER,TYPE||"p",(ELEMENTS)=>{

@@ -1,6 +1,3 @@
-import { ELEMENTED } from "../../../Functions/DataBase/Elemented/Elemented.js";
-import { STYLED } from "../../../Functions/DataBase/Styled/Styled.js";
-
 export const BUTTON=(HOLDER,WIDTH,HEIGHT,COLOR,WORDCOLOR,RADIUS,WORD,MARGIN,callback)=>{
     
     ELEMENTED(HOLDER,"button",(ELEMENTS)=>{

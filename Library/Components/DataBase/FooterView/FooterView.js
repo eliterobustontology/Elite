@@ -1,8 +1,3 @@
-import { CLEAR } from "../../../Functions/DataBase/Clear/Clear.js";
-import { STYLED } from "../../../Functions/DataBase/Styled/Styled.js";
-import { DIV } from "../Div/Div.js";
-import { FOOTER } from "../Footer/Footer.js";
-
 export const FOOTERVIEW=(HOLDERS,VIEWCOLOR,callback,HEADERCOLOR,callbackTwo)=>{
 
     CLEAR(HOLDERS);

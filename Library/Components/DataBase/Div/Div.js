@@ -1,7 +1,3 @@
-import { CONDITION } from "../../../Functions/DataBase/Condition/Condition.js";
-import { ELEMENTED } from "../../../Functions/DataBase/Elemented/Elemented.js";
-import { STYLED } from "../../../Functions/DataBase/Styled/Styled.js";
-
 export const DIV=(HOLDER,WIDTH,HEIGHT,COLOR,DISPLAY,SCROLL,MARGIN,callback)=>{
     
     ELEMENTED(HOLDER,"div",(ELEMENTS)=>{
