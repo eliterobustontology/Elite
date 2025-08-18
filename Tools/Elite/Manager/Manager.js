@@ -59,6 +59,10 @@ const LOGINMOBILEPAGE=()=>{
 
     });
 
+    BUTTON("","92%","50px","teal","#FFFFFF","5px","Create Account","2% auto",()=>{
+
+    });
+
 };
 
 const HOMEMOBILEPAGE=()=>{
