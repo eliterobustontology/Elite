@@ -14,13 +14,54 @@ const HOMEPAGE=()=>{
 
     },()=>{
 
-        MOBILEPAGE();
+        MOBILESECTIONCHECK();
+    });
+
+};
+
+const MOBILESECTIONCHECK=()=>{
+    
+    ACCOUNTCHECKER(()=>{
+        
+        HOMEMOBILEPAGE();
+
+    }, ()=>{
+
+    }, ()=>{
+
+        LOGINMOBILEPAGE();
 
     });
 
 };
 
-const MOBILEPAGE=()=>{
+const LOGINMOBILEPAGE=()=>{
+
+    CLEAR();
+
+    TEXT("","h1","#FFFFFF","5% auto","20px","ELITE MANAGER",()=>{
+
+    });
+
+    TEXT("","p","#FFFFFF","3% auto","16px","Imagine | Innovate | Inspire ",()=>{
+
+    });
+
+    ROUNDINPUT("","90%","32px","5px","auto","#cdcdcd","email","Email",()=>{
+
+    });
+
+    ROUNDINPUT("","90%","32px","5px","3% auto","#cdcdcd","email","Email",()=>{
+
+    });
+
+    BUTTON("","92%","50px","forestgreen","#FFFFFF","5px","Sign In","2% auto",()=>{
+
+    });
+
+};
+
+const HOMEMOBILEPAGE=()=>{
 
     HEADERVIEW("","forestgreen",(ELEMENT)=>{
 
@@ -29,6 +70,10 @@ const MOBILEPAGE=()=>{
         });
 
         RIGHTIMAGE(ELEMENT,WHITEPOSTICON,"transparent","20px","20px","2%",()=>{
+
+        });
+
+        RIGHTIMAGE(ELEMENT,WHITEDELETEICON,"transparent","20px","20px","2%",()=>{
 
         });
 
