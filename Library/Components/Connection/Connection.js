@@ -1,4 +1,5 @@
 import { AUDIO } from "../DataBase/Audio/Audio.js";
+import { BOTTOMVIEW } from "../DataBase/BottomView/BottomView.js";
 import { BUTTON } from "../DataBase/Button/Button.js";
 import { DIV } from "../DataBase/Div/Div.js";
 import { FOOTER } from "../DataBase/Footer/Footer.js";
@@ -40,12 +41,13 @@ const INLINEVIEW=${INLINEVIEW};
 const TABLEVIEW=${TABLEVIEW};
 const FOOTERVIEW=${FOOTERVIEW};
 const HEADERVIEW=${HEADERVIEW};
+const BOTTOMVIEW=${BOTTOMVIEW};
 `;
     
 localStorage.setItem('COMPONENTS',DATA)
 
 };
 `
-const HEADERVIEW=${HEADERVIEW};
+const BOTTOMVIEW=${BOTTOMVIEW};
 
 `
