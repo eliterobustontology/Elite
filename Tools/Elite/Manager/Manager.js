@@ -195,6 +195,13 @@ const HOMEMOBILEPAGE=()=>{
 
     },"transparent",(ELEMENT)=>{
 
+        GETINDEXEDDATA("APPMANAGER", "APPMANAGER", (data)=>{
+
+            TABLEVIEW(ELEMENT,"45%","200px","orange","hidden","2%",(ELEMENT)=>{
+
+            });
+
+        });
 
     });
 
