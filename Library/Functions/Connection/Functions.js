@@ -1,7 +1,7 @@
 import { ACCOUNTCHECKER } from "../DataBase/AccouintChecker/AccountChecker.js";
 import { ADD } from "../DataBase/Add/Add.js";
 import { APPMODE } from "../DataBase/AppMode/AppMode.js";
-import { ASHMAIL } from "../DataBase/AshMail/AdhMail.js";
+import { ASHMAIL } from "../DataBase/AshMail/AshMail.js";
 import { AUDIOPICKER } from "../DataBase/AudioPicker/AudioPicker.js";
 import { AUTORUN } from "../DataBase/AutoRun/AutoRun.js";
 import { BACKPAGE } from "../DataBase/BackPage/BackPage.js";

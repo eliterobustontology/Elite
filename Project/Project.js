@@ -2,6 +2,6 @@ const NOVASTART=()=>{
 
     CLEAR();
 
-    BOTTOMVIEW("");
+    BOTTOMVIEW("","Test");
 
 };
