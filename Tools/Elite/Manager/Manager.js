@@ -37,6 +37,10 @@ const MOBILESECTIONCHECK=()=>{
 
 const LOGINMOBILEPAGE=()=>{
 
+    SESSIONDELETE("Email");
+
+    SESSIONDELETE("Password");
+
     CLEAR();
 
     TEXT("","h1","#FFFFFF","5% auto","20px","ELITE MANAGER",()=>{
@@ -47,15 +51,77 @@ const LOGINMOBILEPAGE=()=>{
 
     });
 
-    ROUNDINPUT("","90%","32px","5px","auto","#cdcdcd","email","Email",()=>{
+    ROUNDINPUT("","90%","32px","5px","auto","#cdcdcd","email","Email",(ELEMENT)=>{
+
+        INPUTED (ELEMENT, (data)=>{
+
+            SESSIONSTORE("Email",data);
+
+        });
 
     });
 
-    ROUNDINPUT("","90%","32px","5px","3% auto","#cdcdcd","password","*******",()=>{
+    ROUNDINPUT("","90%","32px","5px","3% auto","#cdcdcd","password","*******",(ELEMENT)=>{
+
+        INPUTED (ELEMENT, (data)=>{
+
+            SESSIONSTORE("Password",data);
+
+        });
 
     });
 
-    BUTTON("","92%","50px","forestgreen","#FFFFFF","5px","Log In","2% auto",()=>{
+    BUTTON("","92%","50px","forestgreen","#FFFFFF","5px","Log In","2% auto",(ELEMENT)=>{
+
+        CLICK(ELEMENT,()=>{
+
+            CONDITION(sessionStorage.getItem("Email"),()=>{
+
+                CONDITION(sessionStorage.getItem("Password"),()=>{
+
+                    TOAST("Please Wait");
+
+                    GETDATA(URLLINK,"Users",(data)=>{
+
+                        FINDER(data,"UserEmail",sessionStorage.getItem("Email"),(result)=>{
+
+                            CONDITION(result === false,()=>{
+
+                                TOAST("No User Email Found");
+
+                            },()=>{
+
+                                CONDITION(result.UserPassword === sessionStorage.getItem("Password"),()=>{
+
+                                    LOCALSTORE("UserData",result.ID);
+
+                                    HOMEPAGE();
+
+                                },()=>{
+
+                                    TOAST("Invalid User Password");
+
+                                });
+
+                            });
+
+                        });
+
+                    });
+
+                },()=>{
+
+                    TOAST("Enter Password");
+
+                });
+
+            },()=>{
+
+                TOAST("Enter Email");
+
+            });
+
+        });
 
     });
 
@@ -68,8 +134,6 @@ const LOGINMOBILEPAGE=()=>{
         });
 
     });
-
-    TOAST("Hello");
 
 };
 
