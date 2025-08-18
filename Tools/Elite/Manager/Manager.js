@@ -55,7 +55,7 @@ const LOGINMOBILEPAGE=()=>{
 
     });
 
-    BUTTON("","92%","50px","forestgreen","#FFFFFF","5px","Sign In","2% auto",()=>{
+    BUTTON("","92%","50px","forestgreen","#FFFFFF","5px","Log In","2% auto",()=>{
 
     });
 
