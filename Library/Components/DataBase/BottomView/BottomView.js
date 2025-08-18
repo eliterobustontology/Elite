@@ -1,9 +1,9 @@
-export const BOTTOMVIEW=(HOLDER,COLORED,TOPCOLOR,NAMED,callback)=>{
+export const BOTTOMVIEW=(HOLDER,TOP,COLORED,TOPCOLOR,NAMED,callback)=>{
 
     DIV(HOLDER,"100%","auto",COLORED,"block","hidden","auto",(ELEMENTIS)=>{
 
         STYLED(ELEMENTIS,"position","absolute");
-        STYLED(ELEMENTIS,"top","30%");
+        STYLED(ELEMENTIS,"top",TOP||"30%");
         STYLED(ELEMENTIS,"bottom","0");
         STYLED(ELEMENTIS,"border-radius","10px 10px 0px 0px");
 

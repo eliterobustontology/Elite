@@ -2,6 +2,10 @@ const NOVASTART=()=>{
 
     CLEAR();
 
-    BOTTOMVIEW("","Test");
+    BOTTOMVIEW("","#000000","forestgreen","My Name",(ELEMENTS)=>{
+
+        DISPLAY(ELEMENTS,"Tets")
+
+    });
 
 };
