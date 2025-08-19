@@ -77,13 +77,27 @@ const MOBILEHOMEPAGE=()=>{
 
             TEXT(ELEMENTS,"h1","white","","18px","About Us",(ELEMENTS)=>{
 
+                CLICK(ELEMENTS,()=>{
+
+                    BOTTOMVIEW("","50px","#FFFFFF","forestgreen","About Us",(ELEMENTASA)=>{
+
+                        ABOUTUS(ELEMENTASA);
+
+                    });
+
+                });
+
             });
 
             TEXT(ELEMENTS,"h1","white","","18px","Services",(ELEMENTS)=>{
 
                 CLICK(ELEMENTS,()=>{
 
-                   SCROLLPOINT("Services");
+                    BOTTOMVIEW("","50px","#FFFFFF","forestgreen","Our Services",(ELEMENTASA)=>{
+
+                        FAMOUSRITUALS(ELEMENTASA);
+
+                    });
 
                 });
 
