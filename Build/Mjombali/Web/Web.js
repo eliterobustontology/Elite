@@ -201,8 +201,6 @@ const MOBILEHOMEPAGEHOM=(ELEMENT)=>{
 
 const FAMOUSRITUALS=(ELEMENT)=>{
 
-    POINT(ELEMENT,"Services")
-
     DIV(ELEMENT,"95%","auto","transparent","block","","auto",(ELEMENTS)=>{
 
         GETINDEXEDDATA('Services', "Services", (data)=>{
@@ -227,7 +225,7 @@ const FAMOUSRITUALS=(ELEMENT)=>{
                             DIV("","100%","auto","green","block","hidden","auto",(ELEMENTIS)=>{
 
                                 STYLED(ELEMENTIS,"position","absolute");
-                                STYLED(ELEMENTIS,"top","30%");
+                                STYLED(ELEMENTIS,"top","50px");
                                 STYLED(ELEMENTIS,"bottom","0");
                                 STYLED(ELEMENTIS,"border-radius","10px 10px 0px 0px");
 
