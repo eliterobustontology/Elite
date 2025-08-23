@@ -383,7 +383,15 @@ const ABOUTUS=(ELEMENTSERE)=>{
 
       });
 
-      YEARSTAMP(ELEMENTS);
+      DIV(ELEMENTS,"100%","50px","transparent","inline-flex","","",(ELEMENTA)=>{
+
+        STYLED(ELEMENTA,"position","absolute");
+        STYLED(ELEMENTA,"left","0");
+        STYLED(ELEMENTA,"bottom","0");
+
+        YEARSTAMP(ELEMENTA,"Doctor Mjombali , All Rights Reserved.");
+
+      });
 
     });
 

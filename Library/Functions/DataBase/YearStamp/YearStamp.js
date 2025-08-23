@@ -1,8 +1,8 @@
-export const YEARSTAMP = (ELEMENT) => {
+export const YEARSTAMP = (ELEMENT,DATA) => {
 
     const currentYear = new Date().getFullYear();
 
-    const content = `\u00A9 ${currentYear}`;
+    const content = `<p style="margin: auto;">\u00A9 ${currentYear} ,${DATA} </p>`;
 
     DISPLAY(ELEMENT, content);
 
