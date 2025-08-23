@@ -108,6 +108,7 @@ import { VISITOR } from "../DataBase/Visitior/Visitor.js";
 import { WEBSITE } from "../DataBase/WebSite/WebSite.js";
 import { SITECLOSE } from "../DataBase/WebsiteClose/WebsiteClose.js";
 import { WHATSAPP } from "../DataBase/whatsapp/Whatsapp.js";
+import { YEARSTAMP } from "../DataBase/YearStamp/YearStamp.js";
 import { YOUTUBEUD } from "../DataBase/YouTubed/Youtubed.js";
 import { ZOOM } from "../DataBase/Zoom/Zoom.js";
 
@@ -224,11 +225,12 @@ const MONTHS=${MONTHS};
 const HOVER=${HOVER};
 const PASSWORDCHECKER=${PASSWORDCHECKER};
 const POINT=${POINT};
+const YEARSTAMP=${YEARSTAMP};
 `;
 localStorage.setItem('FUNCTIONS',DATA)
 };
 
 `
-const POINT=${POINT};
+const YEARSTAMP=${YEARSTAMP};
 
 `
