@@ -86,6 +86,7 @@ import { SESSIONDELETE } from "../DataBase/SessionDelete/SessonDelete.js";
 import { SESSIONSTORE } from "../DataBase/SessionStore/SessionStore.js";
 import { SESSIONDEJSONDATA } from "../DataBase/SessonDejson/SessionDejson.js";
 import { SMS } from "../DataBase/Sms/Sms.js";
+import { SOURCED } from "../DataBase/Sourced/Sourced.js";
 import { STOPCOLORCHANGER } from "../DataBase/StopColorChanger/StopColorChanger.js";
 import { STOREINDEXED } from "../DataBase/StoreIndexed/StoreIndexed.js";
 import { STOREINDEXEDDATA } from "../DataBase/StoreIndexedData/StoreIndexedData.js";
@@ -228,11 +229,12 @@ const PASSWORDCHECKER=${PASSWORDCHECKER};
 const POINT=${POINT};
 const YEARSTAMP=${YEARSTAMP};
 const POWEREDBY=${POWEREDBY};
+const SOURCED=${SOURCED};
 `;
 localStorage.setItem('FUNCTIONS',DATA)
 };
 
 `
-const POWEREDBY=${POWEREDBY};
+const SOURCED=${SOURCED};
 
 `

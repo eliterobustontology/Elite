@@ -185,7 +185,13 @@ const HOMEMOBILEPAGE=()=>{
 
         });
 
-        RIGHTIMAGE(ELEMENT,WHITEPOSTICON,"transparent","20px","20px","2%",()=>{
+        RIGHTIMAGE(ELEMENT,WHITEPOSTICON,"transparent","20px","20px","2%",(ELS)=>{
+
+            CLICK(ELS,()=>{
+
+                ROUTE(" ",CREATENEWMOBILEPROJECT,"HOMEMOBILEPAGE");
+
+            });
 
         });
 
@@ -200,6 +206,70 @@ const HOMEMOBILEPAGE=()=>{
             TABLEVIEW(ELEMENT,"45%","200px","orange","hidden","2%",(ELEMENT)=>{
 
             });
+
+        });
+
+    });
+
+};
+
+const CREATENEWMOBILEPROJECT=()=>{
+
+    HEADERVIEW("","forestgreen",(ELEMENT)=>{
+
+        LEFTIMAGE(ELEMENT,WHITEBACKICON,"transparent","20px","20px","2%",(ELS)=>{
+
+            CLICK(ELS,()=>{
+
+                ROUTE("",HOMEMOBILEPAGE,"HOMEMOBILEPAGE");
+
+            });
+
+        });
+
+        RIGHTTEXT(ELEMENT,"h2","#FFFFFF","1%","20px","New Project",()=>{
+
+        });
+
+    },"transparent",(ELEMENT)=>{
+
+        DIV(ELEMENT,"95%","400px","forestgreen","block","hidden","2%",(ELEMENTA)=>{
+
+            IMAGE(ELEMENTA,ELITELOGO,"transparent","340px","95%","2%",(ELS)=>{
+
+                FOOTER(ELEMENTA,"transparent",(ELESE)=>{
+
+                    ICON(ELESE,WHITERETRYICON,"transparent","30px","30px","auto",(IMA)=>{
+
+                        CLICK(IMA,()=>{
+
+                            IMAGEPICKER(ELS, ()=>{
+
+                            });
+
+                        });
+
+                    });
+
+                    ICON(ELESE,WHITEDELETEICON,"transparent","30px","30px","auto",(IMA)=>{
+
+                        CLICK(IMA,()=>{
+
+                            SESSIONDELETE("TakenPhoto");
+
+                            SOURCED(ELS,ELITELOGO);
+
+                        });
+
+                    });
+
+                });
+
+            });
+
+        });
+
+        ROUNDINPUT(ELEMENT,"95%","32PX","10px","2%","green","text","Enter Project Name",()=>{
 
         });
 
