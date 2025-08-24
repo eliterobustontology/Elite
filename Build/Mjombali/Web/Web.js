@@ -129,8 +129,6 @@ const MOBILEHOMEPAGE=()=>{
 
         ABOUTUS(ELEMENT);
 
-        POWEREDBY(ELEMENT,"green");
-
     });
 
 };
