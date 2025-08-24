@@ -427,11 +427,11 @@ const CONTACTUS=(ELEMENT)=>{
 
         RIGHTIMAGE(ELEMENTS,WHITEPHONEICON,"","20px","20px","2%",(ELES)=>{
 
-            CLICK(ELES,()=>{
+        });
 
-                CALL("+254794094414");
+        CLICK(ELEMENTS,()=>{
 
-            });
+            CALL("+254794094414");
 
         });
 
@@ -447,11 +447,11 @@ const CONTACTUS=(ELEMENT)=>{
 
         RIGHTIMAGE(ELEMENTS,WHITEWHATSAPPICON,"","20px","20px","2%",(ELES)=>{
 
-            CLICK(ELES,()=>{
+        });
 
-                WHATSAPP("+254794094414");
+        CLICK(ELEMENTS,()=>{
 
-            });
+            WHATSAPP("+254794094414");
 
         });
 
