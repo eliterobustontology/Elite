@@ -399,7 +399,7 @@ const ABOUTUS=(ELEMENTSERE)=>{
         STYLED(ELEMENTA,"left","0");
         STYLED(ELEMENTA,"bottom","0");
 
-        YEARSTAMP(ELEMENTA,"Doctor Mjombali , All Rights Reserved.");
+        YEARSTAMP(ELEMENTA,"Doctor Mjombali , All Rights Reserved.","");
 
       });
 
@@ -491,7 +491,7 @@ const CONTACTUS=(ELEMENT)=>{
             STYLED(ELEMENTA,"left","0");
             STYLED(ELEMENTA,"bottom","0");
 
-            YEARSTAMP(ELEMENTA,"Doctor Mjombali , All Rights Reserved.");
+            YEARSTAMP(ELEMENTA,"Doctor Mjombali , All Rights Reserved.","");
 
         });
 
