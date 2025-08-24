@@ -105,6 +105,16 @@ const MOBILEHOMEPAGE=()=>{
 
             TEXT(ELEMENTS,"h1","white","","18px","Contact Us",(ELEMENTS)=>{
 
+                CLICK(ELEMENTS,()=>{
+
+                    BOTTOMVIEW("","50px","#FFFFFF","forestgreen","Reach Us",(ELEMENTASA)=>{
+
+                        CONTACTUS(ELEMENTASA);
+
+                    });
+
+                });
+
             });
 
         });
@@ -396,6 +406,94 @@ const ABOUTUS=(ELEMENTSERE)=>{
     });
 
   });
+
+};
+
+const CONTACTUS=(ELEMENT)=>{
+
+    TEXT(ELEMENT,"h1","green","5%","20px","Reach Mjomba Ali Via",(ELEMENTS)=>{
+
+    });
+
+    DIV(ELEMENT,"95%","50px","forestgreen","inline-flex","","2%",(ELEMENTS)=>{
+
+        STYLED(ELEMENTS,"border-radius","10px");
+
+        LEFTTEXT(ELEMENTS,"h1","#FFFFFF","2%","20px","Call Mjomba Ali",()=>{
+
+        });
+
+        RIGHTIMAGE(ELEMENTS,WHITEPHONEICON,"","20px","20px","2%",(ELES)=>{
+
+            CLICK(ELES,()=>{
+
+                CALL("+254794094414");
+
+            });
+
+        });
+
+    });
+
+    DIV(ELEMENT,"95%","50px","forestgreen","inline-flex","","2%",(ELEMENTS)=>{
+
+        STYLED(ELEMENTS,"border-radius","10px");
+
+        LEFTTEXT(ELEMENTS,"h1","#FFFFFF","2%","20px","WhatsApp Mjomba Ali",()=>{
+
+        });
+
+        RIGHTIMAGE(ELEMENTS,WHITEWHATSAPPICON,"","20px","20px","2%",(ELES)=>{
+
+            CLICK(ELES,()=>{
+
+                WHATSAPP("+254794094414");
+
+            });
+
+        });
+
+    });
+
+    DIV(ELEMENT,"100%","100px","forestgreen","inline-flex","","",(ELEMENTS)=>{
+
+        TEXT(ELEMENTS,"h1","white","5%","18px","Policies",(ELEMENTS)=>{
+
+            CLICK(ELEMENTS,()=>{
+
+            });
+
+        });
+
+        TEXT(ELEMENTS,"h1","white","5%","18px","Tech Support",(ELEMENTS)=>{
+
+            CLICK(ELEMENTS,()=>{
+
+                WEBSITE("https://eroinnovations.site");
+
+            });
+
+        });
+
+        TEXT(ELEMENTS,"h1","white","5%","18px","App",(ELEMENTS)=>{
+
+            CLICK(ELEMENTS,()=>{
+
+            });
+
+        });
+
+        DIV(ELEMENTS,"100%","50px","transparent","inline-flex","","",(ELEMENTA)=>{
+
+            STYLED(ELEMENTA,"position","absolute");
+            STYLED(ELEMENTA,"left","0");
+            STYLED(ELEMENTA,"bottom","0");
+
+            YEARSTAMP(ELEMENTA,"Doctor Mjombali , All Rights Reserved.");
+
+        });
+
+    });
 
 };
 
