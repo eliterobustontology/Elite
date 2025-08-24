@@ -67,6 +67,7 @@ import { POINT } from "../DataBase/Point/Point.js";
 import { POSTDRIVEFILE } from "../DataBase/PostDriveFile/PostDriveFile.js";
 import { POSTPACKAGE } from "../DataBase/PostPackage/PostPackage.js";
 import { POSTTEXTPACKAGE } from "../DataBase/PostTextPackage/PostTextPacakage.js";
+import { POWEREDBY } from "../DataBase/PoweredBy/PoweredBy.js";
 import { QELMAIL } from "../DataBase/QelMail/QelMail.js";
 import { RANDOMCODE } from "../DataBase/RandomCode/RandomCode.js";
 import { REDUX } from "../DataBase/Redux/Redux.js";
@@ -226,11 +227,12 @@ const HOVER=${HOVER};
 const PASSWORDCHECKER=${PASSWORDCHECKER};
 const POINT=${POINT};
 const YEARSTAMP=${YEARSTAMP};
+const POWEREDBY=${POWEREDBY};
 `;
 localStorage.setItem('FUNCTIONS',DATA)
 };
 
 `
-const YEARSTAMP=${YEARSTAMP};
+const POWEREDBY=${POWEREDBY};
 
 `

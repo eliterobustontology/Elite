@@ -129,6 +129,8 @@ const MOBILEHOMEPAGE=()=>{
 
         ABOUTUS(ELEMENT);
 
+        POWEREDBY(ELEMENT,"green");
+
     });
 
 };
@@ -405,6 +407,8 @@ const ABOUTUS=(ELEMENTSERE)=>{
 
     });
 
+    POWEREDBY(ELEMENT,"green");
+
   });
 
 };
@@ -494,6 +498,8 @@ const CONTACTUS=(ELEMENT)=>{
         });
 
     });
+
+    POWEREDBY(ELEMENT,"green");
 
 };
 
