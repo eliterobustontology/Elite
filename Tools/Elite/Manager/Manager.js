@@ -203,7 +203,23 @@ const HOMEMOBILEPAGE=()=>{
 
         GETINDEXEDDATA("APPMANAGER", "APPMANAGER", (data)=>{
 
-            TABLEVIEW(ELEMENT,"45%","200px","orange","hidden","2%",(ELEMENT)=>{
+            console.log(data);
+
+            TABLEVIEW(ELEMENT,"45%","200px","transparent","hidden","2%",(ELEMENTSA)=>{
+
+                STYLED(ELEMENTSA,"border","1px solid green");
+
+                IMAGE(ELEMENTSA,data.AppIcon||ELITELOGO,"transparent","100%","100%","auto",()=>{
+
+                });
+
+                FOOTER(ELEMENTSA,"green",(ELSUE)=>{
+
+                    TEXT(ELSUE,"p","#FFFFFF","auto","16px",data.AppName,()=>{
+
+                    });
+
+                });
 
             });
 
