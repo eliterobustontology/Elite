@@ -203,8 +203,6 @@ const HOMEMOBILEPAGE=()=>{
 
         GETINDEXEDDATA("APPMANAGER", "APPMANAGER", (data)=>{
 
-            console.log(data);
-
             TABLEVIEW(ELEMENT,"45%","200px","transparent","hidden","2%",(ELEMENTSA)=>{
 
                 STYLED(ELEMENTSA,"border","1px solid green");
